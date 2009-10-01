@@ -44,3 +44,21 @@
 
     z-index: 1;
 }
+
+#opinion .reply {
+    position: absolute;
+
+    left: 0px;
+    width: 30px;
+    margin: 0px;
+}
+
+#opinion .reply a {
+    font-size: 20px;
+
+    text-align: center;
+
+    padding: 7px 7px 7px 7px;
+
+    display: block;
+}

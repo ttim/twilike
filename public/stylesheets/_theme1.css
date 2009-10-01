@@ -162,3 +162,16 @@ a {
 #one_opinion .title {
     background: #3c6c92;
 }
+
+#one_opinion .reply {
+    background: #3c6c92;
+}
+
+#one_opinion .reply a {
+    color: #eee;
+}
+
+#one_opinion .reply a:hover {
+    background: #333;
+    color: #fff;
+}
