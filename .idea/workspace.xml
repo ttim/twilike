@@ -31,16 +31,16 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="0" selection-start="2714" selection-end="2714" vertical-scroll-proportion="0.0">
+            <state line="118" column="0" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="one_opinion.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="one_opinion.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/one_opinion.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="5" selection-start="625" selection-end="625" vertical-scroll-proportion="0.37873754">
+            <state line="50" column="5" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_for_one_opinion.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_for_one_opinion.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_one_opinion.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="84" selection-start="290" selection-end="290" vertical-scroll-proportion="-7.7916665">
+            <state line="4" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.11764706">
               <folding />
             </state>
           </provider>
@@ -85,7 +85,7 @@
       <file leaf-file-name="_for_timeline.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_timeline.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="2" selection-start="86" selection-end="151" vertical-scroll-proportion="-2.125">
+            <state line="3" column="2" selection-start="151" selection-end="151" vertical-scroll-proportion="-2.125">
               <folding />
             </state>
           </provider>
@@ -143,10 +143,10 @@
         <option value="$PROJECT_DIR$/config/locales/ru.yml" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
-        <option value="$PROJECT_DIR$/app/views/opinion/_for_one_opinion.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/theme2/one_opinion.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/theme1/one_opinion.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/one_opinion.css" />
+        <option value="$PROJECT_DIR$/app/views/opinion/_for_one_opinion.html.erb" />
       </list>
     </option>
   </component>
@@ -1054,20 +1054,6 @@
         <state line="16" column="0" selection-start="0" selection-end="378" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_timeline.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="2" selection-start="86" selection-end="151" vertical-scroll-proportion="-2.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_one_opinion.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="84" selection-start="290" selection-end="290" vertical-scroll-proportion="-7.7916665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="389" selection-end="535" vertical-scroll-proportion="0.0">
@@ -1089,16 +1075,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_timeline.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="2" selection-start="151" selection-end="151" vertical-scroll-proportion="-2.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="0" selection-start="2714" selection-end="2714" vertical-scroll-proportion="0.0">
+        <state line="118" column="0" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/one_opinion.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="5" selection-start="625" selection-end="625" vertical-scroll-proportion="0.37873754">
+        <state line="50" column="5" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_one_opinion.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.11764706">
           <folding />
         </state>
       </provider>
