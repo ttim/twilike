@@ -3,7 +3,7 @@ class OpinionsController < ApplicationController
   TOP_COUNT = 5
   
   MOVIE_COUNT = 9
-  USER_COUNT = 6
+  USER_COUNT = 9
 
   TIMES = ["alltime", "year", "month", "week"] # TODO: add day
   
