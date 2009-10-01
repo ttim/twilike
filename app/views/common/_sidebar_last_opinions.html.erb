@@ -1,0 +1,5 @@
+<div id="last_opinions">
+  <h3><%= t "common.last_opinions" %></h3>
+
+  <%= render :partial => "opinion/for_sidebar", :collection => Opinion.last, :as => :opinion %>
+</div>

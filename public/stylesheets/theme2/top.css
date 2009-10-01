@@ -1,0 +1,21 @@
+#tops h2 {
+    color: white;
+}
+
+.top_users {
+    border-left: 1px dashed #676767;
+    color: #676767;
+}
+
+.movie_name a {
+    color: white;
+}
+
+/*---- user ------*/
+.profile {
+    color: black;
+}
+
+.profile a {
+    color: white;
+}

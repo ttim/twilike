@@ -1,0 +1,79 @@
+#sidebar {
+    text-align: right;
+}
+
+/* twilike header */
+#sidebar h1 {
+    margin-bottom: 0px;
+    font-size: 2em;
+}
+
+/* love and vopros */
+.love, .vopros {
+    font-size: 30px;
+}
+
+/* search */
+#search form input {
+    border-width: 0px;
+    height: 1.5em;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 18px;
+    width: 155px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode ", Tahoma, Helvetica, Verdana, sans-serif;
+}
+
+/* navigation */
+.navigation ul li {
+    list-style: none;
+    font-size: 1.8em;
+}
+
+.navigation ul li a:hover {
+    text-decoration: none;
+}
+
+/* view type switch */
+#viewtype_switch {
+    line-height: 1.2em;
+    padding-bottom: 10px;
+}
+
+#viewtype_switch ul li {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* language */
+#language ul {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#language ul li {
+    list-style: none;
+}
+
+#language ul li a {
+    text-decoration: none;
+}
+
+/* last opinions */
+#last_opinions {
+    width: 150px;
+    float: right;
+    margin-top: -20px
+}
+
+.sidebar_response {
+    font-size: 0.7em;
+    line-height: 1.5em;
+    margin-top: 5px;
+}
+
+.sidebar_response img {
+    width: 16px;
+    height: 16px;
+    margin-bottom: -4px;
+}

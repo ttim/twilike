@@ -1,0 +1,57 @@
+<img src='<%= image_path(movie.medium_image_url || ApplicationHelper::NO_IMAGE) %>'/>
+
+<table cellspacing='0'>
+  <tr>
+    <td><span class='user_stats'><%= movie.plus_count %>
+      <img src='<%= image_for_rating(1) %>'/></span>
+    </td>
+    <td><span class='user_stats'><%= movie.neutral_count %>
+      <img src='<%= image_for_rating(0) %>'/>
+  </span>
+    </td>
+    <td><span class='user_stats'><%= movie.minus_count %>
+      <img src='<%= image_for_rating(-1) %>'/>
+  </span>
+    </td>
+  </tr>
+</table>
+
+<% if (movie.original_name != nil ) && (movie.original_name != "") %>
+
+<span class='info_td'>
+  <%= t 'movie.original_name' %>
+</span>
+
+<span class='info' id='original_name'>
+   <%= movie.original_name %>
+</span>
+
+<% end %>
+
+<% if movie.year != nil %>
+
+<span class='info_td'>
+  <%= t 'movie.year' %>
+</span>
+
+<span class='info' id='year'>
+  <%= movie.year %>
+</span>
+
+<% end %>
+
+<% if (movie.translated_tagline != nil) && (movie.translated_tagline != "") %>
+
+<span class='info_td'>
+  <%= t 'movie.tagline' %>
+</span>
+
+<span class='info' id='tagline'>
+  <%= movie.translated_tagline %>
+</span>
+
+<% end %>
+
+<div class='info' id='more_info'><a href='<%= movie.imdb_href %>'><%= t 'movie.more_info' %></a></div>
+
+<div class='info' id='comment_on_twitter'><%= comment_movie(movie, t('message.comment_on_twitter')) %></div>

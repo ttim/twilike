@@ -1,0 +1,21 @@
+<table id='tops'>
+  <tr>
+    <td class='top_column' valign='top'>
+      <h2><%= t 'top.top_movies' %></h2>
+      
+      <%= render :partial => "movie/for_top_top", :collection => @top_movies, :as => :movie, :locals => { :time_interval => @time_interval } %>
+    </td>
+
+    <td class='top_column' valign='top'>
+      <h2><%= t 'top.worst_movies' %></h2>
+
+      <%= render :partial => "movie/for_top_worst", :collection => @worst_movies, :as => :movie, :locals => { :time_interval => @time_interval } %>
+    </td>
+
+    <td class='top_column top_users' valign='top'>
+      <h2><%= t 'top.top_users' %></h2>
+
+      <%= render :partial => "user/for_top", :collection => @top_users, :as => :user, :locals => { :time_interval => @time_interval } %>
+    </td>
+  </tr>
+</table>

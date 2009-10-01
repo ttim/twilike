@@ -1,0 +1,9 @@
+<div id="search">
+  <form method="get" action="/search">
+    <input type="text" name="q"
+           value="<%= t 'search.search' %>" onblur="if (this.value == '') {this.value = '<%= t 'search.search' %>';}"
+           onfocus="if (this.value == '<%= t 'search.search' %>') {this.value = '';}"/>
+    <input type="hidden" name = "target" value = "movie" />
+    <span class = "hidden"><input type="submit" value="Search" /></span>
+  </form>
+</div>

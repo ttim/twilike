@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  key: MyString
+  delete_at: 2009-09-21 00:47:45
+  text: MyText
+
+two:
+  key: MyString
+  delete_at: 2009-09-21 00:47:45
+  text: MyText

@@ -1,0 +1,60 @@
+#add_info {
+    float: right;
+    width: 200px;
+
+    padding: 10px;
+
+    line-height: 1em;
+}
+
+#add_info img {
+    width: 200px;
+}
+
+#add_info .user_stats img {
+    width: 24px;
+    margin-left: -10px;
+}
+
+#add_info .user_stats {
+    font-size: 30px;
+}
+
+#add_info table {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 220px;
+}
+
+.info_td {
+    font-size: 14px;
+}
+
+.info {
+    font-size: 14px;
+    padding-bottom: 5px;
+    display: block;
+}
+
+#more_info {
+    text-align: center;
+}
+
+#comment_on_twitter {
+    text-align: center;
+}
+
+/* main */
+.by_movie_response {
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.by_movie_response a:hover {
+    text-decoration: underline;
+}
+
+.user_img img {
+    padding-left: 5px;
+    padding-right: 5px;
+}

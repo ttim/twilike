@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  imdb_id: 1
+  original_name: MyString
+  russian_name: MyString
+  english_name: MyString
+  year: 1
+  russian_tagline: MyString
+  english_tagline: MyString
+  image_url: MyString
+  names: MyText
+
+two:
+  id: 1
+  imdb_id: 1
+  original_name: MyString
+  russian_name: MyString
+  english_name: MyString
+  year: 1
+  russian_tagline: MyString
+  english_tagline: MyString
+  image_url: MyString
+  names: MyText

@@ -1,0 +1,48 @@
+body {
+    background-color: #e1ddd9;
+    color: #564b47;
+}
+
+a {
+    color: #0084b4;
+}
+
+#container {
+    background-color: #555;
+}
+
+#content {
+    color: white;
+}
+
+/* opinion block */
+.block .title a {
+    color: #eee;
+}
+
+.block .title a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.block .data {
+    background: #222;
+    color: #ddd;
+}
+
+.block .title {
+    background: #3c6c92;
+}
+
+.block .reply {
+    background: #3c6c92;
+}
+
+.block .reply a {
+    color: #eee;
+}
+
+.block .reply a:hover {
+    background: #333;
+    color: #fff;
+}

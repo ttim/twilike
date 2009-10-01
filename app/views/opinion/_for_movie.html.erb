@@ -1,0 +1,17 @@
+<div class='by_movie_response'>
+  <table>
+    <tr>
+      <td><img src='<%= rating_image(opinion) %>'/></td>
+      <td class = "user_img">
+        <%= user_image_tag(opinion.user) %>
+      </td>
+      <td style='padding-right: 5px'>
+        <%= user_href(opinion.user) %>
+      <br />
+      <%= opinion.text %> <a href = "<%= opinion_link(opinion) %>">#</a>
+      </td>
+    </tr>
+    <tr></tr>
+  </table>
+</div>
+  

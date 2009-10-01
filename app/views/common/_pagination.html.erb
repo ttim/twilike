@@ -1,0 +1,11 @@
+<% if collection.size != 0 %>
+
+    <div id='pagination'>
+      <%=
+          result = will_paginate(collection, :prev_label => t("paginate.prev"), :next_label => t("paginate.next")) 
+          result = '<span class="current">1</span>' if result == nil
+          result
+      %>
+    </div>
+
+<% end %>

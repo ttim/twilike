@@ -1,0 +1,20 @@
+<div class='block'>
+  <p class='reply opacity'><%= comment_movie(movie) %></p>
+  
+  <%= movie_medium_image_tag(movie) %>
+
+  <div class='data'>
+    <table>
+      <tr>
+        <td valign='bottom' class = "rating">
+          <%= rate_count %>
+          <img src='<%= rate_image_path %>'/>
+        </td>
+        
+        <td class = "movie_name">
+          <%= movie_href(movie) %>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

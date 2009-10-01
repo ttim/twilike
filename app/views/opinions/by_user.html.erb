@@ -1,0 +1,33 @@
+<% content_for :header do %>
+    <h2>
+      <%= user_image_tag(@user) %> <a href='<%= @user.twitter_url %>'><%= @user.name %></a>
+    </h2>
+<% end %>
+
+<div id='main'>
+  <% if @view == "line" %>
+      <%= render :partial => "opinion/for_user_line", :collection => @opinions, :as => :opinion %>
+  <% else %>
+      <table cellpadding='0' cellspacing='0' id='timelines'>
+        <tr>
+          <% [:plus, :neutral, :minus].each do |rate| %>
+              <td class='timeline' valign='top'>
+                <%
+                   current = []
+                   i = {:plus => 2, :neutral => 1, :minus => 0}[rate]
+
+                   @opinions.each do |opinion|
+                       i += 1
+
+                       current << opinion if i%3 == 0
+                   end
+                %>
+                <%= render :partial => "opinion/for_user_block", :collection => current, :as => :opinion %>
+              </td>
+          <% end %>
+        </tr>
+      </table>
+  <% end %>
+
+  <%= render :partial => 'common/pagination', :locals => {:collection => @opinions} %>
+</div>

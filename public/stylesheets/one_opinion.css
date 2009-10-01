@@ -1,0 +1,46 @@
+#one_opinion {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    height: 337px;
+
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    line-height: 1.4em;
+}
+
+#one_opinion .title {
+    position: absolute;
+
+    margin: 0px;
+    right: 7px;
+    width: 300px;
+
+    z-index: 1;
+    background: #3c6c92;
+}
+
+#one_opinion .title a {
+    font-size: 20px;
+    
+    text-align: center;
+
+    padding: 7px 7px 7px 7px;
+
+    display: block;
+}
+
+#one_opinion .data {
+    font-size: 16px;
+    
+    position: absolute;
+    display: block;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1;
+}

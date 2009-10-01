@@ -1,0 +1,24 @@
+<p class='title opacity'><%= movie_href(opinion.movie) %></p>
+
+
+<%= movie_big_image_tag(opinion.movie) %>
+
+<div class='data opacity'>
+  <table>
+    <tr>
+      <td>
+        <img src='<%= rating_image(opinion) %>'/>
+      </td>
+
+      <td>
+        [<a class='user_href' href='<%= url_for :action => 'by_user', :screen_name => opinion.user.screen_name %>'>
+        <%= opinion.user.name %>
+      </a>]
+        <br/>
+        <%= opinion.text %>
+        <br/>
+        <a href = "<%= opinion.twitter_url%>">@ <%= opinion.created_at.to_s(:long) %></a>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,208 @@
+/* based on */
+/* *** css by miss monorom www.intensivstation.ch *** */
+/* css released under Creative Commons License -  http://creativecommons.org/licenses/by/2.0/deed.en  */
+
+body {
+    font: normal 100% "Lucida Grande", "Lucida Sans Unicode", Tahoma, Helvetica, Verdana, sans-serif;
+    line-height: 1.7em;
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+}
+
+img {
+    border-width: 0px;
+}
+
+/* ----------container to center the layout-------------- */
+#container {
+    margin: 10px auto;
+
+    width: 965px;
+
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+/* -----------------content--------------------- */
+#content {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin-left: 215px;
+    margin-right: 0px;
+    width: 740px;
+}
+
+div#content {
+    min-height: 750px;
+    height: expression(this.scrollHeight > 750 ? "auto":"750px");
+}
+
+/* --------------left navi------------- */
+#sidebar {
+    float: left;
+    width: 185px;
+    padding: 5px 15px 20px 0px;
+    margin: 0px;
+
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+/* -----------footer--------------------------- */
+#footer {
+    margin: 0px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+/* -----------added--------------------*/
+.border {
+    border: 1px solid black;
+}
+
+.wrapper {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none
+}
+
+/* common up h2 */
+#content h2 {
+    text-align: right;
+    margin-right: 5px;
+}
+
+h3 {
+    margin-bottom: 0px;
+}
+
+/* common - opacity */
+.opacity {
+    filter: alpha(opacity = 90);
+    -moz-opacity: .9;
+    opacity: .9;
+}
+
+/* common - opinion block */
+.block {
+    line-height: 1em;
+    margin: 0 7px 10px 0;
+
+    width: 236px;
+    height: 205px;
+
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.block .title {
+    position: absolute;
+
+    margin: 0px;
+    right: 7px;
+    width: 150px;
+
+    z-index: 1;
+}
+
+.block .reply {
+    position: absolute;
+
+    left: 0px;
+    width: 28px;
+    margin: 0px;
+}
+
+.block .reply a {
+    font-size: 18px;
+
+    text-align: center;
+
+    padding: 7px 7px 7px 7px;
+
+    display: block;
+}
+
+.block .title a {
+    font-size: 18px;
+
+    text-align: center;
+
+    padding: 7px 7px 7px 7px;
+
+    display: block;
+}
+
+.block .data {
+    font-size: 12px;
+    
+    position: absolute;
+    display: block;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1;
+}
+
+/* pagination */
+#pagination {
+    width: 100%;
+    text-align: center;
+}
+
+.title a:hover {
+    text-decoration: none;
+}
+
+.reply a:hover {
+    text-decoration: none;
+}
+
+/* movie */
+.movie_img_small {
+    width: 67px;
+    height: 50px;
+}
+
+.movie_img_medium {
+    width: 236px;
+    height: 177px;
+}
+
+.movie_img_big {
+    width: 450px;
+    height: 337px;    
+}
+
+/* color switch */
+#color_switch {
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+    width: 965px;
+    margin-top: 10px;
+}
+
+.color_block {
+    width: 18px;
+    height: 18px;
+
+    border: 2px black solid;
+}
+

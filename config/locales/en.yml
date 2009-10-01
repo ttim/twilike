@@ -1,0 +1,73 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  common:
+    language: "Language"
+    top: "Top"
+    timeline: "Timeline"
+    last_opinions: "Last opinions"
+    about: "What Is It?"
+  about:
+    header: "What Is It?"
+    title: "What Is It? / Twilike"
+  default:
+    title: "Twilike"
+    header: "Twilike"
+  by_movie:
+    title: "Movie / Twilike"
+  by_user:
+    title: "User / Twilike"
+    block_view: "Picture view"
+    line_view: "Twitter view"
+  timeline:
+    title: "Timeline / Twilike"
+    header: "Timeline"
+  top:
+    title: "Top / Twilike"
+    header: "Top"
+    for: "for"
+
+    intervals:
+      alltime: "all time"
+      year: "year"
+      month: "month"
+      week: "week"
+      day: "day"
+    top_movies: "Best"
+    worst_movies: "Worst"
+    top_users: "Active users"
+
+    opinions_for_period: "posts for period"
+  header:
+    top: "Top"
+    love: "Tweet love for twilike.net"
+    timeline: "Timeline"
+  movie:
+    original_name: "Original name"
+    year: "Year"
+    tagline: "Tagline"
+    more_info: "More info"
+  search:
+    nothing_found: "Nothing found :-("
+    search: "Search"
+    find: "Search"
+    movies: "movies"
+    users: "users"
+  message:
+    love: "service%20for%20comment%20and%20rate%20movies%20direct%20in%20twitter%21"
+
+    header: "Message"
+    title: "Message"
+
+    comment_movie: "comment this movie!"
+    your_opinion: "Your Opinion"
+    comment_on_twitter: "Comment movie on twitter!"
+  try_it:
+    text: "Try It!"
+    status: "Movie+Name.+Your+Opinion!+%23twilike%2B"
+  footer:
+    follow_us: "Follow Us!"
+  paginate:
+    next: "Next »"
+    prev: "« Previous"

@@ -1,0 +1,5 @@
+<div id='main'>
+  <%= render :partial => "opinion/for_movie", :collection => @opinions, :as => :opinion %>
+
+  <%= render :partial => 'common/pagination', :locals => {:collection => @opinions} %>
+</div>

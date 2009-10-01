@@ -1,0 +1,4 @@
+<%= render :partial => "movie/for_top_common",
+           :locals => { :rate_image_path => image_path('twilike/plus.png'),
+                        :movie => movie,
+                        :rate_count => movie.plus_count(time_interval) } %>

@@ -1,0 +1,146 @@
+body {
+    background-color: #e1ddd9;
+    color: #564b47;
+}
+
+a {
+    color: #0084b4;
+}
+
+#container {
+    background-color: #555;
+}
+
+#content {
+    color: white;
+}
+
+/* opinion block */
+.block .title a {
+    color: #eee;
+}
+
+.block .title a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.block .data {
+    background: #222;
+    color: #ddd;
+}
+
+.block .title {
+    background: #3c6c92;
+}
+
+.block .reply {
+    background: #3c6c92;
+}
+
+.block .reply a {
+    color: #eee;
+}
+
+.block .reply a:hover {
+    background: #333;
+    color: #fff;
+}
+#sidebar {
+    background-color: #AAA;
+}
+
+#sidebar * a {
+    color: #456
+}
+
+/* love & vopros */
+#sidebar h1 a.love {
+    color: #D01F3C;
+}
+
+#sidebar h1 a.vopros {
+    color: #356AA0;
+}
+
+#sidebar h1 a.love:hover, #sidebar h1 a.vopros:hover {
+    color: #564b47;
+}
+
+/* search */
+#search form input {
+    color: #999;
+}
+
+/* navigation */
+#sidebar .navigation ul li a, #sidebar .navigation ul li a:visited {
+    color: #564b47;
+}
+
+#sidebar .navigation ul li a:hover {
+    color: #ECD;
+}
+
+#sidebar .navigation ul li a.active_tab, #sidebar .navigation ul li a.active_tab:hover, #sidebar .navigation ul li a.active_tab:visited {
+    color: #AF7;
+}
+
+/* language */
+#language ul li a:hover {
+    background-color: white;
+}
+
+/* last opinions */
+.sidebar_response a:hover {
+    background-color: white;
+}
+
+
+#tops h2 {
+    color: white;
+}
+
+.top_users {
+    border-left: 1px dashed #676767;
+    color: #676767;
+}
+
+.movie_name a {
+    color: white;
+}
+
+/*---- user ------*/
+.profile {
+    color: black;
+}
+
+.profile a {
+    color: white;
+}
+
+#add_info {
+    background-color: #AAA
+}
+
+.info_td {
+    color: #777;
+}
+
+
+#one_opinion .title a {
+    color: #eee;
+}
+
+#one_opinion .title a:hover {
+    background: #333;
+    color: #fff;
+}
+
+#one_opinion .data {
+    background: #222;
+    color: #ddd;
+}
+
+#one_opinion .title {
+    background: #3c6c92;
+}

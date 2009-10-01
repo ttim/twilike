@@ -1,0 +1,21 @@
+<div id='main' class = 'static'>
+  <h4><%= t 'search.find' %>:
+    <%= text = t('search.movies')+" ("+@movies_count.to_s+")"
+        if @type == "movie"
+          text
+        else
+          link_to text, search_url(:q => @text, :target => "movie")
+        end
+    %>,
+    <%= text = t('search.users')+" ("+@users_count.to_s+")"
+        if @type == "user"
+          text
+        else
+          link_to text, search_url(:q => @text, :target => "user")
+        end
+    %>
+  </h4>
+
+  <%= render :partial => 'search_movies' if @movies != nil %>
+  <%= render :partial => 'search_users' if @users != nil %>  
+</div>

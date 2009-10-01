@@ -1,0 +1,9 @@
+<table id='timelines' cellpadding='0' cellspacing='0'>
+  <tr>
+    <% [:plus, :neutral, :minus].each do |rate| %>
+      <td class='timeline' valign='top'>
+        <%= render :partial => "opinion/for_timeline", :as => :opinion, :collection => @timelines[rate]  %>
+      </td>
+    <% end %>
+  </tr>
+</table>

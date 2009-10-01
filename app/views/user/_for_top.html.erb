@@ -1,0 +1,21 @@
+<div class='profile'>
+  <table>
+    <tr>
+      <td>
+        <%= user_image_tag(user) %>
+      </td>
+      <td>
+        <%= user_href(user) %> <a href='<%= user.twitter_url %>'>[twi]</a>
+      </td>
+    </tr>
+  </table>
+
+  <h3>
+    <%= user.opinions_by_period(time_interval) %> <%= t 'top.opinions_for_period' %>
+  </h3>
+
+  <div class='last'>
+    <% latest = user.latest_opinion %>
+    <%= render :partial => "opinion/for_top", :locals => { :opinion => latest } unless latest == nil %>
+  </div>
+</div>

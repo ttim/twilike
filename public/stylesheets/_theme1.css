@@ -1,0 +1,164 @@
+body {
+    background-color: #B8D2E5;
+    color: #36393D;
+}
+
+a {
+    color: #4096EE;
+}
+
+#container {
+    background-color: #E0F3B7;
+}
+
+#content {
+    color: white;
+}
+
+/* opinion block */
+.block .title a {
+    color: #eee;
+}
+
+.block .title a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.block .reply a {
+    color: #eee;
+}
+
+.block .reply a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.block .data {
+    background: #222;
+    color: #ddd;
+}
+
+.block .title {
+    background: #3c6c92;
+}
+
+.block .reply {
+    background: #3c6c92;
+}
+
+#content h2 {
+    color: #36393D;
+}
+
+#pagination {
+    color: #36393D;
+}
+
+/* static */
+.static {
+    color: #564b47;
+}
+
+#sidebar {
+    background-color: #FFFFA2;
+}
+
+#sidebar * a {
+    color: #356AA0;
+}
+
+/* love & vopros */
+#sidebar h1 a.love {
+    color: #D01F3C;
+}
+
+#sidebar h1 a.vopros {
+    color: #356AA0;
+}
+
+#sidebar h1 a.love:hover, #sidebar h1 a.vopros:hover {
+}
+
+/* search */
+#search form input {
+    color: #36393D;
+}
+
+/* navigation */
+#sidebar .navigation ul li a, #sidebar .navigation ul li a:visited {
+    color: #36393D;
+}
+
+#sidebar .navigation ul li a:hover {
+    color: #8DCA92;
+}
+
+#sidebar .navigation ul li a.active_tab, #sidebar .navigation ul li a.active_tab:hover, #sidebar .navigation ul li a.active_tab:visited {
+    color: #459449;
+}
+
+/* language */
+#language ul li a:hover {
+    background-color: white;
+}
+
+/* last opinions */
+.sidebar_response a:hover {
+    background-color: white;
+}
+
+
+#tops h2 {
+    color: #36393D;
+}
+
+.top_users {
+    border-left: 1px dashed #676767;
+    color: #676767;
+}
+
+.movie_name a {
+    color: white;
+}
+
+/*---- user ------*/
+.profile {
+    color: #36393D;
+}
+
+.profile a {
+    color: #356AA0;
+}
+
+#add_info {
+    background-color: #BBB;
+}
+
+.info_td {
+    color: #777;
+}
+
+.by_movie_response {
+    color: #36393D;
+}
+.user_line_response {
+    color: #36393D;
+}
+#one_opinion .title a {
+    color: #eee;
+}
+
+#one_opinion .title a:hover {
+    background: #333;
+    color: #fff;
+}
+
+#one_opinion .data {
+    background: #222;
+    color: #ddd;
+}
+
+#one_opinion .title {
+    background: #3c6c92;
+}

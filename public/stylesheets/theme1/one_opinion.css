@@ -1,0 +1,17 @@
+#one_opinion .title a {
+    color: #eee;
+}
+
+#one_opinion .title a:hover {
+    background: #333;
+    color: #fff;
+}
+
+#one_opinion .data {
+    background: #222;
+    color: #ddd;
+}
+
+#one_opinion .title {
+    background: #3c6c92;
+}

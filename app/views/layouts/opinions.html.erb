@@ -1,0 +1,28 @@
+<% content_for :body do %>
+    <div id="color_switch">
+      <a href = "<%= change_url('theme', "theme1") %>"><img src = "<%= image_path("themes/1.png") %>" /></a>
+      <a href = "<%= change_url('theme', "theme2") %>"><img src = "<%= image_path("themes/2.png") %>" /></a>
+    </div>
+    
+    <div id="container">
+      <%= render :partial => 'common/sidebar' %>
+
+      <div id="content">
+        <%= (yield 'header') || ("<h2>"+(@header || t("default.header"))+"</h2>") %>
+        
+        <% if @movie then %>
+
+        <div id="add_info">
+          <%= render :partial => "movie/for_sidebar", :locals => {:movie => @movie} %>
+        </div>
+
+        <% end %>
+
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= render :partial => "common/footer" %>
+<% end %>
+
+<%= render :file => 'layouts/application' %>

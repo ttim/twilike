@@ -1,0 +1,47 @@
+#sidebar {
+    background-color: #FFFFA2;
+}
+
+#sidebar * a {
+    color: #356AA0;
+}
+
+/* love & vopros */
+#sidebar h1 a.love {
+    color: #D01F3C;
+}
+
+#sidebar h1 a.vopros {
+    color: #356AA0;
+}
+
+#sidebar h1 a.love:hover, #sidebar h1 a.vopros:hover {
+}
+
+/* search */
+#search form input {
+    color: #36393D;
+}
+
+/* navigation */
+#sidebar .navigation ul li a, #sidebar .navigation ul li a:visited {
+    color: #36393D;
+}
+
+#sidebar .navigation ul li a:hover {
+    color: #8DCA92;
+}
+
+#sidebar .navigation ul li a.active_tab, #sidebar .navigation ul li a.active_tab:hover, #sidebar .navigation ul li a.active_tab:visited {
+    color: #459449;
+}
+
+/* language */
+#language ul li a:hover {
+    background-color: white;
+}
+
+/* last opinions */
+.sidebar_response a:hover {
+    background-color: white;
+}

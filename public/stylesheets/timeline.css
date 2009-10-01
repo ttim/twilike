@@ -1,0 +1,12 @@
+#timelines {
+    padding-bottom: 15px;
+}
+
+.timeline {
+    width: 260px;
+    padding-right: 5px;
+}
+
+.timeline .block * img {
+    padding-top: 3px;
+}

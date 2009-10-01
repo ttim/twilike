@@ -1,0 +1,75 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  common:
+    language: "Язык"
+    top: "Топ"
+    timeline: "Таймлайн"
+    last_opinions: "Последние мнения"
+    about: "Что это?"
+  about:
+    header: "Что это?"
+    title: "Что это? / Twilike"
+  default:
+    title: "Twilike"
+    header: "Twilike"
+  by_movie:
+    title: "Мнения о фильме / Twilike"
+  by_user:
+    title: "Мнения пользователя / Twilike"
+    block_view: "Просмотр картинками"
+    line_view: "Просмотр как в твиттере"
+  timeline:
+    title: "Таймлайн / Twilike"
+    header: "Таймлайн"
+  top:
+    title: "Топ / Twilike"
+    header: "Топ"
+    for: "за"
+
+    intervals:
+      alltime: "все время"
+      year: "год"
+      month: "месяц"
+      week: "неделю"
+      day: "день"
+
+    top_movies: "Лучшие"
+    worst_movies: "Худшие"
+    top_users: "Киноманы"
+ 
+    opinions_for_period: "мнений за период"
+  header:
+    top: "Топ"
+    love: "Твиттить любовь для твилайка"
+    timeline: "Таймлайн"
+  movie:
+    original_name: "Оригинальное имя"
+    year: "Год"
+    tagline: "Слоган"
+    more_info: "Больше информации"
+  search:
+    nothing_found: "Ничего не найдено :-("
+    search: "Поиск"
+    
+    find: "Искать"
+    movies: "фильмы"
+    users: "пользователи"
+  message:
+    love: "%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%B4%D0%BB%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2%20%D0%BF%D1%80%D1%8F%D0%BC%D0%BE%20%D0%B2%20%D1%82%D0%B2%D0%B8%D1%82%D1%82%D0%B5%D1%80%D0%B5%21"
+
+    header: "Обращение"
+    title: "Обращение / Twilike"
+
+    comment_movie: "Комментировать этот фильм!"
+    your_opinion: "Ваше мнение"
+    comment_on_twitter: "Комментировать фильм на Твиттере!"
+  try_it:
+    text: "Попробовать!"
+    status: "%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0.+%D0%92%D0%B0%D1%88%D0%B5+%D0%BC%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5.+%23twilike%2B"
+  footer:
+    follow_us: "Follow Us!"
+  paginate:
+    next: "Следующая »"
+    prev: "« Предыдущая"
