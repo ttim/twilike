@@ -6,8 +6,8 @@
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="abfd4eec-63ef-4c86-b7d3-7ff60c67419a" name="Default" comment="for_user(1/2) and for_movie is here! :-)" />
     <list id="a0d2f9af-e795-4e6f-b662-c749f6f2d48c" name="Failed commit: Default" comment="initial commit" />
-    <ignored path="twilike.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="twilike.iws" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="true" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,28 +28,28 @@
   <component name="FileColors" enabled="false" enabledForTabs="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="18" selection-start="887" selection-end="887" vertical-scroll-proportion="0.53263706">
+            <state line="52" column="14" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_pagination.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/common/_pagination.html.erb">
+      <file leaf-file-name="_for_one_opinion.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_one_opinion.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="113" selection-start="180" selection-end="180" vertical-scroll-proportion="-2.8333333">
+            <state line="11" column="84" selection-start="290" selection-end="290" vertical-scroll-proportion="0.32352942">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+      <file leaf-file-name="_for_timeline.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_timeline.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="22" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
+            <state line="3" column="2" selection-start="86" selection-end="151" vertical-scroll-proportion="-2.125">
               <folding />
             </state>
           </provider>
@@ -131,7 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/opinion/_for_user_block.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/theme2/main.css" />
         <option value="$PROJECT_DIR$/app/views/common/_search.html.erb" />
         <option value="$PROJECT_DIR$/app/views/movies/_search_movies.html.erb" />
@@ -147,6 +146,7 @@
         <option value="$PROJECT_DIR$/config/locales/ru.yml" />
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
+        <option value="$PROJECT_DIR$/app/views/opinion/_for_one_opinion.html.erb" />
       </list>
     </option>
   </component>
@@ -605,19 +605,19 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Favorites" />
       <pane id="RailsProjectView">
         <subPane />
       </pane>
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Rails.Development: twilike">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
@@ -1007,16 +1007,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/movies/search.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="432" selection-end="432" vertical-scroll-proportion="-9.208333" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/_search_movies.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="26" selection-start="0" selection-end="694" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="17" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" />
@@ -1024,9 +1014,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/movies/_search_users.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="95" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="95" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application.js">
@@ -1039,11 +1027,31 @@
         <state line="19" column="22" selection-start="828" selection-end="828" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user/_for_top.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/common/_pagination.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="99" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+        <state line="4" column="113" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="22" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="23" selection-start="2181" selection-end="2181" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/opinions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="54" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/user/_for_top.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="99" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
@@ -1053,9 +1061,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/opinions/by_user.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_top.html.erb">
@@ -1065,42 +1071,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_user_line.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="0" selection-end="378" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/opinions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="54" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/common/_pagination.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="113" selection-start="180" selection-end="180" vertical-scroll-proportion="-2.8333333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/ru.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="23" selection-start="2181" selection-end="2181" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="22" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="16" column="0" selection-start="0" selection-end="378" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="18" selection-start="887" selection-end="887" vertical-scroll-proportion="0.53263706">
+        <state line="52" column="14" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_timeline.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="2" selection-start="86" selection-end="151" vertical-scroll-proportion="-2.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_one_opinion.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="84" selection-start="290" selection-end="290" vertical-scroll-proportion="0.32352942">
           <folding />
         </state>
       </provider>
