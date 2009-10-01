@@ -37,19 +37,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="one_opinion.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="one_opinion.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/one_opinion.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="5" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
+            <state line="47" column="5" selection-start="625" selection-end="625" vertical-scroll-proportion="0.37873754">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="one_opinion.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="one_opinion.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/one_opinion.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="229" selection-end="393" vertical-scroll-proportion="0.50830567">
+            <state line="21" column="35" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1068,13 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="0" selection-start="2714" selection-end="2714" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="389" selection-end="535" vertical-scroll-proportion="0.0">
@@ -1089,16 +1082,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/one_opinion.css">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/one_opinion.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="5" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
+        <state line="21" column="35" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/one_opinion.css">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="229" selection-end="393" vertical-scroll-proportion="0.50830567">
+        <state line="181" column="0" selection-start="2714" selection-end="2714" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/one_opinion.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="5" selection-start="625" selection-end="625" vertical-scroll-proportion="0.37873754">
           <folding />
         </state>
       </provider>
