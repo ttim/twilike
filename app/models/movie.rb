@@ -44,6 +44,8 @@ class Movie < ActiveRecord::Base
 
   def update_saved_image
     # open(RAILS_ROOT+"/public/tmp/"+self.small_name+".jpeg", 'wb') { |file| file.write(UrlFetch.get(self.image_url).body) }
+    self.image_url = nil if self.image_url == ""
+
     if self.image_url != nil
       Delayed::Job.enqueue(CreateThumbs.new(self.small_name, self.image_url),
                          CreateThumbs::JOB_PRIORITY, Time.now)
