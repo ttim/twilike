@@ -1,8 +1,6 @@
 class StaticController < ApplicationController
   def about
-    if caching(5.minutes)
-      return
-    end
+    return if caching(5.minutes)
 
     get_header_and_title_from_i18n
 
@@ -10,9 +8,7 @@ class StaticController < ApplicationController
   end
 
   def message
-    if caching(5.minutes)
-      return
-    end
+    return if caching(5.minutes)
 
     get_header_and_title_from_i18n
 

@@ -9,7 +9,7 @@ class OpinionsController < ApplicationController
   
   # get movie by id
   def by_movie
-    caching(1.minute, params[:small_name], params[:page])
+    return if caching(1.minute, params[:small_name], params[:page])
 
     @movie = Movie.find_by_small_name(params[:small_name])
 
@@ -28,7 +28,7 @@ class OpinionsController < ApplicationController
 
   # get movies timeline
   def timeline
-    caching(1.minute)
+    return if caching(1.minute)
 
     get_header_and_title_from_i18n
     
@@ -53,7 +53,7 @@ class OpinionsController < ApplicationController
 
     @time = @time || "alltime"
 
-    caching(3.minutes, @time)
+    return if caching(3.minutes, @time)
 
     # init header
     @header += " <span class = 'additional'> "+t("top.for")+" "
@@ -79,7 +79,7 @@ class OpinionsController < ApplicationController
 
   # get movies by user
   def by_user
-    caching(3.minutes, params[:screen_name], params[:page], @view)
+    return if caching(3.minutes, params[:screen_name], params[:page], @view)
 
     @user = User.first(:conditions => { :screen_name => params[:screen_name] })
 
