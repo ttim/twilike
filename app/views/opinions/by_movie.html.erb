@@ -1,5 +1,7 @@
 <div id='main'>
-  <%= render :partial => "opinion/for_movie", :collection => @opinions, :as => :opinion %>
-
+  <% @opinions.each do |opinion| %>
+    <%= render_cell :opinion, :for_movie, :opinion => opinion %>
+  <% end %>
+  
   <%= render :partial => 'common/pagination', :locals => {:collection => @opinions} %>
 </div>

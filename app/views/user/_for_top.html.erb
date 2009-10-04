@@ -16,6 +16,7 @@
 
   <div class='last'>
     <% latest = user.latest_opinion %>
-    <%= render :partial => "opinion/for_top", :locals => { :opinion => latest } unless latest == nil %>
+
+    <%= render_cell :opinion, :for_top, :opinion => latest unless latest == nil %>
   </div>
 </div>

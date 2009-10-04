@@ -1,5 +1,7 @@
 <div id="last_opinions">
   <h3><%= t "common.last_opinions" %></h3>
 
-  <%= render :partial => "opinion/for_sidebar", :collection => Opinion.last, :as => :opinion %>
+  <% Opinion.last.each do |opinion| %>
+    <%= render_cell :opinion, :for_sidebar, :opinion => opinion %>
+  <% end %>
 </div>

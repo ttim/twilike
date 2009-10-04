@@ -1,0 +1,24 @@
+<div class='block'>
+  <p class='title opacity'><%= movie_href(@opinion.movie) %></p>
+  <p class='reply opacity'><%= comment_movie(@opinion.movie) %></p>
+
+  <%= movie_image_tag(@opinion.movie, :medium) %>
+
+  <div class='data'>
+    <table>
+      <tr>
+        <td>
+          <img src='<%= rating_image(@opinion) %>'/>
+        </td>
+
+        <td>
+          [<a class='user_href' href='<%= url_for :action => 'by_user', :screen_name => @opinion.user.screen_name %>'>
+            <%= @opinion.user.name %>
+          </a>]
+          <br/>
+          <%= @opinion.text %> <a href = "<%= opinion_link(@opinion) %>">#</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

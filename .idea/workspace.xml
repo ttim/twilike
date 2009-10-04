@@ -5,19 +5,23 @@
   </component>
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="abfd4eec-63ef-4c86-b7d3-7ff60c67419a" name="Default" comment="for_user(1/2) and for_movie is here! :-)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cells/movie_helper.rb" />
-      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\movie\_for_sidebar.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\movie\_for_top_top.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/_search_movies.html.erb" afterPath="$PROJECT_DIR$/app/views/movies/_search_movies.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/opinions/one.html.erb" afterPath="$PROJECT_DIR$/app/views/opinions/one.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/opinions/by_movie.html.erb" afterPath="$PROJECT_DIR$/app/views/opinions/by_movie.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/common/_sidebar_last_opinions.html.erb" afterPath="$PROJECT_DIR$/app/views/common/_sidebar_last_opinions.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cells/opinion/for_user_line.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/opinions/timeline.html.erb" afterPath="$PROJECT_DIR$/app/views/opinions/timeline.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/opinions/by_user.html.erb" afterPath="$PROJECT_DIR$/app/views/opinions/by_user.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/opinions.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/opinions.html.erb" />
-      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\movie\_for_top_worst.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\movie\_for_search.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/opinions/top.html.erb" afterPath="$PROJECT_DIR$/app/views/opinions/top.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\movie\_for_top_common.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\cells\movie_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\opinion\_for_one_opinion.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\opinion\_for_user_block.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\opinion\_for_top.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\opinion\_for_movie.html.erb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user/_for_top.html.erb" afterPath="$PROJECT_DIR$/app/views/user/_for_top.html.erb" />
+      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\opinion\_for_timeline.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/twilike.iml" afterPath="$PROJECT_DIR$/.idea/twilike.iml" />
+      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\opinion\_for_user_line.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="D:\Rails projects\twilike\app\views\opinion\_for_sidebar.html.erb" afterPath="" />
     </list>
     <list id="a0d2f9af-e795-4e6f-b662-c749f6f2d48c" name="Failed commit: Default" comment="initial commit" />
     <ignored path=".idea/workspace.xml" />
@@ -42,10 +46,64 @@
   <component name="FileColors" enabled="false" enabledForTabs="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="movie_cell.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/cells/movie_cell.rb">
+      <file leaf-file-name="opinion_cell.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/cells/opinion_cell.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
+            <state line="34" column="49" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_sidebar.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/common/_sidebar.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="41" selection-start="424" selection-end="424" vertical-scroll-proportion="-6.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_sidebar_last_opinions.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/common/_sidebar_last_opinions.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="66" selection-start="174" selection-end="174" vertical-scroll-proportion="-2.8333333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="for_user_line.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_user_line.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="for_user_block.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_user_block.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="one.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/opinions/one.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="-1.4166666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timeline.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/opinions/timeline.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="17" selection-start="294" selection-end="294" vertical-scroll-proportion="-4.25">
               <folding />
             </state>
           </provider>
@@ -54,61 +112,25 @@
       <file leaf-file-name="top.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/opinions/top.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="-0.0">
+            <state line="12" column="27" selection-start="361" selection-end="361" vertical-scroll-proportion="-2.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movie_helper.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/cells/movie_helper.rb">
+      <file leaf-file-name="_for_top.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/user/_for_top.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.085213035">
+            <state line="21" column="82" selection-start="480" selection-end="480" vertical-scroll-proportion="-10.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/movies/search.html.erb">
+      <file leaf-file-name="by_user.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/opinions/by_user.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="603" selection-end="603" vertical-scroll-proportion="-14.166667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_search_movies.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/movies/_search_movies.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="10" selection-start="613" selection-end="613" vertical-scroll-proportion="-10.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="for_top.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/cells/movie/for_top.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="214" selection-end="214" vertical-scroll-proportion="-5.6666665">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="for_info.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/cells/movie/for_info.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="2" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
+            <state line="4" column="53" selection-start="149" selection-end="149" vertical-scroll-proportion="0.18133333">
               <folding />
             </state>
           </provider>
@@ -127,22 +149,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/movie.rb" />
+        <option value="$PROJECT_DIR$/app/views/opinions/one.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/opinion/_for_sidebar.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/opinion/_for_timeline.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/opinion/_for_top.html.erb" />
         <option value="$PROJECT_DIR$/app/views/opinion/_for_user_block.html.erb" />
         <option value="$PROJECT_DIR$/app/views/opinion/_for_user_line.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/opinion/_for_one_opinion.html.erb" />
-        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/movie/_for_sidebar.html.erb" />
-        <option value="$PROJECT_DIR$/app/cells/movie/for_info.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/opinions.html.erb" />
-        <option value="$PROJECT_DIR$/app/cells/movie_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/movie/_for_top_common.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/movie/_for_search.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/movies/_search_movies.html.erb" />
-        <option value="$PROJECT_DIR$/app/cells/movie/movie_helper.rb" />
-        <option value="$PROJECT_DIR$/app/cells/movie/for_top.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/opinions/top.html.erb" />
-        <option value="$PROJECT_DIR$/app/cells/movie_cell.rb" />
+        <option value="$PROJECT_DIR$/app/cells/opinion/for_top.html.erb" />
+        <option value="$PROJECT_DIR$/app/cells/opinion/for_timeline.html.erb" />
+        <option value="$PROJECT_DIR$/app/cells/opinion/for_sidebar.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/opinions/timeline.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/user/_for_top.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/common/_sidebar_last_opinions.html.erb" />
+        <option value="$PROJECT_DIR$/app/cells/opinion_cell.rb" />
+        <option value="$PROJECT_DIR$/app/cells/opinion/for_user_line.html.erb" />
+        <option value="$PROJECT_DIR$/app/cells/opinion/for_user_block.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/opinions/by_user.html.erb" />
       </list>
     </option>
   </component>
@@ -215,6 +237,28 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twilike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twilike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -235,28 +279,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="opinions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twilike" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twilike" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opinion" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -301,6 +323,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twilike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twilike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,7 +416,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="movie" />
+              <option name="myItemId" value="opinion" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -725,7 +769,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921174" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32713178" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960254" sideWeight="0.24031007" order="1" side_tool="true" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21224165" sideWeight="0.6852713" order="0" side_tool="false" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21065183" sideWeight="0.6852713" order="0" side_tool="false" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30387598" sideWeight="0.0" order="2" side_tool="false" />
@@ -779,98 +823,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_user_line.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_movie.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="49" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+        <state line="15" column="6" selection-start="415" selection-end="415" vertical-scroll-proportion="-10.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_one_opinion.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_top.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="18" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+        <state line="5" column="38" selection-start="155" selection-end="155" vertical-scroll-proportion="-3.5416667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/common_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_timeline.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0" />
+        <state line="23" column="46" selection-start="665" selection-end="665" vertical-scroll-proportion="-10.75">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/opinion/_for_timeline.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_sidebar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
+        <state line="3" column="38" selection-start="157" selection-end="157" vertical-scroll-proportion="-2.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_one_opinion.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="653" selection-end="653" vertical-scroll-proportion="-16.291666">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/opinions/by_movie.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="33" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
+        <state line="4" column="2" selection-start="18" selection-end="131" vertical-scroll-proportion="-2.8333333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/opinions.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/opinions/one.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="14" selection-start="620" selection-end="620" vertical-scroll-proportion="-5.7083335">
+        <state line="2" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="-1.4166666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/search.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/opinions/timeline.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="603" selection-end="603" vertical-scroll-proportion="-14.166667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/_search_movies.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="10" selection-start="613" selection-end="613" vertical-scroll-proportion="-10.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/movie/for_info.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="2" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/movie/for_top.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="214" selection-end="214" vertical-scroll-proportion="-5.6666665">
+        <state line="6" column="17" selection-start="294" selection-end="294" vertical-scroll-proportion="-4.25">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/opinions/top.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
+        <state line="12" column="27" selection-start="361" selection-end="361" vertical-scroll-proportion="-2.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/movie_cell.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/user/_for_top.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
+        <state line="21" column="82" selection-start="480" selection-end="480" vertical-scroll-proportion="-10.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/movie_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/common/_sidebar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.085213035">
+        <state line="9" column="41" selection-start="424" selection-end="424" vertical-scroll-proportion="-6.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/common/_sidebar_last_opinions.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="66" selection-start="174" selection-end="174" vertical-scroll-proportion="-2.8333333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion_cell.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="49" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_user_line.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_user_block.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/opinions/by_user.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="53" selection-start="149" selection-end="149" vertical-scroll-proportion="0.18133333">
           <folding />
         </state>
       </provider>

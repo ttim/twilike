@@ -1,0 +1,16 @@
+<div class='user_line_response'>
+  <table>
+    <tr>
+      <td><img src='<%= rating_image(@opinion) %>'/></td>
+      <td>
+        <%= movie_image_tag(@opinion.movie, :small) %>
+      </td>
+      <td>
+        <%= movie_href(@opinion.movie) %>
+        <br />
+      <%= @opinion.text %> <a href = "<%= opinion_link(@opinion) %>">#</a>
+      </td>
+    </tr>
+    <tr></tr>
+  </table>
+</div>

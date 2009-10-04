@@ -2,7 +2,9 @@
   <tr>
     <% [:plus, :neutral, :minus].each do |rate| %>
       <td class='timeline' valign='top'>
-        <%= render :partial => "opinion/for_timeline", :as => :opinion, :collection => @timelines[rate]  %>
+        <% @timelines[rate].each do |opinion| %>
+          <%= render_cell :opinion, :for_timeline, :opinion => opinion %>
+        <% end %>
       </td>
     <% end %>
   </tr>
