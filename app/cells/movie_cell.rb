@@ -1,7 +1,11 @@
 class MovieCell < Cell::Base
-  def for_search
-    @movie = @opts[:movie]
+  def initialize(*args)
+    super
 
+    @movie = @opts[:movie]
+  end
+
+  def for_search
     @rate_image = 'twilike/plus.png'
     @rate_count = @movie.plus_count
 
@@ -9,13 +13,10 @@ class MovieCell < Cell::Base
   end
 
   def for_info
-    @movie = @opts[:movie]
-    
     render
   end
 
   def for_best_top
-    @movie = @opts[:movie]
     @time_interval = @opts[:time_interval]
 
     @rate_image = 'twilike/plus.png'
@@ -25,7 +26,6 @@ class MovieCell < Cell::Base
   end
 
   def for_worst_top
-    @movie = @opts[:movie]
     @time_interval = @opts[:time_interval]
 
     @rate_image = 'twilike/minus.png'

@@ -2,20 +2,20 @@
   <table>
     <tr>
       <td>
-        <%= user_image_tag(user) %>
+        <%= user_image_tag(@user) %>
       </td>
       <td>
-        <%= user_href(user) %> <a href='<%= user.twitter_url %>'>[twi]</a>
+        <%= user_href(@user) %> <a href='<%= @user.twitter_url %>'>[twi]</a>
       </td>
     </tr>
   </table>
 
   <h3>
-    <%= user.opinions_by_period(time_interval) %> <%= t 'top.opinions_for_period' %>
+    <%= @user.opinions_by_period(@time_interval) %> <%= t 'top.opinions_for_period' %>
   </h3>
 
   <div class='last'>
-    <% latest = user.latest_opinion %>
+    <% latest = @user.latest_opinion %>
 
     <%= render_cell :opinion, :for_top, :opinion => latest unless latest == nil %>
   </div>

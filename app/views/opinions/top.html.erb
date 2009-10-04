@@ -19,7 +19,9 @@
     <td class='top_column top_users' valign='top'>
       <h2><%= t 'top.top_users' %></h2>
 
-      <%= render :partial => "user/for_top", :collection => @top_users, :as => :user, :locals => { :time_interval => @time_interval } %>
+      <% @top_users.each do |user| %>
+        <%= render_cell :user, :for_top, :user => user, :time_interval => @time_interval %>
+      <% end %>
     </td>
   </tr>
 </table>
