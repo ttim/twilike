@@ -46,7 +46,7 @@ module ApplicationHelper
   def movie_image_tag(movie, size)
     image = movie.image_url_with_size(size)
     image = image_path(NO_IMAGE) if image == nil
-    
+
     "<img alt='"+movie.translated_name+"' class = 'movie_img_"+size.to_s+"' id = 'movie_"+movie.small_name+"' src='"+image+"' />"
   end
 

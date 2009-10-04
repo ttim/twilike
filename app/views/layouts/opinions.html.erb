@@ -13,7 +13,7 @@
         <% if @movie then %>
 
         <div id="add_info">
-          <%= render :partial => "movie/for_sidebar", :locals => {:movie => @movie} %>
+          <%= render_cell :movie, :for_info, :movie => @movie %>
         </div>
 
         <% end %>

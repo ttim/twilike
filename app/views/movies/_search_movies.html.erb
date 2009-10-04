@@ -16,7 +16,11 @@
                  current << movie if i%3 == 0
              end
           %>
-          <%= render :partial => "movie/for_search", :collection => current, :as => :movie %>
+
+          <% current.each do |movie| %>
+              <%= render_cell :movie, :for_search, :movie => movie %>
+          <% end %>
+          
         </td>
     <% end %>
   </tr>
