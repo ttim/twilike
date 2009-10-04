@@ -9,10 +9,12 @@
 
 #add_info img {
     width: 200px;
+    height: 160px;
 }
 
 #add_info .user_stats img {
     width: 24px;
+    height: 24px;
     margin-left: -10px;
 }
 

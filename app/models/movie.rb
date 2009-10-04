@@ -154,7 +154,7 @@ class Movie < ActiveRecord::Base
     self.top_by_rating('ASC', count, time_interval)
   end
 
-  def image_url(size) # small, medium or big
+  def image_url_with_size(size) # small, medium or big
     return nil if (self.image_url == nil) # || (RAILS_ENV == "development")
 
     # get image from GAE

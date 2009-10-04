@@ -3,7 +3,7 @@
     <tr>
       <td><img src='<%= rating_image(opinion) %>'/></td>
       <td>
-        <%= movie_small_image_tag(opinion.movie) %>
+        <%= movie_image_tag(opinion.movie, :small) %>
       </td>
       <td>
         <%= movie_href(opinion.movie) %>

@@ -1,4 +1,4 @@
-<img src='<%= image_path(movie.medium_image_url || ApplicationHelper::NO_IMAGE) %>'/>
+<%= movie_image_tag(movie, :medium) %>
 
 <table cellspacing='0'>
   <tr>
@@ -52,6 +52,6 @@
 
 <% end %>
 
-<div class='info' id='more_info'><a href='<%= movie.imdb_href %>'><%= t 'movie.more_info' %></a></div>
+<div class='info' id='more_info'><a href='<%= movie.imdb_url %>'><%= t 'movie.more_info' %></a></div>
 
 <div class='info' id='comment_on_twitter'><%= comment_movie(movie, t('message.comment_on_twitter')) %></div>

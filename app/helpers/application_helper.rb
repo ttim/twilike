@@ -43,25 +43,11 @@ module ApplicationHelper
     "<a class='movie_href' href='"+url_for(:controller => :opinions, :action => :by_movie, :small_name => movie.small_name)+"'>"+movie.translated_name+"</a>"
   end
 
-  def movie_big_image_tag(movie)
-    image = movie.big_image_url
+  def movie_image_tag(movie, size)
+    image = movie.image_url_with_size(size)
     image = image_path(NO_IMAGE) if image == nil
-
-    "<img alt='"+movie.translated_name+"' class = 'movie_img_big' id = 'movie_"+movie.small_name+"' src='"+image+"' />"
-  end
-
-  def movie_medium_image_tag(movie)
-    image = movie.medium_image_url
-    image = image_path(NO_IMAGE) if image == nil
-
-    "<img alt='"+movie.translated_name+"' class = 'movie_img_medium' id = 'movie_"+movie.small_name+"' src='"+image+"' />"
-  end
-
-  def movie_small_image_tag(movie)
-    image = movie.small_image_url
-    image = image_path(NO_IMAGE) if image == nil
-
-    "<img alt='"+movie.translated_name+"' class = 'movie_img_small' src='"+image+"' />"
+    
+    "<img alt='"+movie.translated_name+"' class = 'movie_img_"+size.to_s+"' id = 'movie_"+movie.small_name+"' src='"+image+"' />"
   end
 
   def view_link(view_type)
