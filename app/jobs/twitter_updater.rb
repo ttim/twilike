@@ -1,6 +1,6 @@
 class TwitterUpdater
   JOB_PRIORITY = 7
-  JOB_DELAY = 2.minute
+  JOB_DELAY = 3.minute
 
   def add_tweet_by_id(id)
     if (AddedTweet.find_by_tweet_id(id.to_s) == nil)
