@@ -7,7 +7,7 @@ class CreateThumbs
   end
 
   def perform
-    Movie::IMAGE_SIZES.each do |size|
+    Movie::IMAGE_SIZES.each_value do |size|
       raise "Thumbs not created!" unless ImageProcessor.store_image(@url, @short_name, size[:width], size[:height])
     end
     

@@ -11,7 +11,7 @@
     <td class='top_column' valign='top'>
       <h2><%= t 'top.worst_movies' %></h2>
 
-      <% @top_movies.each do |movie| %>
+      <% @worst_movies.each do |movie| %>
           <%= render_cell :movie, :for_worst_top, :movie => movie, :time_interval => @time_interval %>
       <% end %>
     </td>

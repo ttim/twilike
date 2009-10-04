@@ -9,7 +9,7 @@ module Delayed
   # Contains the work object as a YAML field.
   class Job < ActiveRecord::Base
     MAX_ATTEMPTS = 25
-    MAX_RUN_TIME = 10.seconds
+    MAX_RUN_TIME = 60.seconds
     set_table_name :delayed_jobs
 
     # By default failed jobs are destroyed after too many attempts.

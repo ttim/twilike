@@ -1,3 +1,6 @@
 #!/usr/bin/env ruby
+require 'rubygems'
+require 'win32console'
+
 require File.expand_path('../../config/boot',  __FILE__)
 require 'commands/server'
