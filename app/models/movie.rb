@@ -1,4 +1,10 @@
 class Movie < ActiveRecord::Base
+  IMAGE_SIZES = {
+          :small => {:width => 67, :height => 50},
+          :medium => {:width => 260, :height => 195},
+          :big => {:width => 450, :height => 337}
+  }
+
   has_many :opinions
 
   validates_presence_of :imdb_id, :message => "imdb id is required!"
@@ -48,38 +54,41 @@ class Movie < ActiveRecord::Base
 
     if self.image_url != nil
       Delayed::Job.enqueue(CreateThumbs.new(self.small_name, self.image_url),
-                         CreateThumbs::JOB_PRIORITY, Time.now)
+                           CreateThumbs::JOB_PRIORITY, Time.now)
     end
   end
 
   def update_info(info)
     self.original_name = info["original_name"]
+    self.year = info["year"]
+
     self.russian_name = info["russian_name"]
     self.english_name = info["english_name"]
-
-    self.small_name = small_name_for(info["english_name"])
 
     self.russian_tagline = info["russian_tagline"]
     self.english_tagline = info["english_tagline"]
 
-    self.year = info["year"]
-
-    if info["image_url"] != self.image_url
+    is_update = false
+    if self.small_name != small_name_for(info["english_name"])
+      is_update = true
+      self.small_name = small_name_for(info["english_name"])
+    end
+    if self.image_url != info["image_url"]
+      is_update = true
       self.image_url = info["image_url"]
-      # update saved image - /movies/original/small_name.jpeg
-      # /movies/medium/ /movies/small
-      update_saved_image
     end
 
     names = "|"
     info["names"].each { |name| names += name + "|" }
-
     self.names = names
+
+
+    update_saved_image if is_update
   end
 
   def translated_name
     name = nil
-    
+
     name = self.russian_name if I18n.locale == "ru"
     name = self.english_name if I18n.locale == "en"
 
@@ -94,7 +103,7 @@ class Movie < ActiveRecord::Base
     self.english_tagline
   end
 
-  def imdb_href
+  def imdb_url
     "http://imdb.com/title/tt"+self.imdb_id.to_s
   end
 
@@ -145,24 +154,10 @@ class Movie < ActiveRecord::Base
     self.top_by_rating('ASC', count, time_interval)
   end
 
-  def small_image_url
+  def image_url(size) # small, medium or big
     return nil if (self.image_url == nil) # || (RAILS_ENV == "development")
 
-    # from GAE
-    ImageProcessor.get_image_href(self.small_name, 67, 50)
-  end
-
-  def medium_image_url
-    return nil if (self.image_url == nil) # || (RAILS_ENV == "development")
-
-    # from GAE
-    ImageProcessor.get_image_href(self.small_name, 260, 195)
-  end
-
-  def big_image_url
-    return nil if (self.image_url == nil) # || (RAILS_ENV == "development")
-
-    # from GAE
-    ImageProcessor.get_image_href(self.small_name, 450, 337)
+    # get image from GAE
+    ImageProcessor.get_image_url(self.small_name, IMAGE_SIZES[size][:width], IMAGE_SIZES[size][:height])
   end
 end

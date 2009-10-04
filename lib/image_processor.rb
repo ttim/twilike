@@ -17,7 +17,7 @@ class ImageProcessor
     result["result"] == "ok"
   end
 
-  def self.get_image_href(short_name, width, height)
+  def self.get_image_url(short_name, width, height)
     base_uri+'/'+width.to_s+'/'+height.to_s+'/'+short_name+'.jpeg'
   end
 end
