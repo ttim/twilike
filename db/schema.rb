@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090920204745) do
+ActiveRecord::Schema.define(:version => 20091004045147) do
 
   create_table "added_tweets", :force => true do |t|
     t.string   "tweet_id",   :limit => 14
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(:version => 20090920204745) do
     t.datetime "updated_at"
   end
 
+  add_index "added_tweets", ["tweet_id"], :name => "index_added_tweets_on_tweet_id"
+
   create_table "caches", :force => true do |t|
     t.string   "key"
     t.datetime "delete_at"
@@ -25,6 +27,8 @@ ActiveRecord::Schema.define(:version => 20090920204745) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "caches", ["key"], :name => "index_caches_on_key"
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -54,6 +58,8 @@ ActiveRecord::Schema.define(:version => 20090920204745) do
     t.datetime "updated_at"
   end
 
+  add_index "movies", ["small_name"], :name => "index_movies_on_small_name"
+
   create_table "opinions", :force => true do |t|
     t.string   "tweet_id",   :default => "", :null => false
     t.integer  "movie_id",                   :null => false
@@ -64,6 +70,9 @@ ActiveRecord::Schema.define(:version => 20090920204745) do
     t.datetime "updated_at"
   end
 
+  add_index "opinions", ["rating"], :name => "index_opinions_on_rating"
+  add_index "opinions", ["tweet_id"], :name => "index_opinions_on_tweet_id"
+
   create_table "users", :force => true do |t|
     t.integer  "twitter_id",        :null => false
     t.string   "screen_name"
@@ -72,5 +81,7 @@ ActiveRecord::Schema.define(:version => 20090920204745) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["screen_name"], :name => "index_users_on_screen_name"
 
 end

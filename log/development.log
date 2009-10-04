@@ -1,1 +1,69 @@
-# Logfile created on Thu Oct 01 16:14:45 +0400 2009
+# Logfile created on Thu Oct 01 16:14:45 +0400 2009  [4;36;1mSQL (81.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (61.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (83.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090909073226)
+Migrating to CreateDelayedJobs (20090909073442)
+Migrating to CreateMovies (20090910050106)
+Migrating to CreateOpinions (20090910103430)
+Migrating to CreateAddedTweets (20090911035643)
+Migrating to CreateCaches (20090920204745)
+Migrating to AddIndexesForUsers (20091004044430)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090909073226)
+Migrating to CreateDelayedJobs (20090909073442)
+Migrating to CreateMovies (20090910050106)
+Migrating to CreateOpinions (20090910103430)
+Migrating to CreateAddedTweets (20090911035643)
+Migrating to CreateCaches (20090920204745)
+Migrating to AddIndexesForUsers (20091004044430)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090909073226)
+Migrating to CreateDelayedJobs (20090909073442)
+Migrating to CreateMovies (20090910050106)
+Migrating to CreateOpinions (20090910103430)
+Migrating to CreateAddedTweets (20090911035643)
+Migrating to CreateCaches (20090920204745)
+Migrating to AddIndexesForUsers (20091004044430)
+  [4;36;1mSQL (789.0ms)[0m   [0;1mCREATE INDEX `index_users_on_screen_name` ON `users` (`screen_name`)[0m
+  [4;35;1mSQL (36.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091004044430')[0m
+Migrating to AddIndexesForMovies (20091004044722)
+  [4;36;1mSQL (617.0ms)[0m   [0;1mCREATE INDEX `index_movies_on_small_name` ON `movies` (`small_name`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091004044722')[0m
+Migrating to AddIndexesForOpinions (20091004044952)
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCREATE INDEX `index_opinions_on_tweet_id` ON `opinions` (`tweet_id`)[0m
+  [4;35;1mSQL (111.0ms)[0m   [0mCREATE INDEX `index_opinions_on_rating` ON `opinions` (`rating`)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091004044952')[0m
+Migrating to AddIndexesForAddedTweets (20091004045129)
+  [4;35;1mSQL (570.0ms)[0m   [0mCREATE INDEX `index_added_tweets_on_tweet_id` ON `added_tweets` (`tweet_id`)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091004045129')[0m
+Migrating to AddIndexesForCaches (20091004045147)
+  [4;35;1mSQL (1119.0ms)[0m   [0mCREATE INDEX `index_caches_on_key` ON `caches` (`key`)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091004045147')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (543.0ms)[0m   [0;1mSHOW FIELDS FROM `added_tweets`[0m
+  [4;35;1mSQL (24.0ms)[0m   [0mdescribe `added_tweets`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSHOW KEYS FROM `added_tweets`[0m
+  [4;35;1mSQL (933.0ms)[0m   [0mSHOW FIELDS FROM `caches`[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mdescribe `caches`[0m
+  [4;35;1mSQL (13.0ms)[0m   [0mSHOW KEYS FROM `caches`[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mSHOW FIELDS FROM `delayed_jobs`[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mdescribe `delayed_jobs`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mSHOW KEYS FROM `delayed_jobs`[0m
+  [4;35;1mSQL (483.0ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mSQL (20.0ms)[0m   [0;1mdescribe `movies`[0m
+  [4;35;1mSQL (11.0ms)[0m   [0mSHOW KEYS FROM `movies`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (17.0ms)[0m   [0mdescribe `opinions`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mSHOW KEYS FROM `opinions`[0m
+  [4;35;1mSQL (522.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (29.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
