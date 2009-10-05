@@ -35,8 +35,8 @@ img {
 }
 
 div#content {
-    min-height: 750px;
-    height: expression(this.scrollHeight > 750 ? "auto":"750px");
+    min-height: 777px;
+    height: expression(this.scrollHeight > 777 ? "auto":"777px");
 }
 
 /* --------------left navi------------- */
@@ -205,8 +205,6 @@ h3 {
 
     border: 2px black solid;
 }
-
-
 #sidebar {
     text-align: right;
 }
@@ -383,10 +381,12 @@ h3 {
 
 #add_info img {
     width: 200px;
+    height: 160px;
 }
 
 #add_info .user_stats img {
     width: 24px;
+    height: 24px;
     margin-left: -10px;
 }
 

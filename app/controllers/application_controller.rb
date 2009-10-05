@@ -66,8 +66,7 @@ class ApplicationController < ActionController::Base
 
     @_key = I18n.locale.to_s+separator+
            request.parameters["controller"]+separator+
-           request.parameters["action"]+separator+
-           @theme
+           request.parameters["action"]
 
     args.each { |arg| @_key += separator+arg  if arg != nil }
 
