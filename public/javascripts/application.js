@@ -13,8 +13,6 @@ function setCookie(c_name, value, expire_days)
              ((expire_days == null) ? "" : ";expires=" + date.toGMTString()) +
              ";path=/; domain=." + RAILS_DOMAIN;
 
-    alert(params)
-
     document.cookie = params
 }
 
