@@ -78,15 +78,31 @@ module ApplicationHelper
   end
    
   def colors_css_link_tag(*args)
+    theme = "theme1" # it's default theme
+    
     tmp = []
-    args.each { |arg| tmp << (@theme+"/"+arg) }
-
+    args.each { |arg| tmp << (theme+"/"+arg) }
     
     if RAILS_ENV == "production"
-      stylesheet_link_tag('_'+@theme)
+      result = stylesheet_link_tag('_'+theme)
     else
-      stylesheet_link_tag(tmp)
+      result = stylesheet_link_tag(tmp)
+
+      result += '<script type="text/javascript">'
+
+      files = []
+      args.each { |arg| files << ("'"+arg+"'") }
+
+      result += 'THEME_FILES = ['+files.join(",")+']'
+
+      result += '</script>'
     end
+
+    result
+  end
+
+  def rails_env_javascript
+    '<script type="text/javascript">RAILS_ENV="'+RAILS_ENV+'"</script>'
   end
 
   def change_url(what, how)

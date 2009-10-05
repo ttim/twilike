@@ -41,8 +41,8 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: twilike_production
+  database: twilike_development
   pool: 5
   username: root
-  password: EXT8ciGH
+  password: 
   host: localhost

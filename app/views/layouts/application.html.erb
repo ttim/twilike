@@ -2,12 +2,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <%= rails_env_javascript %>
+    
   <%= main_css_link_tag "main",
                         "sidebar", "timeline", "top", "by_movie", "by_user", "one_opinion" %>
   <%= colors_css_link_tag "main", "sidebar", "timeline", "top",
                           "by_movie", "by_user", "one_opinion" %>
-  <%= javascript_include_tag "jquery-1.3.2.min",
-                             "application" %>
+
+  <%= javascript_include_tag "application",
+                             "jquery-1.3.2.min",
+                             "application_on_ready" %>
 
   <title>
     <%= @title || t("default.title") %>
@@ -21,14 +25,15 @@
 <script type="text/javascript" language="JavaScript" src="http://reformal.ru/tab.js?title=Twilike.net&domain=twilike&color=FFA000&align=right&charset=utf-8&ltitle=&lfont=&lsize=&waction=0&regime=0"></script>
 
 <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-1794842-8");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+    try {
+        var pageTracker = _gat._getTracker("UA-1794842-8");
+        pageTracker._trackPageview();
+    } catch(err) {
+    }</script>
 
 </body>
 </html>
