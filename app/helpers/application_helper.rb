@@ -1,5 +1,6 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  DOMAINS = { 'development' => 'localhost:3000', 'production' => 'twilike.net' }
   NO_IMAGE = 'no_image.jpg'
 
   def lang_link(language_name, language_locale)
@@ -102,7 +103,8 @@ module ApplicationHelper
   end
 
   def rails_env_javascript
-    '<script type="text/javascript">RAILS_ENV="'+RAILS_ENV+'"; RAILS_DOMAIN="'+request.domain(2)+'"</script>'
+    domain = DOMAINS[RAILS_ENV]
+    '<script type="text/javascript">RAILS_ENV="'+RAILS_ENV+'"; RAILS_DOMAIN="'+domain+'"</script>'
   end
 
   def change_url(what, how)
