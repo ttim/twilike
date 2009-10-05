@@ -102,7 +102,7 @@ module ApplicationHelper
   end
 
   def rails_env_javascript
-    '<script type="text/javascript">RAILS_ENV="'+RAILS_ENV+'"</script>'
+    '<script type="text/javascript">RAILS_ENV="'+RAILS_ENV+'"; RAILS_DOMAIN="'+request.domain(2)+'"</script>'
   end
 
   def change_url(what, how)

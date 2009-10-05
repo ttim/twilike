@@ -11,7 +11,7 @@ function setCookie(c_name, value, expire_days)
 
     document.cookie = c_name + "=" + escape(value) +
                       ((expire_days == null) ? "" : ";expires=" + date.toGMTString())+
-                      ";path=/";
+                      ";path=/; domain=."+RAILS_DOMAIN;
 }
 
 function getCookie(c_name)
