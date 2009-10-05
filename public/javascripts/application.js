@@ -1,17 +1,20 @@
 function setCookie(c_name, value, expire_days)
 {
     // delete old cookie
-    var cookie_date = new Date ( );  // current date & time
-    cookie_date.setTime ( cookie_date.getTime() - 1 );
+    var cookie_date = new Date();  // current date & time
+    cookie_date.setTime(cookie_date.getTime() - 1);
     document.cookie = c_name + "=; expires=" + cookie_date.toGMTString();
 
     // set new
     var date = new Date();
     date.setDate(date.getDate() + expire_days);
 
-    document.cookie = c_name + "=" + escape(value) +
-                      ((expire_days == null) ? "" : ";expires=" + date.toGMTString())+
-                      ";path=/; domain=."+RAILS_DOMAIN;
+    params = c_name + "=" + escape(value) +
+             ((expire_days == null) ? "" : ";expires=" + date.toGMTString()) +
+             ";path=/; domain=." + RAILS_DOMAIN;
+
+
+    document.cookie = params
 }
 
 function getCookie(c_name)
@@ -56,7 +59,7 @@ function set_theme(theme) {
 
 function load_default_theme() {
     theme = getCookie("theme")
-    
+
     if ((theme != "theme1") && (theme != "theme2")) theme = "theme1"
 
     set_theme(theme)
