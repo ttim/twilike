@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="abfd4eec-63ef-4c86-b7d3-7ff60c67419a" name="Default" comment="for_user(1/2) and for_movie is here! :-)">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/common/_footer.html.erb" afterPath="$PROJECT_DIR$/app/views/common/_footer.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
@@ -64,7 +63,7 @@
       <file leaf-file-name="_footer.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/common/_footer.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="6" selection-start="401" selection-end="401" vertical-scroll-proportion="0.54545456">
+            <state line="11" column="6" selection-start="393" selection-end="393" vertical-scroll-proportion="0.5">
               <folding />
             </state>
           </provider>
@@ -980,7 +979,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/common/_footer.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="401" selection-end="401" vertical-scroll-proportion="0.54545456">
+        <state line="11" column="6" selection-start="393" selection-end="393" vertical-scroll-proportion="0.5">
           <folding />
         </state>
       </provider>
