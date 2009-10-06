@@ -3,28 +3,43 @@
 
 class ApplicationController < ActionController::Base
   USE_CACHE = (RAILS_ENV == "production")
-  
+
+  DOMAINS = { 'development' => 'twiliked.net', 'production' => 'twilike.net' }
+
+  RAILS_DOMAIN = DOMAINS[RAILS_ENV]
+  RAILS_PORT = (if (RAILS_ENV == "development") then ":3000" else "" end)
+
+  LANGUAGES = ["ru", "en"]
+
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
-  before_filter :sets
+  before_filter :check_domain, :_set_view
   after_filter :save_to_cache
 
-  def sets
-    _set_locale
-    _set_view
-    _set_theme
-  end
-  
-  def _set_locale
-    ["ru", "en"].each do |lang|
-      if cookies[:locale] == lang
-        I18n.locale = lang
-        return
-      end
-    end
+  def self.change_language(url, language)
+    tmp = url.from(7)
+    tmp = tmp.from(tmp.index("/"))
 
-    I18n.locale = "ru"
+    "http://"+language+"."+RAILS_DOMAIN+RAILS_PORT+tmp
+  end
+
+  def check_domain
+    current = nil
+
+    LANGUAGES.each { |lang| current = lang if lang+"."+RAILS_DOMAIN == request.host }
+
+    if (!current)
+      # get cookie language
+      language = 'ru' # default language
+      LANGUAGES.each { |lang| language = lang if cookies[:locale] == lang }
+
+      redirect_to ApplicationController.change_language(request.url, language)
+    else
+      I18n.locale = current
+
+      cookies[:locale] = { :value => current, :expires => 1.year.from_now, :domain => "."+RAILS_DOMAIN }
+    end
   end
 
   def _set_view
@@ -37,17 +52,6 @@ class ApplicationController < ActionController::Base
 
     @view = "block" # default
   end
-
-  def _set_theme
-    ["theme1", "theme2"].each do |theme|
-      if cookies[:theme] == theme
-        @theme = theme
-        return
-      end
-    end
-
-    @theme = "theme1" # default
-  end  
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
@@ -65,10 +69,10 @@ class ApplicationController < ActionController::Base
     @_time = time
 
     @_key = I18n.locale.to_s+separator+
-           request.parameters["controller"]+separator+
-           request.parameters["action"]
+            request.parameters["controller"]+separator+
+            request.parameters["action"]
 
-    args.each { |arg| @_key += separator+arg  if arg != nil }
+    args.each { |arg| @_key += separator+arg if arg != nil }
 
     result = Cache.get(@_key)
     if USE_CACHE && (result != nil)

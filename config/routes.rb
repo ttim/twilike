@@ -11,10 +11,8 @@ ActionController::Routing::Routes.draw do |map|
   map.opinion 'opinion/:tweet_id', :controller => 'opinions', :action => 'one'
 
   map.about 'about', :controller => 'static', :action => 'about'
-  map.set_lang 'set_lang/:lang', :controller => 'common', :action => 'set_lang'
   map.set_view 'set_view/:view', :controller => 'common', :action => 'set_view'
-  map.set_theme 'set_theme/:theme', :controller => 'common', :action => 'set_theme'
-
+  
   map.root :controller => 'opinions', :action => 'timeline'
 
   # work_off

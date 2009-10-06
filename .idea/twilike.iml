@@ -18,6 +18,18 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="sqlite3-ruby" version="0" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="vendor/plugins/delayed_job/spec/database.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="daemons" version="0" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="httparty" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environment.rb" />
@@ -33,18 +45,6 @@
         <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/boot.rb" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="sqlite3-ruby" version="0" bound="GREATER_OR_EQUAL" />
-      </requirement>
-      <source from="vendor/plugins/delayed_job/spec/database.rb" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="daemons" version="0" bound="GREATER_OR_EQUAL" />
-      </requirement>
-      <source from="config/environment.rb" />
     </requirement>
   </component>
   <component name="NewModuleRootManager">
