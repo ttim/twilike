@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
       language = 'ru' # default language
       LANGUAGES.each { |lang| language = lang if cookies[:locale] == lang }
 
-      redirect_to ApplicationController.change_language(request.url, language)
+      redirect_to_full_url(ApplicationController.change_language(request.url, language), 301)
     else
       I18n.locale = current
 
