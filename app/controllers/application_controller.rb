@@ -66,14 +66,14 @@ class ApplicationController < ActionController::Base
 
     result = Cache.get(@_key)
     if USE_CACHE && (result != nil)
+      response.headers['Cache-Control'] = 'public, max-age='+time.to_i.to_s
       render :text => result
-      @cached = true
 
+      @cached = true
       return true
     end
 
     @cached = false
-
     false
   end
 
