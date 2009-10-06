@@ -53,36 +53,36 @@ module ApplicationHelper
   def view_link(view_type)
     text = t("by_user."+view_type+"_view")
 
-    puts "!"+view_type+" "+@view
-
     html = {}
     html = { :class => "active_tab" } if view_type == @view
 
-    link_to text, change_url('view', view_type), html
+    link_to text,
+            user_movies_url(:screen_name => params[:screen_name], :page => params[:page], :view => view_type),
+            html
   end
 
   def opinion_link(opinion)
     id = opinion.tweet_id
     url_for(opinion_url :tweet_id => id)
-  end 
+  end
 
   def main_css_link_tag(*args)
     tmp = []
     args.each { |arg| tmp << arg }
-    
+
     if RAILS_ENV == "production"
       stylesheet_link_tag("_all")
     else
       stylesheet_link_tag(tmp)
     end
   end
-   
+
   def colors_css_link_tag(*args)
     theme = "theme1" # it's default theme
-    
+
     tmp = []
     args.each { |arg| tmp << (theme+"/"+arg) }
-    
+
     if RAILS_ENV == "production"
       result = stylesheet_link_tag('_'+theme)
     else
@@ -103,10 +103,6 @@ module ApplicationHelper
 
   def rails_env_javascript
     '<script type="text/javascript">RAILS_ENV="'+RAILS_ENV+'"; RAILS_DOMAIN="'+ApplicationController::RAILS_DOMAIN+'"</script>'
-  end
-
-  def change_url(what, how)
-    url_for("/set_"+what+"/"+how+"?back="+CGI::escape(request.url))
   end
 
   def comment_movie(movie, text = "@")

@@ -10,11 +10,12 @@ class ApplicationController < ActionController::Base
   RAILS_PORT = (if (RAILS_ENV == "development") then ":3000" else "" end)
 
   LANGUAGES = ["ru", "en"]
+  USER_VIEWS = ["block", "line"]
 
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
-  before_filter :check_domain, :_set_view
+  before_filter :check_domain
   after_filter :save_to_cache
 
   def self.change_language(url, language)
@@ -40,17 +41,6 @@ class ApplicationController < ActionController::Base
 
       cookies[:locale] = { :value => current, :expires => 1.year.from_now, :domain => "."+RAILS_DOMAIN }
     end
-  end
-
-  def _set_view
-    ["block", "line"].each do |view|
-      if cookies[:view] == view
-        @view = view
-        return
-      end
-    end
-
-    @view = "block" # default
   end
 
   # Scrub sensitive parameters from your log
@@ -83,6 +73,7 @@ class ApplicationController < ActionController::Base
     end
 
     @cached = false
+
     false
   end
 

@@ -79,6 +79,26 @@ class OpinionsController < ApplicationController
 
   # get movies by user
   def by_user
+    # getting view
+    @view = nil
+    USER_VIEWS.each { |view| @view = view if params[:view] == view }
+
+    # redirect if view = nil
+    if @view == nil
+      # get default view from cookies
+      new_view = 'block' # default view
+      USER_VIEWS.each { |view| new_view = view if cookies[:view] == view }
+
+      head :moved_permanently,
+           :location => user_movies_url(:screen_name => params[:screen_name], :page => params[:page], :view => new_view)
+
+      return
+    end
+
+    # set current view as default
+    cookies[:view] = { :value => @view, :expires => 1.year.from_now, :domain => "."+RAILS_DOMAIN }
+
+    # it's all true
     return if caching(3.minutes, params[:screen_name], params[:page], @view)
 
     @user = User.first(:conditions => { :screen_name => params[:screen_name] })
