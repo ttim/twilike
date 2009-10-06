@@ -28,3 +28,7 @@
     background: #333;
     color: #fff;
 }
+
+#content h2, .static, .user_line_response, .by_movie_response {
+    color: #e1ddd9;
+}

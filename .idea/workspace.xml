@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="abfd4eec-63ef-4c86-b7d3-7ff60c67419a" name="Default" comment="for_user(1/2) and for_movie is here! :-)">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/theme2/top.css" afterPath="$PROJECT_DIR$/public/stylesheets/theme2/top.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/common/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/common/_navigation.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/_search_users.html.erb" afterPath="$PROJECT_DIR$/app/views/movies/_search_users.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/twilike.iml" afterPath="$PROJECT_DIR$/.idea/twilike.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/theme2/main.css" afterPath="$PROJECT_DIR$/public/stylesheets/theme2/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/theme1/top.css" afterPath="$PROJECT_DIR$/public/stylesheets/theme1/top.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/main.css" afterPath="$PROJECT_DIR$/public/stylesheets/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/theme2/sidebar.css" afterPath="$PROJECT_DIR$/public/stylesheets/theme2/sidebar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/sidebar.css" afterPath="$PROJECT_DIR$/public/stylesheets/sidebar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/theme2/one_opinion.css" afterPath="$PROJECT_DIR$/public/stylesheets/theme2/one_opinion.css" />
     </list>
     <list id="a0d2f9af-e795-4e6f-b662-c749f6f2d48c" name="Failed commit: Default" comment="initial commit" />
     <ignored path=".idea/workspace.xml" />
@@ -60,16 +55,25 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="62" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="one_opinion.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/one_opinion.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="1" selection-start="480" selection-end="480" vertical-scroll-proportion="0.8718593">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/sidebar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="792" selection-end="792" vertical-scroll-proportion="0.73368144">
+            <state line="47" column="0" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,7 +118,7 @@
       <file leaf-file-name="_theme2.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/_theme2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="30" selection-start="11" selection-end="37" vertical-scroll-proportion="0.0">
+            <state line="5" column="30" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,7 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/javascripts/application.js" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/controllers/opinions_controller.rb" />
@@ -147,8 +150,9 @@
         <option value="$PROJECT_DIR$/public/stylesheets/theme2/top.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/theme1/top.css" />
         <option value="$PROJECT_DIR$/app/views/movies/_search_users.html.erb" />
-        <option value="$PROJECT_DIR$/public/stylesheets/theme2/main.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/theme2/sidebar.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/theme2/main.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/theme2/one_opinion.css" />
       </list>
     </option>
   </component>
@@ -955,11 +959,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application_on_ready.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="5" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/sidebar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="22" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
@@ -990,7 +989,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/_theme2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="30" selection-start="11" selection-end="37" vertical-scroll-proportion="0.0">
+        <state line="5" column="30" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1051,16 +1050,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/main.css">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/sidebar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="62" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+        <state line="47" column="0" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/sidebar.css">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="792" selection-end="792" vertical-scroll-proportion="0.73368144">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme2/one_opinion.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="1" selection-start="480" selection-end="480" vertical-scroll-proportion="0.8718593">
           <folding />
         </state>
       </provider>
