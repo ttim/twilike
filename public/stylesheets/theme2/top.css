@@ -1,7 +1,3 @@
-#tops h2 {
-    color: white;
-}
-
 .top_users {
     border-left: 1px dashed #676767;
     color: #676767;
@@ -12,10 +8,10 @@
 }
 
 /*---- user ------*/
-.profile {
-    color: black;
-}
-
 .profile a {
     color: white;
+}
+
+.profile h3, .top_response {
+    color: #e1ddd9;
 }

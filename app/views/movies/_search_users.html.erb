@@ -3,7 +3,7 @@
 <% end %>
 
 <% @users.each do |user| %>
-    <%= render :partial => 'user/for_top', :locals => {:time_interval => nil, :user => user} %>
+    <%= render_cell 'user', 'for_top', :time_interval => nil, :user => user %>
 <% end %>
 
 <%= render :partial => 'common/pagination', :locals => {:collection => @users} %>

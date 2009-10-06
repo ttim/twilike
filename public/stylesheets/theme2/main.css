@@ -1,3 +1,7 @@
+#content h2, .static, .user_line_response, .by_movie_response {
+    color: #e1ddd9;
+}
+
 body {
     background-color: #e1ddd9;
     color: #564b47;
@@ -9,10 +13,6 @@ a {
 
 #container {
     background-color: #555;
-}
-
-#content {
-    color: white;
 }
 
 /* opinion block */
