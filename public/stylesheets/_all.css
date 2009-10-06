@@ -1,7 +1,6 @@
 /* based on */
 /* *** css by miss monorom www.intensivstation.ch *** */
 /* css released under Creative Commons License -  http://creativecommons.org/licenses/by/2.0/deed.en  */
-
 body {
     font: normal 100% "Lucida Grande", "Lucida Sans Unicode", Tahoma, Helvetica, Verdana, sans-serif;
     line-height: 1.7em;
@@ -205,6 +204,7 @@ h3 {
 
     border: 2px black solid;
 }
+
 #sidebar {
     text-align: right;
 }
@@ -213,6 +213,10 @@ h3 {
 #sidebar h1 {
     margin-bottom: 0px;
     font-size: 2em;
+}
+
+#sidebar h3 {
+    font-weight: bold;
 }
 
 /* love and vopros */
@@ -249,7 +253,6 @@ h3 {
 
 #viewtype_switch ul li {
     font-size: 16px;
-    font-weight: bold;
 }
 
 /* language */
