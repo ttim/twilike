@@ -1,4 +1,3 @@
-<% cache(:key => [I18n.locale.to_s, Opinion.find(:last).created_at].join(':')) do %>
 <div id="last_opinions">
   <h3><%= t "common.last_opinions" %></h3>
 
@@ -6,4 +5,3 @@
     <%= render_cell :opinion, :for_sidebar, :opinion => opinion %>
   <% end %>
 </div>
-<% end %>
