@@ -7,7 +7,7 @@
     <table>
       <tr>
         <td class = "rating" style = "font-size: 3em; font-weight: bold; height: 59px">
-          <%= if @rating then sprintf("%.1f", @rating) else "-.-" end %>
+          <%= rating(@rating) %>
         </td>
 
         <td class = "movie_name">

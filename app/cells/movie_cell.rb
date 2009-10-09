@@ -1,4 +1,6 @@
 class MovieCell < Cell::Base
+  helper :movie
+  
   def initialize(*args)
     super
 
