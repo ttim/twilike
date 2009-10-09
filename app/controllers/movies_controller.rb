@@ -30,4 +30,8 @@ class MoviesController < ApplicationController
 
     render :layout => 'opinions'
   end
+
+  def weekend
+    
+  end
 end

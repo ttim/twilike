@@ -8,19 +8,13 @@ module ApplicationHelper
     link_to language_name, ApplicationController.change_language(request.url, language_locale)
   end
 
-  def navigation_link(action_name)
+  def navigation_link(controller_name, action_name)
     text = t("common."+action_name)
 
     html = {}
     html = { :class => "active_tab" } if action_name == request.parameters["action"]
 
-    if action_name == 'about'
-      controller = 'static'
-    else
-      controller = 'opinions'
-    end
-
-    link_to text, { :controller => controller, :action => action_name }, html
+    link_to text, { :controller => controller_name, :action => action_name }, html
   end
 
   def image_for_rating(rating)

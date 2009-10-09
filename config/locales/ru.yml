@@ -4,10 +4,11 @@
 ru:
   common:
     language: "Язык"
-    top: "Топ"
+    top: "ТвиТоп"
     timeline: "Таймлайн"
     last_opinions: "Последние мнения"
-    about: "Что это?"
+    about: "Что Это?"
+    weekend: "В Кино"
   about:
     header: "Что это?"
     title: "Что это? / Twilike"

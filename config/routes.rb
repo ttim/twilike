@@ -2,9 +2,12 @@ ActionController::Routing::Routes.draw do |map|
   map.movie 'movie/:small_name', :controller => 'opinions', :action => 'by_movie'
 
   map.timeline 'timeline', :controller => 'opinions', :action => 'timeline'
+
   map.top 'top/:time', :controller => 'opinions', :action => 'top'
   map.default_top 'top', :controller => 'opinions', :action => 'top'
-  
+
+  map.weekend 'weekend', :controller => 'movies', :action => 'weekend'
+
   map.user_movies 'user/:screen_name', :controller => 'opinions', :action => 'by_user'
   map.search 'search', :controller => 'movies', :action => 'search'
 
@@ -13,7 +16,7 @@ ActionController::Routing::Routes.draw do |map|
   map.about 'about', :controller => 'static', :action => 'about'
   map.set_view 'set_view/:view', :controller => 'common', :action => 'set_view'
   
-  map.root :controller => 'opinions', :action => 'timeline'
+  map.root :controller => 'movies', :action => 'weekend'
 
   # work_off
   map.work_off 'work_off.6hfSVJH4', :controller => 'common', :action => 'work_off'

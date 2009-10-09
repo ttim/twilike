@@ -4,10 +4,11 @@
 en:
   common:
     language: "Language"
-    top: "Top"
+    top: "TwiTop"
     timeline: "Timeline"
     last_opinions: "Last opinions"
     about: "What Is It?"
+    weekend: "Weekend"
   about:
     header: "What Is It?"
     title: "What Is It? / Twilike"
