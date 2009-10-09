@@ -131,7 +131,9 @@ class Movie < ActiveRecord::Base
 
     avg = Opinion.average(:rating, :conditions => ["movie_id = :movie_id AND created_at > :min_created_at",
                                                    {:movie_id => self, :min_created_at => Time.now-time_interval}])
-    rating = 50*(avg+1)
+    rating = 5*(avg+1)
+
+    # rating = 9.9 if rating == 10
 
     rating
   end
