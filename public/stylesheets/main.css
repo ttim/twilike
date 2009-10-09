@@ -90,9 +90,9 @@ h3 {
 
 /* common - opacity */
 .opacity {
-    filter: alpha(opacity = 90);
-    -moz-opacity: .9;
-    opacity: .9;
+    filter: alpha(opacity = 70);
+    -moz-opacity: .7;
+    opacity: .7;
 }
 
 /* common - opinion block */
@@ -144,6 +144,12 @@ h3 {
     padding: 7px 7px 7px 7px;
 
     display: block;
+}
+
+.block .title:hover {
+    filter: alpha(opacity = 90);
+    -moz-opacity: .9;
+    opacity: .9;    
 }
 
 .block .data {

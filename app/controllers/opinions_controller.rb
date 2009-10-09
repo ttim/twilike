@@ -1,6 +1,7 @@
 class OpinionsController < ApplicationController
   TIMELINE_COUNT = 5
   TOP_COUNT = 5
+  USER_TOP_COUNT = 7
   
   MOVIE_COUNT = 9
   USER_COUNT = 9
@@ -74,7 +75,7 @@ class OpinionsController < ApplicationController
 
     @top_movies = Movie.top(TOP_COUNT, @time_interval)
     @worst_movies = Movie.worst(TOP_COUNT, @time_interval)
-    @top_users = User.top(TOP_COUNT, @time_interval)
+    @top_users = User.top(USER_TOP_COUNT, @time_interval)
   end
 
   # get movies by user

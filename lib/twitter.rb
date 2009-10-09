@@ -14,7 +14,7 @@ class Twitter
   end
 
   def self.last_tweets
-    # self.get('http://search.twitter.com/search.json?q=%23twilike')
+    # self.get('http://search.twitter.com/search.json?q=%23twilike&rpp=100')
     self.get('http://service.twilike.net/last_tweets.php')
   end
 
