@@ -29,6 +29,10 @@
     color: #564b47;
 }
 
+a#logo, a:hover#logo {
+    color: #564b47;
+}
+
 #sidebar .navigation ul li a:hover {
     color: #ECD;
 }
