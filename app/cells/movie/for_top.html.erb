@@ -4,11 +4,10 @@
   <%= movie_image_tag(@movie, :medium) %>
 
   <div class='data'>
-    <table>
+    <table style = "min-height: 59px">
       <tr>
-        <td valign='bottom' class = "rating">
-          <%= @rate_count %>
-          <%= image_tag(@rate_image) %>
+        <td class = "rating" style = "font-size: 1.5em">
+          <%= if @rating then sprintf("%.1f", @rating) else "--.-" end %>%
         </td>
 
         <td class = "movie_name">

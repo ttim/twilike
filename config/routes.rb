@@ -16,7 +16,7 @@ ActionController::Routing::Routes.draw do |map|
   map.about 'about', :controller => 'static', :action => 'about'
   map.set_view 'set_view/:view', :controller => 'common', :action => 'set_view'
   
-  map.root :controller => 'movies', :action => 'weekend'
+  map.root :controller => 'opinions', :action => 'timeline'
 
   # work_off
   map.work_off 'work_off.6hfSVJH4', :controller => 'common', :action => 'work_off'

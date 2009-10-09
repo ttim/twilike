@@ -126,6 +126,16 @@ class Movie < ActiveRecord::Base
     opinions_by_rating(-1, time_interval)
   end
 
+  def calc_rating(time_interval = nil)
+    time_interval = 10.years unless time_interval
+
+    avg = Opinion.average(:rating, :conditions => ["movie_id = :movie_id AND created_at > :min_created_at",
+                                                   {:movie_id => self, :min_created_at => Time.now-time_interval}])
+    rating = 50*(avg+1)
+
+    rating
+  end
+
   def self.top_by_rating(order, count, time_interval)
     if time_interval == nil
       condition = { }

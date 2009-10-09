@@ -101,7 +101,7 @@ h3 {
     margin: 0 7px 10px 0;
 
     width: 236px;
-    height: 205px;
+    height: 236px;
 
     display: block;
     overflow: hidden;
@@ -148,7 +148,9 @@ h3 {
 
 .block .data {
     font-size: 12px;
-    
+
+    min-height: 59px;
+
     position: absolute;
     display: block;
 

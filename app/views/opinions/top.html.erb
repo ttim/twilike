@@ -4,7 +4,7 @@
       <h2><%= t 'top.top_movies' %></h2>
 
       <% @top_movies.each do |movie| %>
-          <%= render_cell :movie, :for_best_top, :movie => movie, :time_interval => @time_interval %>
+          <%= render_cell :movie, :for_top, :movie => movie, :time_interval => @time_interval %>
       <% end %>
     </td>
 
@@ -12,7 +12,7 @@
       <h2><%= t 'top.worst_movies' %></h2>
 
       <% @worst_movies.each do |movie| %>
-          <%= render_cell :movie, :for_worst_top, :movie => movie, :time_interval => @time_interval %>
+          <%= render_cell :movie, :for_top, :movie => movie, :time_interval => @time_interval %>
       <% end %>
     </td>
 

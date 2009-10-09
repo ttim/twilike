@@ -6,9 +6,8 @@ class MovieCell < Cell::Base
   end
 
   def for_search
-    @rate_image = 'twilike/plus.png'
-    @rate_count = @movie.plus_count
-
+    @rating = @movie.calc_rating
+    
     render :view => 'for_top'
   end
 
@@ -16,20 +15,10 @@ class MovieCell < Cell::Base
     render
   end
 
-  def for_best_top
+  def for_top
     @time_interval = @opts[:time_interval]
 
-    @rate_image = 'twilike/plus.png'
-    @rate_count = @movie.plus_count(@time_interval)
-
-    render :view => 'for_top'
-  end
-
-  def for_worst_top
-    @time_interval = @opts[:time_interval]
-
-    @rate_image = 'twilike/minus.png'
-    @rate_count = @movie.minus_count(@time_interval)
+    @rating = @movie.calc_rating(@time_interval)
 
     render :view => 'for_top'
   end
