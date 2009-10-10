@@ -16494,3 +16494,421 @@ execution expired
   [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 628[0m
   [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
 * [JOB] CacheCleaner completed after 0.0210
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#by_movie (for 127.0.0.1 at 2009-10-10 15:41:41) [GET]
+  Parameters: {"small_name"=>"slumdog-millionaire"}
+  [4;36;1mCache Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (7.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||by_movie|||slumdog-millionaire') LIMIT 1[0m
+  [4;36;1mMovie Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (11.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'slumdog-millionaire') LIMIT 1[0m
+  [4;36;1mOpinion Load (86.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`movie_id` = 108) ORDER BY created_at DESC LIMIT 0, 9[0m
+Rendering template within layouts/opinions
+Rendering opinions/by_movie
+  [4;35;1mOpinion Columns (13.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mUser Columns (64.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (34.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+Rendered common/_pagination (2.0ms)
+Rendered common/_navigation (6.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mMovie Load (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (182.0ms)
+Rendered common/_sidebar (205.0ms)
+  [4;35;1mSQL (5.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`rating` = 1 AND `opinions`.`movie_id` = 108) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`rating` = 0 AND `opinions`.`movie_id` = 108) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`rating` = -1 AND `opinions`.`movie_id` = 108) [0m
+Rendered common/_footer (4.0ms)
+Completed in 1125ms (View: 617, DB: 269) | 200 OK [http://ru.twiliked.net/movie/slumdog-millionaire]
+  [4;36;1mSQL (13.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#by_user (for 127.0.0.1 at 2009-10-10 15:41:55) [GET]
+  Parameters: {"screen_name"=>"vagav"}
+Completed in 19ms (View: 5, DB: 14) | 301 Moved Permanently [http://ru.twiliked.net/user/vagav]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#by_user (for 127.0.0.1 at 2009-10-10 15:41:56) [GET]
+  Parameters: {"view"=>"line", "screen_name"=>"vagav"}
+  [4;36;1mCache Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (6.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||by_user|||vagav|||line') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`screen_name` = 'vagav') LIMIT 1[0m
+  [4;35;1mUser Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 60) ORDER BY created_at DESC LIMIT 0, 9[0m
+Rendering template within layouts/opinions
+Rendering opinions/by_user
+  [4;35;1mOpinion Columns (12.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mMovie Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (10.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_pagination (1.0ms)
+Rendered common/_navigation (5.0ms)
+Rendered common/_view_switch (79.0ms)
+Rendered common/_search (1.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (200.0ms)
+Rendered common/_sidebar (321.0ms)
+Rendered common/_footer (3.0ms)
+Completed in 896ms (View: 675, DB: 64) | 200 OK [http://ru.twiliked.net/user/vagav?view=line]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#by_user (for 127.0.0.1 at 2009-10-10 15:42:00) [GET]
+  Parameters: {"view"=>"block", "screen_name"=>"vagav"}
+  [4;36;1mCache Columns (19.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (14.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||by_user|||vagav|||block') LIMIT 1[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`screen_name` = 'vagav') LIMIT 1[0m
+  [4;35;1mUser Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 60) ORDER BY created_at DESC LIMIT 0, 9[0m
+Rendering template within layouts/opinions
+Rendering opinions/by_user
+  [4;35;1mOpinion Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mMovie Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (9.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+Rendered common/_pagination (2.0ms)
+Rendered common/_navigation (6.0ms)
+Rendered common/_view_switch (9.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (215.0ms)
+Rendered common/_sidebar (252.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 937ms (View: 687, DB: 78) | 200 OK [http://ru.twiliked.net/user/vagav?view=block]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#by_user (for 127.0.0.1 at 2009-10-10 15:42:28) [GET]
+  Parameters: {"view"=>"block", "screen_name"=>"vagav"}
+  [4;35;1mCache Columns (12.0ms)[0m   [0mSHOW FIELDS FROM `caches`[0m
+  [4;36;1mCache Load (1.0ms)[0m   [0;1mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||by_user|||vagav|||block') LIMIT 1[0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`screen_name` = 'vagav') LIMIT 1[0m
+  [4;36;1mUser Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 60) ORDER BY created_at DESC LIMIT 0, 9[0m
+Rendering template within layouts/opinions
+Rendering opinions/by_user
+  [4;36;1mOpinion Columns (22.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mMovie Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (29.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+Rendered common/_pagination (2.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_view_switch (11.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (261.0ms)
+Rendered common/_sidebar (309.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 1232ms (View: 772, DB: 98) | 200 OK [http://ru.twiliked.net/user/vagav?view=block]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#timeline (for 127.0.0.1 at 2009-10-10 15:42:35) [GET]
+  [4;36;1mCache Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (5.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||timeline') LIMIT 1[0m
+  [4;36;1mOpinion Load (6.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = -1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 0) ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/opinions
+Rendering opinions/timeline
+  [4;35;1mOpinion Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mMovie Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (30.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 17) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 103) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 55) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 100) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 41) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 99) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 51) [0m
+  [4;36;1mMovie Load (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 56) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 50) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 46) [0m
+Rendered common/_navigation (5.0ms)
+Rendered common/_search (1.0ms)
+Rendered common/_langbar (2.0ms)
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (204.0ms)
+Rendered common/_sidebar (224.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 1608ms (View: 1380, DB: 127) | 200 OK [http://ru.twiliked.net/timeline]
+* [JOB] acquiring lock on TwitterUpdater
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:43:12', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 629 and (locked_at is null or locked_at < '2009-10-10 11:43:02') and (run_at <= '2009-10-10 11:43:12')) [0m
+  [4;35;1mAddedTweet Load (41.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4743670842') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4744282811') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (1.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4745397482') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4749349525') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (1.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756169882') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756324956') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (1.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756348768') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756580234') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (1.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756743227') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4757470470') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:43:13', '--- !ruby/object:TwitterUpdater {}\n\n', '2009-10-10 11:43:13', 7, '2009-10-10 11:46:13', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 629[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] TwitterUpdater completed after 1.2790
+* [JOB] acquiring lock on CacheCleaner
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:43:13', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 630 and (locked_at is null or locked_at < '2009-10-10 11:43:03') and (run_at <= '2009-10-10 11:43:13')) [0m
+  [4;36;1mCache Delete all (17.0ms)[0m   [0;1mDELETE FROM `caches` WHERE (delete_at < '2009-10-10 11:43:13') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:43:13', '--- !ruby/object:CacheCleaner {}\n\n', '2009-10-10 11:43:13', 5, '2009-10-10 11:44:13', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 630[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] CacheCleaner completed after 0.0360
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:43:13', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 626 and (locked_at is null or locked_at < '2009-10-10 11:43:03') and (run_at <= '2009-10-10 11:43:13')) [0m
+  [4;36;1mMovie Load (16.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'state-of-play') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 473705 AND `movies`.id <> 111) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (0.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:43:17', '--- !ruby/object:MovieUpdater \nmovie_id: 111\n', '2009-10-10 11:43:17', 2, '2009-10-10 11:48:43', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 626[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3510
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:43:17', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 624 and (locked_at is null or locked_at < '2009-10-10 11:43:07') and (run_at <= '2009-10-10 11:43:17')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-taking-of-pelham-1-2-3') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1111422 AND `movies`.id <> 109) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:43:23', '--- !ruby/object:MovieUpdater \nmovie_id: 109\n', '2009-10-10 11:43:23', 2, '2009-10-10 11:49:03', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (2.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 624[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 6.9330
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:43:24', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 625 and (locked_at is null or locked_at < '2009-10-10 11:43:14') and (run_at <= '2009-10-10 11:43:24')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'case-39') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 795351 AND `movies`.id <> 110) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:43:27', '--- !ruby/object:MovieUpdater \nmovie_id: 110\n', '2009-10-10 11:43:27', 2, '2009-10-10 11:49:06', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 625[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.4400
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:43:27', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 623 and (locked_at is null or locked_at < '2009-10-10 11:43:17') and (run_at <= '2009-10-10 11:43:27')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'slumdog-millionaire') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1010048 AND `movies`.id <> 108) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (0.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:43:27', '--- !ruby/object:MovieUpdater \nmovie_id: 108\n', '2009-10-10 11:43:27', 2, '2009-10-10 11:49:20', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 623[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3230
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#timeline (for 127.0.0.1 at 2009-10-10 15:44:29) [GET]
+  [4;36;1mCache Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (5.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||timeline') LIMIT 1[0m
+  [4;36;1mOpinion Load (7.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = -1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 0) ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/opinions
+Rendering opinions/timeline
+  [4;35;1mOpinion Columns (13.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mMovie Columns (24.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (18.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mUser Columns (19.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (14.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 17) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 103) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 55) [0m
+  [4;36;1mMovie Load (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 100) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 41) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 99) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 51) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 56) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 50) [0m
+  [4;36;1mMovie Load (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (4.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 46) [0m
+Rendered common/_navigation (5.0ms)
+Rendered common/_search (1.0ms)
+Rendered common/_langbar (2.0ms)
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (196.0ms)
+Rendered common/_sidebar (215.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 1697ms (View: 1452, DB: 143) | 200 OK [http://ru.twiliked.net/timeline]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#one (for 127.0.0.1 at 2009-10-10 15:44:46) [GET]
+  Parameters: {"tweet_id"=>"4756743227"}
+  [4;36;1mOpinion Columns (120.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`tweet_id` = '4756743227') ORDER BY created_at DESC LIMIT 1[0m
+Rendering template within layouts/opinions
+Rendering opinions/one
+  [4;36;1mMovie Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mUser Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+Rendered common/_navigation (5.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (180.0ms)
+Rendered common/_sidebar (200.0ms)
+Rendered common/_footer (3.0ms)
+Completed in 1226ms (View: 728, DB: 153) | 200 OK [http://ru.twiliked.net/opinion/4756743227]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#one (for 127.0.0.1 at 2009-10-10 15:45:09) [GET]
+  Parameters: {"tweet_id"=>"4756743227"}
+  [4;36;1mOpinion Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mOpinion Load (6.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`tweet_id` = '4756743227') ORDER BY created_at DESC LIMIT 1[0m
+Rendering template within layouts/opinions
+Rendering opinions/one
+  [4;36;1mMovie Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (9.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (21.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+Rendered common/_navigation (5.0ms)
+Rendered common/_search (1.0ms)
+Rendered common/_langbar (2.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mMovie Load (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (180.0ms)
+Rendered common/_sidebar (201.0ms)
+Rendered common/_footer (3.0ms)
+Completed in 786ms (View: 667, DB: 70) | 200 OK [http://ru.twiliked.net/opinion/4756743227]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#one (for 127.0.0.1 at 2009-10-10 15:49:48) [GET]
+  Parameters: {"tweet_id"=>"4689017865"}
+  [4;36;1mOpinion Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mOpinion Load (4.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`tweet_id` = '4689017865') ORDER BY created_at DESC LIMIT 1[0m
+Rendering template within layouts/opinions
+Rendering opinions/one
+  [4;36;1mMovie Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (14.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (14.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 43) [0m
+Rendered common/_navigation (5.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (2.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (185.0ms)
+Rendered common/_sidebar (205.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 590ms (View: 473, DB: 72) | 200 OK [http://en.twiliked.net/opinion/4689017865]

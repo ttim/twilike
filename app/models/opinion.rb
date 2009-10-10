@@ -25,6 +25,14 @@ class Opinion < ActiveRecord::Base
   end
 
   def self.tmp
-    Opinion.all(:conditions => ["text like ?", "%Ваше мнение.%"])
+    Opinion.all(:conditions => ["text like ?", "%Ваше мнение.%"]).each do |opinion|
+      tmp = opinion.text
+
+      tmp[0..tmp.index(".")+1] = ""
+      tmp.strip
+
+      opinion.text = tmp
+      opinion.save!
+    end
   end
 end
