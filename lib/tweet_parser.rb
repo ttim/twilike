@@ -1,4 +1,14 @@
-class TweetParser
+class String
+    def delete_from_begin(phrase)
+      tmp = ""+self
+
+      tmp[0..phrase.size-1] = "" if tmp.index(phrase) == 0
+
+      tmp
+    end
+  end
+
+class TweetParser  
   def self.parse(tweet)
     # result = { :name => "", :rating => 0|+1|-1, :text => "" }
     tweet += ""
@@ -29,6 +39,8 @@ class TweetParser
       movie = tweet
       tweet = ""
     end
+
+    tweet = tweet.strip.delete_from_begin("Your Opinion!").strip.delete_from_begin("Ваше мнение.")
 
     { :name => movie, :rating => rating, :text => tweet.strip }
   end

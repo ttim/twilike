@@ -15344,3 +15344,1153 @@ Rendered common/_sidebar_last_opinions (239.0ms)
 Rendered common/_sidebar (265.0ms)
 Rendered common/_footer (4.0ms)
 Completed in 3588ms (View: 2482, DB: 433) | 200 OK [http://ru.twiliked.net/top]
+  [4;36;1mDelayed::Job Columns (166.0ms)[0m   [0;1mSHOW FIELDS FROM `delayed_jobs`[0m
+* [JOB] acquiring lock on TwitterUpdater
+  [4;35;1mDelayed::Job Update (10.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:31:19', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 524 and (locked_at is null or locked_at < '2009-10-10 11:31:09') and (run_at <= '2009-10-10 11:31:19')) [0m
+  [4;36;1mAddedTweet Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `added_tweets`[0m
+  [4;35;1mAddedTweet Load (62.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4743670842') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (2.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4744282811') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (1.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4745397482') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4749349525') LIMIT 1[0m
+  [4;35;1mUser Columns (232.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (74.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 15649915) LIMIT 1[0m
+  [4;35;1mSQL (36.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (9.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = 15649915 AND `users`.id <> 17) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAddedTweet Load (57.0ms)[0m   [0mSELECT `added_tweets`.id FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = BINARY '4749349525') LIMIT 1[0m
+  [4;36;1mMovie Columns (56.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (107.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`imdb_id` = 1247640) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 15649915) LIMIT 1[0m
+  [4;35;1mOpinion Columns (187.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mOpinion Load (88.0ms)[0m   [0;1mSELECT `opinions`.id FROM `opinions` WHERE (`opinions`.`tweet_id` = BINARY '4749349525') LIMIT 1[0m
+  [4;35;1mOpinion Create (77.0ms)[0m   [0mINSERT INTO `opinions` (`tweet_id`, `rating`, `created_at`, `movie_id`, `updated_at`, `text`, `user_id`) VALUES(4749349525, 1, '2009-10-10 00:41:56', 14, '2009-10-10 11:31:29', 'Как ни странно для сиквела — то же самое, только основных фишек… меньше. Смотрится хорошо, но не догоняет.', 17)[0m
+  [4;36;1mOpinion Delete all (56.0ms)[0m   [0;1mDELETE FROM `opinions` WHERE (user_id = 17 AND movie_id = 14 AND id != 178) [0m
+  [4;35;1mAddedTweet Create (2.0ms)[0m   [0mINSERT INTO `added_tweets` (`tweet_id`, `data`, `created_at`, `updated_at`) VALUES(4749349525, '--- \ntruncated: false\ncreated_at: Sat Oct 10 00:41:56 +0000 2009\nfavorited: false\ntext: !binary |\n MTMt0Lkg0YDQsNC50L7QvTog0YPQu9GM0YLQuNC80LDRgtGD0LwuINCa0LDQ\n uiDQvdC4INGB0YLRgNCw0L3QvdC+INC00LvRjyDRgdC40LrQstC10LvQsCDi\n gJQg0YLQviDQttC1INGB0LDQvNC+0LUsINGC0L7Qu9GM0LrQviDQvtGB0L3Q\n vtCy0L3Ri9GFINGE0LjRiNC10LrigKYg0LzQtdC90YzRiNC1LiDQodC80L7R\n gtGA0LjRgtGB0Y8g0YXQvtGA0L7RiNC+LCDQvdC+INC90LUg0LTQvtCz0L7Q\n vdGP0LXRgi4gI3R3aWxpa2Ur\n\nid: 4749349525\ngeo: \nin_reply_to_user_id: \nuser: \n profile_sidebar_fill_color: ffffff\n name: Njordy\n profile_background_tile: false\n profile_sidebar_border_color: f9f0f3\n location: \"\"\n created_at: Tue Jul 29 19:14:49 +0000 2008\n profile_image_url: http://a3.twimg.com/profile_images/181823735/Sep2_normal.jpg\n profile_link_color: 8739b1\n favourites_count: 209\n url: \n utc_offset: 10800\n id: 15649915\n protected: false\n followers_count: 194\n profile_text_color: \"000000\"\n verified: false\n time_zone: Moscow\n profile_background_color: \"000000\"\n geo_enabled: false\n notifications: false\n description: \"\"\n statuses_count: 3318\n friends_count: 106\n profile_background_image_url: http://a3.twimg.com/profile_background_images/10154913/bg_twittergallery.jpg\n screen_name: Njordy\n following: true\nin_reply_to_screen_name: \nsource: <a href=\"http://www.atebits.com/\" rel=\"nofollow\">Tweetie</a>\nin_reply_to_status_id: \n', '2009-10-10 11:31:30', '2009-10-10 11:31:30')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m: execution expired: COMMIT[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756169882') LIMIT 1[0m
+  [4;35;1mUser Load (6.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 39954104) LIMIT 1[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAddedTweet Load (1.0ms)[0m   [0mSELECT `added_tweets`.id FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = BINARY '4756169882') LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`imdb_id` = 1247640) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 39954104) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = 39954104) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO `users` (`name`, `profile_image_url`, `created_at`, `updated_at`, `twitter_id`, `screen_name`) VALUES(NULL, NULL, '2009-10-10 11:31:35', '2009-10-10 11:31:35', 39954104, NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = 39954104 AND `users`.id <> 58) LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-10-10 11:31:35', `name` = 'chudesaty', `screen_name` = 'chudesaty', `profile_image_url` = 'http://a3.twimg.com/profile_images/462640087/___________normal.jpg', `created_at` = '2009-10-10 11:31:35', `twitter_id` = 39954104 WHERE `id` = 58[0m
+  [4;36;1mDelayed::Job Create (6.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:31:36', '--- !ruby/object:UserUpdater \nuser_id: 58\n', '2009-10-10 11:31:36', 1, '2009-10-13 11:31:36', 0, NULL, NULL)[0m
+  [4;35;1mOpinion Load (213.0ms)[0m   [0mSELECT `opinions`.id FROM `opinions` WHERE (`opinions`.`tweet_id` = BINARY '4756169882') LIMIT 1[0m
+  [4;36;1mOpinion Create (1796.0ms)[0m   [0;1mINSERT INTO `opinions` (`tweet_id`, `rating`, `created_at`, `movie_id`, `updated_at`, `text`, `user_id`) VALUES(4756169882, 1, '2009-10-10 07:07:37', 14, '2009-10-10 11:31:36', 'Фильм приятный, но не более. Второй раз смотреть врядли буду,.', 58)[0m
+  [4;35;1mOpinion Delete all (1.0ms)[0m   [0mDELETE FROM `opinions` WHERE (user_id = 58 AND movie_id = 14 AND id != 179) [0m
+  [4;36;1mAddedTweet Create (4.0ms)[0m   [0;1mINSERT INTO `added_tweets` (`tweet_id`, `data`, `created_at`, `updated_at`) VALUES(4756169882, '--- \ntruncated: false\ncreated_at: Sat Oct 10 07:07:37 +0000 2009\nfavorited: false\ntext: !binary |\n QmFubGlldWUgMTMgLSBVbHRpbWF0dW0uINCk0LjQu9GM0Lwg0L/RgNC40Y/R\n gtC90YvQuSwg0L3QviDQvdC1INCx0L7Qu9C10LUuINCS0YLQvtGA0L7QuSDR\n gNCw0Lcg0YHQvNC+0YLRgNC10YLRjCDQstGA0Y/QtNC70Lgg0LHRg9C00YMs\n LiAjdHdpbGlrZSs=\n\nid: 4756169882\ngeo: \nin_reply_to_user_id: \nuser: \n profile_sidebar_fill_color: DDFFCC\n name: Nikolay\n profile_background_tile: true\n profile_sidebar_border_color: BDDCAD\n location: \n created_at: Thu May 14 08:14:52 +0000 2009\n profile_image_url: http://s.twimg.com/a/1255039715/images/default_profile_1_normal.png\n profile_link_color: 0084B4\n favourites_count: 0\n url: \n utc_offset: \n id: 39954104\n protected: false\n profile_text_color: \"333333\"\n followers_count: 0\n time_zone: \n profile_background_color: 9AE4E8\n geo_enabled: false\n notifications: false\n verified: false\n description: \n statuses_count: 1\n profile_background_image_url: http://a3.twimg.com/profile_background_images/26230847/Texture_B111ackground_Flat.jpg\n friends_count: 0\n screen_name: chudesaty\n following: false\nin_reply_to_screen_name: \nsource: web\nin_reply_to_status_id: \n', '2009-10-10 11:31:38', '2009-10-10 11:31:38')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAddedTweet Load (2.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756324956') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 29954826) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAddedTweet Load (2.0ms)[0m   [0mSELECT `added_tweets`.id FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = BINARY '4756324956') LIMIT 1[0m
+  [4;36;1mMovie Load (5.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`imdb_id` = 1010048) LIMIT 1[0m
+  [4;35;1mMovie Load (17.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1010048) LIMIT 1[0m
+  [4;36;1mMovie Create (1.0ms)[0m   [0;1mINSERT INTO `movies` (`english_tagline`, `original_name`, `russian_name`, `created_at`, `russian_tagline`, `image_url`, `updated_at`, `english_name`, `small_name`, `imdb_id`, `year`, `names`) VALUES(NULL, NULL, NULL, '2009-10-10 11:31:43', NULL, NULL, '2009-10-10 11:31:43', NULL, NULL, 1010048, NULL, NULL)[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'slumdog-millionaire') LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'slumdog-millionaire') LIMIT 1[0m
+  [4;35;1mDelayed::Job Create (31.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:31:53', '--- !ruby/object:CreateThumbs \nshort_name: slumdog-millionaire\nurl: http://www.kinopoisk.ru//im/wallpaper/9/1/8/kinopoisk.ru-Slumdog-Millionaire-918650_800.jpg\n', '2009-10-10 11:31:53', 10, '2009-10-10 11:31:53', 0, NULL, NULL)[0m
+  [4;36;1mMovie Load (56.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1010048 AND `movies`.id <> 108) LIMIT 1[0m
+  [4;35;1mMovie Update (2.0ms)[0m   [0mUPDATE `movies` SET `small_name` = 'slumdog-millionaire', `updated_at` = '2009-10-10 11:31:53', `russian_name` = 'Миллионер из трущоб', `original_name` = 'Slumdog Millionaire', `created_at` = '2009-10-10 11:31:43', `english_tagline` = 'Love and money... You have mixed them both.', `names` = '|Slumdog Millionaire|Миллионер из трущоб|', `year` = 2008, `english_name` = 'Slumdog Millionaire', `image_url` = 'http://www.kinopoisk.ru//im/wallpaper/9/1/8/kinopoisk.ru-Slumdog-Millionaire-918650_800.jpg', `imdb_id` = 1010048, `russian_tagline` = 'Что может вернуть любовь?' WHERE `id` = 108[0m
+  [4;36;1mDelayed::Job Create (2.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:31:53', '--- !ruby/object:MovieUpdater \nmovie_id: 108\n', '2009-10-10 11:31:53', 2, '2009-10-10 11:32:53', 0, NULL, NULL)[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 29954826) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = 29954826) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO `users` (`name`, `profile_image_url`, `created_at`, `updated_at`, `twitter_id`, `screen_name`) VALUES(NULL, NULL, '2009-10-10 11:31:53', '2009-10-10 11:31:53', 29954826, NULL)[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = 29954826 AND `users`.id <> 59) LIMIT 1[0m
+  [4;35;1mUser Update (2.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-10-10 11:31:54', `name` = 'Mazikk', `screen_name` = 'Mazikk', `profile_image_url` = 'http://a3.twimg.com/profile_images/130320845/mazikk-normal_normal.jpg', `created_at` = '2009-10-10 11:31:53', `twitter_id` = 29954826 WHERE `id` = 59[0m
+  [4;36;1mDelayed::Job Create (4.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:31:54', '--- !ruby/object:UserUpdater \nuser_id: 59\n', '2009-10-10 11:31:54', 1, '2009-10-13 11:31:54', 0, NULL, NULL)[0m
+  [4;35;1mOpinion Load (4.0ms)[0m   [0mSELECT `opinions`.id FROM `opinions` WHERE (`opinions`.`tweet_id` = BINARY '4756324956') LIMIT 1[0m
+  [4;36;1mOpinion Create (57.0ms)[0m   [0;1mINSERT INTO `opinions` (`tweet_id`, `rating`, `created_at`, `movie_id`, `updated_at`, `text`, `user_id`) VALUES(4756324956, 1, '2009-10-10 07:21:48', 108, '2009-10-10 11:31:54', 'Такого длинного \"О, счастливчик\" я еще не видел :) но он того стоит.', 59)[0m
+  [4;35;1mOpinion Delete all (2.0ms)[0m   [0mDELETE FROM `opinions` WHERE (user_id = 59 AND movie_id = 108 AND id != 180) [0m
+  [4;36;1mAddedTweet Create (5.0ms)[0m   [0;1mINSERT INTO `added_tweets` (`tweet_id`, `data`, `created_at`, `updated_at`) VALUES(4756324956, '--- \ntruncated: false\ncreated_at: Sat Oct 10 07:21:48 +0000 2009\nfavorited: false\ntext: !binary |\n 0JzQuNC70LvQuNC+0L3QtdGAINC40Lcg0YLRgNGD0YnQvtCxLiDQotCw0LrQ\n vtCz0L4g0LTQu9C40L3QvdC+0LPQviAi0J4sINGB0YfQsNGB0YLQu9C40LLR\n h9C40LoiINGPINC10YnQtSDQvdC1INCy0LjQtNC10LsgOikg0L3QviDQvtC9\n INGC0L7Qs9C+INGB0YLQvtC40YIuICN0d2lsaWtlKw==\n\nid: 4756324956\ngeo: \nin_reply_to_user_id: \nuser: \n profile_sidebar_fill_color: ededed\n name: Mazikk\n profile_background_tile: false\n profile_sidebar_border_color: cfd4c9\n location: \"\"\n created_at: Thu Apr 09 09:53:02 +0000 2009\n profile_image_url: http://a3.twimg.com/profile_images/130320845/mazikk-normal_normal.jpg\n profile_link_color: 21781f\n url: \n favourites_count: 2\n utc_offset: 21600\n id: 29954826\n protected: false\n followers_count: 98\n profile_text_color: 2c300f\n time_zone: Astana\n profile_background_color: ffffff\n geo_enabled: false\n notifications: false\n verified: false\n description: \"\"\n statuses_count: 1556\n friends_count: 56\n profile_background_image_url: http://a3.twimg.com/profile_background_images/37570255/ilovepics.gif\n screen_name: Mazikk\n following: false\nin_reply_to_screen_name: \nsource: <a href=\"http://echofon.com/\" rel=\"nofollow\">Echofon</a>\nin_reply_to_status_id: \n', '2009-10-10 11:31:54', '2009-10-10 11:31:54')[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAddedTweet Load (2.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756348768') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 29954826) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = 29954826 AND `users`.id <> 59) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAddedTweet Load (2.0ms)[0m   [0;1mSELECT `added_tweets`.id FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = BINARY '4756348768') LIMIT 1[0m
+  [4;35;1mMovie Load (5.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`imdb_id` = 1111422) LIMIT 1[0m
+  [4;36;1mMovie Load (14.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1111422) LIMIT 1[0m
+  [4;35;1mMovie Create (2.0ms)[0m   [0mINSERT INTO `movies` (`english_tagline`, `original_name`, `russian_name`, `created_at`, `russian_tagline`, `image_url`, `updated_at`, `english_name`, `small_name`, `imdb_id`, `year`, `names`) VALUES(NULL, NULL, NULL, '2009-10-10 11:32:05', NULL, NULL, '2009-10-10 11:32:05', NULL, NULL, 1111422, NULL, NULL)[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-taking-of-pelham-1-2-3') LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-taking-of-pelham-1-2-3') LIMIT 1[0m
+  [4;36;1mDelayed::Job Create (3.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:06', '--- !ruby/object:CreateThumbs \nshort_name: the-taking-of-pelham-1-2-3\nurl: http://www.kinopoisk.ru//im/wallpaper/9/4/6/kinopoisk.ru-Taking-of-Pelham-1-2-3_2C-The-946607_800.jpg\n', '2009-10-10 11:32:06', 10, '2009-10-10 11:32:06', 0, NULL, NULL)[0m
+  [4;35;1mMovie Load (11.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1111422 AND `movies`.id <> 109) LIMIT 1[0m
+  [4;36;1mMovie Update (2.0ms)[0m   [0;1mUPDATE `movies` SET `small_name` = 'the-taking-of-pelham-1-2-3', `updated_at` = '2009-10-10 11:32:06', `russian_name` = 'Опасные пассажиры поезда 123', `original_name` = 'The Taking of Pelham 1 2 3', `created_at` = '2009-10-10 11:32:05', `english_tagline` = '', `names` = '|Опасные пассажиры поезда 123|The Taking of Pelham 1 2 3|', `year` = 2009, `english_name` = 'The Taking of Pelham 1 2 3', `image_url` = 'http://www.kinopoisk.ru//im/wallpaper/9/4/6/kinopoisk.ru-Taking-of-Pelham-1-2-3_2C-The-946607_800.jpg', `imdb_id` = 1111422, `russian_tagline` = 'Осторожно, двери закрываются...навсегда' WHERE `id` = 109[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:06', '--- !ruby/object:MovieUpdater \nmovie_id: 109\n', '2009-10-10 11:32:06', 2, '2009-10-10 11:33:06', 0, NULL, NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 29954826) LIMIT 1[0m
+  [4;35;1mOpinion Load (4.0ms)[0m   [0mSELECT `opinions`.id FROM `opinions` WHERE (`opinions`.`tweet_id` = BINARY '4756348768') LIMIT 1[0m
+  [4;36;1mOpinion Create (536.0ms)[0m   [0;1mINSERT INTO `opinions` (`tweet_id`, `rating`, `created_at`, `movie_id`, `updated_at`, `text`, `user_id`) VALUES(4756348768, 1, '2009-10-10 07:24:04', 109, '2009-10-10 11:32:06', 'Фильм на один раз, но посмотреть стоит. Дензел Вашингтон и Джон Траволта не плохо сыграли.', 59)[0m
+  [4;35;1mOpinion Delete all (2.0ms)[0m   [0mDELETE FROM `opinions` WHERE (user_id = 59 AND movie_id = 109 AND id != 181) [0m
+  [4;36;1mAddedTweet Create (5.0ms)[0m   [0;1mINSERT INTO `added_tweets` (`tweet_id`, `data`, `created_at`, `updated_at`) VALUES(4756348768, '--- \ntruncated: false\ncreated_at: Sat Oct 10 07:24:04 +0000 2009\nfavorited: false\ntext: !binary |\n 0J7Qv9Cw0YHQvdGL0LUg0L/QsNGB0YHQsNC20LjRgNGLINC/0L7QtdC30LTQ\n sCAxMjMuINCk0LjQu9GM0Lwg0L3QsCDQvtC00LjQvSDRgNCw0LcsINC90L4g\n 0L/QvtGB0LzQvtGC0YDQtdGC0Ywg0YHRgtC+0LjRgi4g0JTQtdC90LfQtdC7\n INCS0LDRiNC40L3Qs9GC0L7QvSDQuCDQlNC20L7QvSDQotGA0LDQstC+0LvR\n gtCwINC90LUg0L/Qu9C+0YXQviDRgdGL0LPRgNCw0LvQuC4gI3R3aWxpa2Ur\n\nid: 4756348768\ngeo: \nin_reply_to_user_id: \nuser: \n profile_sidebar_fill_color: ededed\n name: Mazikk\n profile_background_tile: false\n profile_sidebar_border_color: cfd4c9\n location: \"\"\n created_at: Thu Apr 09 09:53:02 +0000 2009\n profile_image_url: http://a3.twimg.com/profile_images/130320845/mazikk-normal_normal.jpg\n profile_link_color: 21781f\n url: \n favourites_count: 2\n utc_offset: 21600\n id: 29954826\n protected: false\n followers_count: 98\n profile_text_color: 2c300f\n time_zone: Astana\n profile_background_color: ffffff\n geo_enabled: false\n notifications: false\n verified: false\n description: \"\"\n statuses_count: 1557\n friends_count: 56\n profile_background_image_url: http://a3.twimg.com/profile_background_images/37570255/ilovepics.gif\n screen_name: Mazikk\n following: false\nin_reply_to_screen_name: \nsource: <a href=\"http://echofon.com/\" rel=\"nofollow\">Echofon</a>\nin_reply_to_status_id: \n', '2009-10-10 11:32:07', '2009-10-10 11:32:07')[0m
+  [4;35;1mSQL (13.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAddedTweet Load (2.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756580234') LIMIT 1[0m
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 29954826) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = 29954826 AND `users`.id <> 59) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT `added_tweets`.id FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = BINARY '4756580234') LIMIT 1[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`imdb_id` = 795351) LIMIT 1[0m
+  [4;36;1mMovie Load (29.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 795351) LIMIT 1[0m
+  [4;35;1mMovie Create (2.0ms)[0m   [0mINSERT INTO `movies` (`english_tagline`, `original_name`, `russian_name`, `created_at`, `russian_tagline`, `image_url`, `updated_at`, `english_name`, `small_name`, `imdb_id`, `year`, `names`) VALUES(NULL, NULL, NULL, '2009-10-10 11:32:09', NULL, NULL, '2009-10-10 11:32:09', NULL, NULL, 795351, NULL, NULL)[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'case-39') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mMovie Load (20.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'case-39') LIMIT 1[0m
+  [4;36;1mDelayed::Job Create (66.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:12', '--- !ruby/object:CreateThumbs \nshort_name: case-39\nurl: http://www.kinopoisk.ru//im/wallpaper/1/0/3/kinopoisk.ru-Case-39-1035392_800.jpg\n', '2009-10-10 11:32:12', 10, '2009-10-10 11:32:12', 0, NULL, NULL)[0m
+  [4;35;1mMovie Load (12.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 795351 AND `movies`.id <> 110) LIMIT 1[0m
+  [4;36;1mMovie Update (1.0ms)[0m   [0;1mUPDATE `movies` SET `small_name` = 'case-39', `updated_at` = '2009-10-10 11:32:12', `russian_name` = 'Дело №39', `original_name` = 'Case 39', `created_at` = '2009-10-10 11:32:09', `english_tagline` = '', `names` = '|Дело №39|Case 39|', `year` = 2009, `english_name` = 'Case 39', `image_url` = 'http://www.kinopoisk.ru//im/wallpaper/1/0/3/kinopoisk.ru-Case-39-1035392_800.jpg', `imdb_id` = 795351, `russian_tagline` = 'Некоторые дела лучше не открывать' WHERE `id` = 110[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:12', '--- !ruby/object:MovieUpdater \nmovie_id: 110\n', '2009-10-10 11:32:12', 2, '2009-10-10 11:33:12', 0, NULL, NULL)[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 29954826) LIMIT 1[0m
+  [4;35;1mOpinion Load (5.0ms)[0m   [0mSELECT `opinions`.id FROM `opinions` WHERE (`opinions`.`tweet_id` = BINARY '4756580234') LIMIT 1[0m
+  [4;36;1mOpinion Create (202.0ms)[0m   [0;1mINSERT INTO `opinions` (`tweet_id`, `rating`, `created_at`, `movie_id`, `updated_at`, `text`, `user_id`) VALUES(4756580234, 0, '2009-10-10 07:46:13', 110, '2009-10-10 11:32:12', 'В начале вроде интересно. Потом все предсказуемо. На один раз.', 59)[0m
+  [4;35;1mOpinion Delete all (2.0ms)[0m   [0mDELETE FROM `opinions` WHERE (user_id = 59 AND movie_id = 110 AND id != 182) [0m
+  [4;36;1mAddedTweet Create (6.0ms)[0m   [0;1mINSERT INTO `added_tweets` (`tweet_id`, `data`, `created_at`, `updated_at`) VALUES(4756580234, '--- \ntruncated: false\ncreated_at: Sat Oct 10 07:46:13 +0000 2009\nfavorited: false\ntext: !binary |\n 0JTQtdC70L4g4oSWMzkuINCSINC90LDRh9Cw0LvQtSDQstGA0L7QtNC1INC4\n 0L3RgtC10YDQtdGB0L3Qvi4g0J/QvtGC0L7QvCDQstGB0LUg0L/RgNC10LTR\n gdC60LDQt9GD0LXQvNC+LiDQndCwINC+0LTQuNC9INGA0LDQty4gI3R3aWxp\n a2U9\n\nid: 4756580234\ngeo: \nin_reply_to_user_id: \nuser: \n profile_sidebar_fill_color: ededed\n name: Mazikk\n profile_background_tile: false\n profile_sidebar_border_color: cfd4c9\n location: \"\"\n created_at: Thu Apr 09 09:53:02 +0000 2009\n profile_image_url: http://a3.twimg.com/profile_images/130320845/mazikk-normal_normal.jpg\n profile_link_color: 21781f\n favourites_count: 2\n url: \n utc_offset: 21600\n id: 29954826\n protected: false\n followers_count: 98\n profile_text_color: 2c300f\n time_zone: Astana\n profile_background_color: ffffff\n notifications: false\n verified: false\n description: \"\"\n geo_enabled: false\n friends_count: 57\n profile_background_image_url: http://a3.twimg.com/profile_background_images/37570255/ilovepics.gif\n statuses_count: 1559\n screen_name: Mazikk\n following: false\nin_reply_to_screen_name: \nsource: <a href=\"http://echofon.com/\" rel=\"nofollow\">Echofon</a>\nin_reply_to_status_id: \n', '2009-10-10 11:32:12', '2009-10-10 11:32:12')[0m
+  [4;35;1mSQL (41.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756743227') LIMIT 1[0m
+
+
+Processing OpinionsController#timeline (for 127.0.0.1 at 2009-10-10 15:32:13) [GET]
+Redirected to http://ru.twiliked.net:3000/
+Filter chain halted as [:check_domain] rendered_or_redirected.
+Completed in 418ms (DB: 3) | 301 Moved Permanently [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 19063925) LIMIT 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAddedTweet Load (2.0ms)[0m   [0mSELECT `added_tweets`.id FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = BINARY '4756743227') LIMIT 1[0m
+
+
+Processing OpinionsController#timeline (for 127.0.0.1 at 2009-10-10 15:32:14) [GET]
+  [4;36;1mMovie Load (4.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`imdb_id` = 1010048) LIMIT 1[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 19063925) LIMIT 1[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = 19063925) LIMIT 1[0m
+  [4;35;1mUser Create (2.0ms)[0m   [0mINSERT INTO `users` (`name`, `profile_image_url`, `created_at`, `updated_at`, `twitter_id`, `screen_name`) VALUES(NULL, NULL, '2009-10-10 11:32:15', '2009-10-10 11:32:15', 19063925, NULL)[0m
+  [4;36;1mCache Columns (104.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (67.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||timeline') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = 19063925 AND `users`.id <> 60) LIMIT 1[0m
+  [4;35;1mUser Update (2.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2009-10-10 11:32:15', `name` = 'Alexandr', `screen_name` = 'vagav', `profile_image_url` = 'http://s.twimg.com/a/1254953317/images/default_profile_6_normal.png', `created_at` = '2009-10-10 11:32:15', `twitter_id` = 19063925 WHERE `id` = 60[0m
+  [4;36;1mDelayed::Job Create (6.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:15', '--- !ruby/object:UserUpdater \nuser_id: 60\n', '2009-10-10 11:32:15', 1, '2009-10-13 11:32:15', 0, NULL, NULL)[0m
+  [4;35;1mOpinion Load (150.0ms)[0m   [0mSELECT `opinions`.id FROM `opinions` WHERE (`opinions`.`tweet_id` = BINARY '4756743227') LIMIT 1[0m
+  [4;36;1mOpinion Create (3.0ms)[0m   [0;1mINSERT INTO `opinions` (`tweet_id`, `rating`, `created_at`, `movie_id`, `updated_at`, `text`, `user_id`) VALUES(4756743227, 1, '2009-10-10 08:02:10', 108, '2009-10-10 11:32:16', 'супер фильм', 60)[0m
+  [4;35;1mOpinion Delete all (15.0ms)[0m   [0mDELETE FROM `opinions` WHERE (user_id = 60 AND movie_id = 108 AND id != 183) [0m
+  [4;36;1mAddedTweet Create (4.0ms)[0m   [0;1mINSERT INTO `added_tweets` (`tweet_id`, `data`, `created_at`, `updated_at`) VALUES(4756743227, '--- \ntruncated: false\ncreated_at: Sat Oct 10 08:02:10 +0000 2009\nfavorited: false\ntext: !binary |\n U2x1bWRvZyBNaWxsaW9uYWlyZS4g0JLQsNGI0LUg0LzQvdC10L3QuNC1LiAj\n dHdpbGlrZSsg0YHRg9C/0LXRgCDRhNC40LvRjNC8\n\nid: 4756743227\ngeo: \nin_reply_to_user_id: \nuser: \n profile_sidebar_fill_color: e0ff92\n name: Alexandr\n profile_background_tile: false\n profile_sidebar_border_color: 87bc44\n location: \"\"\n created_at: Fri Jan 16 12:17:50 +0000 2009\n profile_image_url: http://s.twimg.com/a/1254953317/images/default_profile_6_normal.png\n profile_link_color: 0000ff\n favourites_count: 0\n url: \n utc_offset: 10800\n id: 19063925\n protected: false\n followers_count: 3\n profile_text_color: \"000000\"\n verified: false\n time_zone: Moscow\n profile_background_color: 9ae4e8\n geo_enabled: false\n notifications: false\n description: \"\"\n statuses_count: 8\n friends_count: 2\n profile_background_image_url: http://s.twimg.com/a/1255039715/images/themes/theme1/bg.png\n screen_name: vagav\n following: false\nin_reply_to_screen_name: \nsource: web\nin_reply_to_status_id: \n', '2009-10-10 11:32:16', '2009-10-10 11:32:16')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAddedTweet Load (3.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4757470470') LIMIT 1[0m
+  [4;36;1mOpinion Load (26.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mOpinion Load (31.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = -1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 0) ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/opinions
+Rendering opinions/timeline
+  [4;35;1mOpinion Columns (13.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mMovie Columns (34.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (13.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mUser Columns (43.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (22.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 17) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 103) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 55) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 100) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 41) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 99) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 51) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 56) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;35;1mUser Load (4.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 50) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 46) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 31) [0m
+Rendered common/_navigation (17.0ms)
+Rendered common/_search (23.0ms)
+Rendered common/_langbar (8.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+Rendered common/_sidebar_last_opinions (235.0ms)
+Rendered common/_sidebar (645.0ms)
+Rendered common/_footer (50.0ms)
+Completed in 5195ms (View: 2463, DB: 389) | 200 OK [http://ru.twiliked.net/]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 29954826) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`twitter_id` = 29954826 AND `users`.id <> 59) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT `added_tweets`.id FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = BINARY '4757470470') LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`imdb_id` = 473705) LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 473705) LIMIT 1[0m
+  [4;35;1mMovie Create (1.0ms)[0m   [0mINSERT INTO `movies` (`english_tagline`, `original_name`, `russian_name`, `created_at`, `russian_tagline`, `image_url`, `updated_at`, `english_name`, `small_name`, `imdb_id`, `year`, `names`) VALUES(NULL, NULL, NULL, '2009-10-10 11:32:25', NULL, NULL, '2009-10-10 11:32:25', NULL, NULL, 473705, NULL, NULL)[0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'state-of-play') LIMIT 1[0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'state-of-play') LIMIT 1[0m
+  [4;36;1mDelayed::Job Create (43.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:25', '--- !ruby/object:CreateThumbs \nshort_name: state-of-play\nurl: http://www.kinopoisk.ru//im/wallpaper/9/0/8/kinopoisk.ru-State-of-Play-908074_800.jpg\n', '2009-10-10 11:32:25', 10, '2009-10-10 11:32:25', 0, NULL, NULL)[0m
+  [4;35;1mMovie Load (13.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 473705 AND `movies`.id <> 111) LIMIT 1[0m
+  [4;36;1mMovie Update (2.0ms)[0m   [0;1mUPDATE `movies` SET `small_name` = 'state-of-play', `updated_at` = '2009-10-10 11:32:25', `russian_name` = 'Большая игра', `original_name` = 'State of Play', `created_at` = '2009-10-10 11:32:25', `english_tagline` = 'Find The Truth', `names` = '|Большая игра|State of Play|', `year` = 2009, `english_name` = 'State of Play', `image_url` = 'http://www.kinopoisk.ru//im/wallpaper/9/0/8/kinopoisk.ru-State-of-Play-908074_800.jpg', `imdb_id` = 473705, `russian_tagline` = 'Find The Truth' WHERE `id` = 111[0m
+  [4;35;1mDelayed::Job Create (5.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:25', '--- !ruby/object:MovieUpdater \nmovie_id: 111\n', '2009-10-10 11:32:25', 2, '2009-10-10 11:33:25', 0, NULL, NULL)[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`twitter_id` = 29954826) LIMIT 1[0m
+  [4;35;1mOpinion Load (82.0ms)[0m   [0mSELECT `opinions`.id FROM `opinions` WHERE (`opinions`.`tweet_id` = BINARY '4757470470') LIMIT 1[0m
+  [4;36;1mOpinion Create (41.0ms)[0m   [0;1mINSERT INTO `opinions` (`tweet_id`, `rating`, `created_at`, `movie_id`, `updated_at`, `text`, `user_id`) VALUES(4757470470, -1, '2009-10-10 09:17:02', 111, '2009-10-10 11:32:25', 'Нудятина, смотреть только тогда, когда совсем смотреть нечего.', 59)[0m
+  [4;35;1mOpinion Delete all (2.0ms)[0m   [0mDELETE FROM `opinions` WHERE (user_id = 59 AND movie_id = 111 AND id != 184) [0m
+  [4;36;1mAddedTweet Create (23.0ms)[0m   [0;1mINSERT INTO `added_tweets` (`tweet_id`, `data`, `created_at`, `updated_at`) VALUES(4757470470, '--- \ntruncated: false\ncreated_at: Sat Oct 10 09:17:02 +0000 2009\nfavorited: false\ntext: !binary |\n 0JHQvtC70YzRiNCw0Y8g0LjQs9GA0LAuINCd0YPQtNGP0YLQuNC90LAsINGB\n 0LzQvtGC0YDQtdGC0Ywg0YLQvtC70YzQutC+INGC0L7Qs9C00LAsINC60L7Q\n s9C00LAg0YHQvtCy0YHQtdC8INGB0LzQvtGC0YDQtdGC0Ywg0L3QtdGH0LXQ\n s9C+LiAjdHdpbGlrZS0=\n\nid: 4757470470\ngeo: \nin_reply_to_user_id: \nuser: \n profile_sidebar_fill_color: ededed\n name: Mazikk\n profile_background_tile: false\n profile_sidebar_border_color: cfd4c9\n location: \"\"\n created_at: Thu Apr 09 09:53:02 +0000 2009\n profile_image_url: http://a3.twimg.com/profile_images/130320845/mazikk-normal_normal.jpg\n profile_link_color: 21781f\n favourites_count: 2\n url: \n utc_offset: 21600\n id: 29954826\n protected: false\n followers_count: 99\n profile_text_color: 2c300f\n time_zone: Astana\n profile_background_color: ffffff\n notifications: false\n verified: false\n description: \"\"\n geo_enabled: false\n friends_count: 57\n profile_background_image_url: http://a3.twimg.com/profile_background_images/37570255/ilovepics.gif\n statuses_count: 1561\n screen_name: Mazikk\n following: false\nin_reply_to_screen_name: \nsource: <a href=\"http://echofon.com/\" rel=\"nofollow\">Echofon</a>\nin_reply_to_status_id: \n', '2009-10-10 11:32:26', '2009-10-10 11:32:26')[0m
+  [4;35;1mSQL (27.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (12.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:26', '--- !ruby/object:TwitterUpdater {}\n\n', '2009-10-10 11:32:26', 7, '2009-10-10 11:35:26', 0, NULL, NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (3.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 524[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] TwitterUpdater completed after 65.8130
+* [JOB] acquiring lock on CreateThumbs
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:32:26', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 568 and (locked_at is null or locked_at < '2009-10-10 11:32:16') and (run_at <= '2009-10-10 11:32:26')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (2.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 568[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+* [JOB] CreateThumbs completed after 2.8510
+* [JOB] acquiring lock on CreateThumbs
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:32:29', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 571 and (locked_at is null or locked_at < '2009-10-10 11:32:19') and (run_at <= '2009-10-10 11:32:29')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (2.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 571[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] CreateThumbs completed after 1.8230
+* [JOB] acquiring lock on CreateThumbs
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:32:31', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 573 and (locked_at is null or locked_at < '2009-10-10 11:32:21') and (run_at <= '2009-10-10 11:32:31')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 573[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+* [JOB] CreateThumbs completed after 1.8620
+* [JOB] acquiring lock on CreateThumbs
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:32:32', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 576 and (locked_at is null or locked_at < '2009-10-10 11:32:22') and (run_at <= '2009-10-10 11:32:32')) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (2.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 576[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] CreateThumbs completed after 2.1800
+* [JOB] acquiring lock on CacheCleaner
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:32:35', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 525 and (locked_at is null or locked_at < '2009-10-10 11:32:25') and (run_at <= '2009-10-10 11:32:35')) [0m
+  [4;35;1mCache Delete all (87.0ms)[0m   [0mDELETE FROM `caches` WHERE (delete_at < '2009-10-10 11:32:35') [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (2.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:35', '--- !ruby/object:CacheCleaner {}\n\n', '2009-10-10 11:32:35', 5, '2009-10-10 11:33:35', 0, NULL, NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 525[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] CacheCleaner completed after 0.1770
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:32:35', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 526 and (locked_at is null or locked_at < '2009-10-10 11:32:25') and (run_at <= '2009-10-10 11:32:35')) [0m
+  [4;35;1mMovie Load (58.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 107) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'dexter') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMovie Load (5.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 773262 AND `movies`.id <> 107) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (2.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:35', '--- !ruby/object:MovieUpdater \nmovie_id: 107\n', '2009-10-10 11:32:35', 2, '2009-10-10 17:50:27', 0, NULL, NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (2.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 526[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.5930
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (3.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:32:36', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 527 and (locked_at is null or locked_at < '2009-10-10 11:32:26') and (run_at <= '2009-10-10 11:32:36')) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 105) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-10 15:32:42) [GET]
+  Parameters: {"q"=>"Ваше", "target"=>"movie"}
+  [4;36;1mMovie Columns (54.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (127.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%Ваше%')) [0m
+  [4;36;1mUser Columns (355.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (26.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%Ваше%') OR UPPER(screen_name) LIKE UPPER('%Ваше%')) [0m
+  [4;36;1mMovie Load (5.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (UPPER(names) LIKE UPPER('%Ваше%')) LIMIT 0, 12[0m
+Rendering template within layouts/opinions
+Rendering movies/search
+Rendered common/_pagination (5.0ms)
+Rendered movies/_search_movies (46.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_search (3.0ms)
+Rendered common/_langbar (7.0ms)
+  [4;35;1mOpinion Load (4.0ms)[0m   [0mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mOpinion Columns (17.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mMovie Load (6.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (596.0ms)
+Rendered common/_sidebar (631.0ms)
+Rendered common/_footer (10.0ms)
+Completed in 2120ms (View: 841, DB: 598) | 200 OK [http://ru.twiliked.net/search?q=%D0%92%D0%B0%D1%88%D0%B5&target=movie]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Update (2.0ms)[0m   [0mUPDATE `delayed_jobs` SET `updated_at` = '2009-10-10 11:32:46', `last_error` = 'execution expired\nF:/portsoft/Ruby1.8/lib/ruby/1.8/timeout.rb:60:in `open\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:560:in `connect\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/timeout.rb:53:in `timeout\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/timeout.rb:93:in `timeout\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:560:in `connect\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:553:in `do_start\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:542:in `start\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:1035:in `request\'\nF:/portsoft/Ruby1.8/lib/ruby/gems/1.8/gems/httparty-0.4.4/lib/httparty/request.rb:71:in `perform_actual_request\'\nF:/portsoft/Ruby1.8/lib/ruby/gems/1.8/gems/httparty-0.4.4/lib/httparty/request.rb:75:in `get_response\'\nF:/portsoft/Ruby1.8/lib/ruby/gems/1.8/gems/httparty-0.4.4/lib/httparty/request.rb:40:in `perform\'\nF:/portsoft/Ruby1.8/lib/ruby/gems/1.8/gems/httparty-0.4.4/lib/httparty.rb:159:in `perform_request\'\nF:/portsoft/Ruby1.8/lib/ruby/gems/1.8/gems/httparty-0.4.4/lib/httparty.rb:125:in `get\'\nD:/Rails projects/twilike/lib/omdb.rb:9:in `movie_info\'\nD:/Rails projects/twilike/app/jobs/movie_updater.rb:14:in `perform\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:216:in `invoke_job\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:94:in `run_with_lock\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:94:in `run_with_lock\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/benchmark.rb:308:in `realtime\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:93:in `run_with_lock\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:153:in `each\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:153:in `reserve_and_run_one_job\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:199:in `times\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:199:in `work_off\'\n(irb):2:in `irb_binding\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/irb/workspace.rb:52:in `irb_binding\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/irb/workspace.rb:52', `run_at` = '2009-10-10 11:32:49', `attempts` = 1 WHERE `id` = 527[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater failed with Timeout::Error: execution expired - 1 failed attempts
+execution expired
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:32:46', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 528 and (locked_at is null or locked_at < '2009-10-10 11:32:36') and (run_at <= '2009-10-10 11:32:46')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 106) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'house-md') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (5.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 412142 AND `movies`.id <> 106) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:47', '--- !ruby/object:MovieUpdater \nmovie_id: 106\n', '2009-10-10 11:32:47', 2, '2009-10-10 17:51:54', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 528[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.5430
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:32:47', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 529 and (locked_at is null or locked_at < '2009-10-10 11:32:37') and (run_at <= '2009-10-10 11:32:47')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 104) [0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'spread') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (6.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1186370 AND `movies`.id <> 104) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (2.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:32:51', '--- !ruby/object:MovieUpdater \nmovie_id: 104\n', '2009-10-10 11:32:51', 2, '2009-10-10 17:52:01', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 529[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.6390
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#timeline (for 127.0.0.1 at 2009-10-10 15:33:15) [GET]
+  [4;36;1mCache Columns (33.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (6.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||timeline') LIMIT 1[0m
+  [4;36;1mOpinion Load (7.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = -1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 0) ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/opinions
+Rendering opinions/timeline
+  [4;35;1mOpinion Columns (70.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mMovie Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (16.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mUser Columns (30.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (12.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+  [4;36;1mMovie Load (24.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (6.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+  [4;35;1mUser Load (5.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 17) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 103) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 55) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 100) [0m
+  [4;35;1mUser Load (10.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 41) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 99) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 53) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 51) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 56) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 50) [0m
+  [4;36;1mMovie Load (6.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 46) [0m
+Rendered common/_navigation (13.0ms)
+Rendered common/_search (34.0ms)
+Rendered common/_langbar (5.0ms)
+  [4;36;1mOpinion Load (6.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (438.0ms)
+Rendered common/_sidebar (596.0ms)
+Rendered common/_footer (5.0ms)
+Completed in 3625ms (View: 3169, DB: 277) | 200 OK [http://ru.twiliked.net/timeline]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#one (for 127.0.0.1 at 2009-10-10 15:35:09) [GET]
+  Parameters: {"tweet_id"=>"4689017865"}
+  [4;36;1mOpinion Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mOpinion Load (12.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`tweet_id` = '4689017865') ORDER BY created_at DESC LIMIT 1[0m
+Rendering template within layouts/opinions
+Rendering opinions/one
+  [4;36;1mMovie Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (9.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;36;1mUser Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 43) [0m
+Rendered common/_navigation (7.0ms)
+Rendered common/_search (3.0ms)
+Rendered common/_langbar (5.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mMovie Load (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (242.0ms)
+Rendered common/_sidebar (272.0ms)
+Rendered common/_footer (3.0ms)
+Completed in 1295ms (View: 1132, DB: 82) | 200 OK [http://en.twiliked.net/opinion/4689017865]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#timeline (for 127.0.0.1 at 2009-10-10 15:35:40) [GET]
+  [4;36;1mCache Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (25.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'en|||opinions|||timeline') LIMIT 1[0m
+  [4;36;1mOpinion Load (7.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = -1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 0) ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/opinions
+Rendering opinions/timeline
+  [4;35;1mOpinion Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mMovie Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (12.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;36;1mUser Columns (17.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (40.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mUser Load (6.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 14) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 17) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 103) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 55) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 100) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 41) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 99) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 51) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 56) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 50) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 46) [0m
+Rendered common/_navigation (7.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (2.0ms)
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+Rendered common/_sidebar_last_opinions (466.0ms)
+Rendered common/_sidebar (493.0ms)
+Rendered common/_footer (5.0ms)
+Completed in 2033ms (View: 1721, DB: 174) | 200 OK [http://en.twiliked.net/timeline]
+* [JOB] acquiring lock on TwitterUpdater
+  [4;35;1mDelayed::Job Update (4.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:35:53', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 578 and (locked_at is null or locked_at < '2009-10-10 11:35:43') and (run_at <= '2009-10-10 11:35:53')) [0m
+  [4;36;1mAddedTweet Load (84.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4743670842') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (46.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4744282811') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (29.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4745397482') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (1.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4749349525') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (2.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756169882') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (2.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756324956') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (2.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756348768') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (2.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756580234') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (3.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756743227') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (2.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4757470470') LIMIT 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (3.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:35:55', '--- !ruby/object:TwitterUpdater {}\n\n', '2009-10-10 11:35:55', 7, '2009-10-10 11:38:55', 0, NULL, NULL)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (2.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 578[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] TwitterUpdater completed after 1.6710
+* [JOB] acquiring lock on CacheCleaner
+  [4;36;1mDelayed::Job Update (3.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:35:55', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 579 and (locked_at is null or locked_at < '2009-10-10 11:35:45') and (run_at <= '2009-10-10 11:35:55')) [0m
+  [4;35;1mCache Delete all (76.0ms)[0m   [0mDELETE FROM `caches` WHERE (delete_at < '2009-10-10 11:35:55') [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:35:55', '--- !ruby/object:CacheCleaner {}\n\n', '2009-10-10 11:35:55', 5, '2009-10-10 11:36:55', 0, NULL, NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 579[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] CacheCleaner completed after 0.1040
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:35:55', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 530 and (locked_at is null or locked_at < '2009-10-10 11:35:45') and (run_at <= '2009-10-10 11:35:55')) [0m
+  [4;35;1mMovie Load (17.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 103) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-game') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMovie Load (5.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 119174 AND `movies`.id <> 103) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:35:56', '--- !ruby/object:MovieUpdater \nmovie_id: 103\n', '2009-10-10 11:35:56', 2, '2009-10-10 17:56:42', 0, NULL, NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (2.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 530[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.5650
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:35:56', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 531 and (locked_at is null or locked_at < '2009-10-10 11:35:46') and (run_at <= '2009-10-10 11:35:56')) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 102) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-sopranos') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMovie Load (5.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 141842 AND `movies`.id <> 102) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:35:56', '--- !ruby/object:MovieUpdater \nmovie_id: 102\n', '2009-10-10 11:35:56', 2, '2009-10-10 17:56:45', 0, NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 531[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.5680
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:35:56', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 532 and (locked_at is null or locked_at < '2009-10-10 11:35:46') and (run_at <= '2009-10-10 11:35:56')) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 101) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'district-b13') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 414852 AND `movies`.id <> 101) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:35:58', '--- !ruby/object:MovieUpdater \nmovie_id: 101\n', '2009-10-10 11:35:58', 2, '2009-10-10 17:56:48', 0, NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (2.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 532[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] MovieUpdater completed after 1.2170
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:35:58', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 534 and (locked_at is null or locked_at < '2009-10-10 11:35:48') and (run_at <= '2009-10-10 11:35:58')) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 100) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'big-fish') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 319061 AND `movies`.id <> 100) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:35:58', '--- !ruby/object:MovieUpdater \nmovie_id: 100\n', '2009-10-10 11:35:58', 2, '2009-10-10 17:56:51', 0, NULL, NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (2.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 534[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.5410
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:35:58', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 533 and (locked_at is null or locked_at < '2009-10-10 11:35:48') and (run_at <= '2009-10-10 11:35:58')) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 99) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'american-history-x') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 120586 AND `movies`.id <> 99) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:01', '--- !ruby/object:MovieUpdater \nmovie_id: 99\n', '2009-10-10 11:36:01', 2, '2009-10-10 17:56:56', 0, NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 533[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+* [JOB] MovieUpdater completed after 2.6780
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:01', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 535 and (locked_at is null or locked_at < '2009-10-10 11:35:51') and (run_at <= '2009-10-10 11:36:01')) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 98) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'gran-torino') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1205489 AND `movies`.id <> 98) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (2.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:01', '--- !ruby/object:MovieUpdater \nmovie_id: 98\n', '2009-10-10 11:36:01', 2, '2009-10-10 17:56:58', 0, NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 535[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3930
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:01', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 536 and (locked_at is null or locked_at < '2009-10-10 11:35:51') and (run_at <= '2009-10-10 11:36:01')) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 97) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'lie-to-me') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1235099 AND `movies`.id <> 97) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:02', '--- !ruby/object:MovieUpdater \nmovie_id: 97\n', '2009-10-10 11:36:02', 2, '2009-10-10 17:57:00', 0, NULL, NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 536[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.4180
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:02', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 537 and (locked_at is null or locked_at < '2009-10-10 11:35:52') and (run_at <= '2009-10-10 11:36:02')) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-green-mile') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 120689 AND `movies`.id <> 96) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:08', '--- !ruby/object:MovieUpdater \nmovie_id: 96\n', '2009-10-10 11:36:08', 2, '2009-10-10 17:57:12', 0, NULL, NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 537[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+* [JOB] MovieUpdater completed after 6.3590
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:09', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 538 and (locked_at is null or locked_at < '2009-10-10 11:35:59') and (run_at <= '2009-10-10 11:36:09')) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 95) [0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'borat-cultural-learnings-of-america-for-make-benefit-glorious-nation-of-kazakhstan') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 443453 AND `movies`.id <> 95) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:10', '--- !ruby/object:MovieUpdater \nmovie_id: 95\n', '2009-10-10 11:36:10', 2, '2009-10-10 17:57:16', 0, NULL, NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 538[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3580
+* [JOB] acquiring lock on MovieUpdater
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:10', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 539 and (locked_at is null or locked_at < '2009-10-10 11:36:00') and (run_at <= '2009-10-10 11:36:10')) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 94) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Update (2.0ms)[0m   [0mUPDATE `delayed_jobs` SET `updated_at` = '2009-10-10 11:36:20', `last_error` = 'execution expired\nF:/portsoft/Ruby1.8/lib/ruby/1.8/timeout.rb:60:in `rbuf_fill\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/timeout.rb:62:in `timeout\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/timeout.rb:93:in `timeout\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/protocol.rb:134:in `rbuf_fill\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/protocol.rb:116:in `readuntil\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/protocol.rb:126:in `readline\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:2020:in `read_status_line\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:2009:in `read_new\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:1050:in `request\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:1037:in `request\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:543:in `start\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/net/http.rb:1035:in `request\'\nF:/portsoft/Ruby1.8/lib/ruby/gems/1.8/gems/httparty-0.4.4/lib/httparty/request.rb:71:in `perform_actual_request\'\nF:/portsoft/Ruby1.8/lib/ruby/gems/1.8/gems/httparty-0.4.4/lib/httparty/request.rb:75:in `get_response\'\nF:/portsoft/Ruby1.8/lib/ruby/gems/1.8/gems/httparty-0.4.4/lib/httparty/request.rb:40:in `perform\'\nF:/portsoft/Ruby1.8/lib/ruby/gems/1.8/gems/httparty-0.4.4/lib/httparty.rb:159:in `perform_request\'\nF:/portsoft/Ruby1.8/lib/ruby/gems/1.8/gems/httparty-0.4.4/lib/httparty.rb:125:in `get\'\nD:/Rails projects/twilike/lib/omdb.rb:9:in `movie_info\'\nD:/Rails projects/twilike/app/jobs/movie_updater.rb:14:in `perform\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:216:in `invoke_job\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:94:in `run_with_lock\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:94:in `run_with_lock\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/benchmark.rb:308:in `realtime\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:93:in `run_with_lock\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:153:in `each\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:153:in `reserve_and_run_one_job\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:199:in `times\'\nD:/Rails projects/twilike/vendor/plugins/delayed_job/lib/delayed/job.rb:199:in `work_off\'\n(irb):4:in `irb_binding\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/irb/workspace.rb:52:in `irb_binding\'\nF:/portsoft/Ruby1.8/lib/ruby/1.8/irb/workspace.rb:52', `run_at` = '2009-10-10 11:36:23', `attempts` = 1 WHERE `id` = 539[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater failed with Timeout::Error: execution expired - 1 failed attempts
+execution expired
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:20', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 540 and (locked_at is null or locked_at < '2009-10-10 11:36:10') and (run_at <= '2009-10-10 11:36:20')) [0m
+  [4;36;1mMovie Load (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'if-only') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 332136 AND `movies`.id <> 93) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:20', '--- !ruby/object:MovieUpdater \nmovie_id: 93\n', '2009-10-10 11:36:20', 2, '2009-10-10 17:57:36', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 540[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.7310
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:20', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 542 and (locked_at is null or locked_at < '2009-10-10 11:36:10') and (run_at <= '2009-10-10 11:36:20')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 92) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-bucket-list') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 825232 AND `movies`.id <> 92) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:21', '--- !ruby/object:MovieUpdater \nmovie_id: 92\n', '2009-10-10 11:36:21', 2, '2009-10-10 17:57:39', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (0.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 542[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3220
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:21', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 541 and (locked_at is null or locked_at < '2009-10-10 11:36:11') and (run_at <= '2009-10-10 11:36:21')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 91) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'ponyo') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 876563 AND `movies`.id <> 91) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:24', '--- !ruby/object:MovieUpdater \nmovie_id: 91\n', '2009-10-10 11:36:24', 2, '2009-10-10 17:57:46', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 541[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.7090
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:25', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 543 and (locked_at is null or locked_at < '2009-10-10 11:36:15') and (run_at <= '2009-10-10 11:36:25')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 90) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'twin-peaks') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 98936 AND `movies`.id <> 90) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:31', '--- !ruby/object:MovieUpdater \nmovie_id: 90\n', '2009-10-10 11:36:31', 2, '2009-10-10 17:57:58', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 543[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 6.3810
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:31', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 544 and (locked_at is null or locked_at < '2009-10-10 11:36:21') and (run_at <= '2009-10-10 11:36:31')) [0m
+  [4;36;1mMovie Load (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 89) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'vse-umrut-a-ya-ostanus') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1227189 AND `movies`.id <> 89) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (0.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:31', '--- !ruby/object:MovieUpdater \nmovie_id: 89\n', '2009-10-10 11:36:31', 2, '2009-10-10 17:58:01', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (0.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 544[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3330
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:31', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 547 and (locked_at is null or locked_at < '2009-10-10 11:36:21') and (run_at <= '2009-10-10 11:36:31')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 88) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'pandorum') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1188729 AND `movies`.id <> 88) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:38', '--- !ruby/object:MovieUpdater \nmovie_id: 88\n', '2009-10-10 11:36:38', 2, '2009-10-10 17:58:14', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 547[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 6.3530
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:38', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 545 and (locked_at is null or locked_at < '2009-10-10 11:36:28') and (run_at <= '2009-10-10 11:36:38')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 87) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'bicentennial-man') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 182789 AND `movies`.id <> 87) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:38', '--- !ruby/object:MovieUpdater \nmovie_id: 87\n', '2009-10-10 11:36:38', 2, '2009-10-10 17:58:16', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 545[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3340
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:38', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 546 and (locked_at is null or locked_at < '2009-10-10 11:36:28') and (run_at <= '2009-10-10 11:36:38')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 86) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'benhur') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 52618 AND `movies`.id <> 86) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:41', '--- !ruby/object:MovieUpdater \nmovie_id: 86\n', '2009-10-10 11:36:41', 2, '2009-10-10 17:58:22', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (2.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 546[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3300
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:44', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 548 and (locked_at is null or locked_at < '2009-10-10 11:36:34') and (run_at <= '2009-10-10 11:36:44')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 85) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'fringe') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1119644 AND `movies`.id <> 85) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:44', '--- !ruby/object:MovieUpdater \nmovie_id: 85\n', '2009-10-10 11:36:44', 2, '2009-10-10 17:58:27', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 548[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3390
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:44', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 549 and (locked_at is null or locked_at < '2009-10-10 11:36:34') and (run_at <= '2009-10-10 11:36:44')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 84) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'billy-elliot') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 249462 AND `movies`.id <> 84) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (0.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:45', '--- !ruby/object:MovieUpdater \nmovie_id: 84\n', '2009-10-10 11:36:45', 2, '2009-10-10 17:58:31', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 549[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.6310
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:45', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 550 and (locked_at is null or locked_at < '2009-10-10 11:36:35') and (run_at <= '2009-10-10 11:36:45')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 83) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = '24') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 285331 AND `movies`.id <> 83) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:48', '--- !ruby/object:MovieUpdater \nmovie_id: 83\n', '2009-10-10 11:36:48', 2, '2009-10-10 17:58:38', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 550[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3190
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:48', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 551 and (locked_at is null or locked_at < '2009-10-10 11:36:38') and (run_at <= '2009-10-10 11:36:48')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 82) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'swimming-pool') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 324133 AND `movies`.id <> 82) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (0.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:48', '--- !ruby/object:MovieUpdater \nmovie_id: 82\n', '2009-10-10 11:36:48', 2, '2009-10-10 17:58:45', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 551[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3570
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:49', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 552 and (locked_at is null or locked_at < '2009-10-10 11:36:39') and (run_at <= '2009-10-10 11:36:49')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = '9') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 472033 AND `movies`.id <> 81) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:49', '--- !ruby/object:MovieUpdater \nmovie_id: 81\n', '2009-10-10 11:36:49', 2, '2009-10-10 17:58:48', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 552[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.6940
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:49', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 554 and (locked_at is null or locked_at < '2009-10-10 11:36:39') and (run_at <= '2009-10-10 11:36:49')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 80) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'californication') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 904208 AND `movies`.id <> 80) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:59', '--- !ruby/object:MovieUpdater \nmovie_id: 80\n', '2009-10-10 11:36:59', 2, '2009-10-10 17:59:13', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 554[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 9.3150
+* [JOB] acquiring lock on CacheCleaner
+  [4;35;1mDelayed::Job Update (0.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:59', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 584 and (locked_at is null or locked_at < '2009-10-10 11:36:49') and (run_at <= '2009-10-10 11:36:59')) [0m
+  [4;36;1mCache Delete all (1.0ms)[0m   [0;1mDELETE FROM `caches` WHERE (delete_at < '2009-10-10 11:36:59') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:36:59', '--- !ruby/object:CacheCleaner {}\n\n', '2009-10-10 11:36:59', 5, '2009-10-10 11:37:59', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 584[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] CacheCleaner completed after 0.0200
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:36:59', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 553 and (locked_at is null or locked_at < '2009-10-10 11:36:49') and (run_at <= '2009-10-10 11:36:59')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 79) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'jennifers-body') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1131734 AND `movies`.id <> 79) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (2.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:02', '--- !ruby/object:MovieUpdater \nmovie_id: 79\n', '2009-10-10 11:37:02', 2, '2009-10-10 17:59:19', 0, NULL, NULL)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (2.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 553[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3500
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (2.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:02', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 555 and (locked_at is null or locked_at < '2009-10-10 11:36:52') and (run_at <= '2009-10-10 11:37:02')) [0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 78) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-proposal') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1041829 AND `movies`.id <> 78) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:05', '--- !ruby/object:MovieUpdater \nmovie_id: 78\n', '2009-10-10 11:37:05', 2, '2009-10-10 17:59:26', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 555[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3310
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:05', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 556 and (locked_at is null or locked_at < '2009-10-10 11:36:55') and (run_at <= '2009-10-10 11:37:05')) [0m
+  [4;36;1mMovie Load (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 77) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'un-homme-et-son-chien') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1174049 AND `movies`.id <> 77) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:09', '--- !ruby/object:MovieUpdater \nmovie_id: 77\n', '2009-10-10 11:37:09', 2, '2009-10-10 17:59:34', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 556[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3450
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:19', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 557 and (locked_at is null or locked_at < '2009-10-10 11:37:09') and (run_at <= '2009-10-10 11:37:19')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 76) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-interpreter') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 373926 AND `movies`.id <> 76) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (0.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:19', '--- !ruby/object:MovieUpdater \nmovie_id: 76\n', '2009-10-10 11:37:19', 2, '2009-10-10 17:59:54', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 557[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3240
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:19', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 558 and (locked_at is null or locked_at < '2009-10-10 11:37:09') and (run_at <= '2009-10-10 11:37:19')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 75) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'eyes-wide-shut') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 120663 AND `movies`.id <> 75) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (0.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:22', '--- !ruby/object:MovieUpdater \nmovie_id: 75\n', '2009-10-10 11:37:22', 2, '2009-10-10 18:00:02', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 558[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3260
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:22', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 559 and (locked_at is null or locked_at < '2009-10-10 11:37:12') and (run_at <= '2009-10-10 11:37:22')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 74) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'battlestar-galactica') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 407362 AND `movies`.id <> 74) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:23', '--- !ruby/object:MovieUpdater \nmovie_id: 74\n', '2009-10-10 11:37:23', 2, '2009-10-10 18:00:05', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 559[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3220
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (0.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:23', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 560 and (locked_at is null or locked_at < '2009-10-10 11:37:13') and (run_at <= '2009-10-10 11:37:23')) [0m
+  [4;36;1mMovie Load (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 73) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'crimes-and-misdemeanors') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 97123 AND `movies`.id <> 73) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:32', '--- !ruby/object:MovieUpdater \nmovie_id: 73\n', '2009-10-10 11:37:32', 2, '2009-10-10 18:00:21', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 560[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 9.3270
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:32', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 561 and (locked_at is null or locked_at < '2009-10-10 11:37:22') and (run_at <= '2009-10-10 11:37:32')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 72) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-big-bang-theory') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 898266 AND `movies`.id <> 72) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:32', '--- !ruby/object:MovieUpdater \nmovie_id: 72\n', '2009-10-10 11:37:32', 2, '2009-10-10 18:00:26', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 561[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3310
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:32', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 562 and (locked_at is null or locked_at < '2009-10-10 11:37:22') and (run_at <= '2009-10-10 11:37:32')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 71) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'kpax') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 272152 AND `movies`.id <> 71) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:36', '--- !ruby/object:MovieUpdater \nmovie_id: 71\n', '2009-10-10 11:37:36', 2, '2009-10-10 18:00:33', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 562[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3390
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (2.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:36', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 565 and (locked_at is null or locked_at < '2009-10-10 11:37:26') and (run_at <= '2009-10-10 11:37:36')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 70) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'monty-pythons-flying-circus') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 63929 AND `movies`.id <> 70) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:36', '--- !ruby/object:MovieUpdater \nmovie_id: 70\n', '2009-10-10 11:37:36', 2, '2009-10-10 18:00:43', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 565[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3440
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:36', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 563 and (locked_at is null or locked_at < '2009-10-10 11:37:26') and (run_at <= '2009-10-10 11:37:36')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'surrogates') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 986263 AND `movies`.id <> 68) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:36', '--- !ruby/object:MovieUpdater \nmovie_id: 68\n', '2009-10-10 11:37:36', 2, '2009-10-10 18:00:47', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (2.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 563[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3320
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:36', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 566 and (locked_at is null or locked_at < '2009-10-10 11:37:26') and (run_at <= '2009-10-10 11:37:36')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 69) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-ugly-truth') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1142988 AND `movies`.id <> 69) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:39', '--- !ruby/object:MovieUpdater \nmovie_id: 69\n', '2009-10-10 11:37:39', 2, '2009-10-10 18:00:50', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 566[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 2.8430
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:39', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 564 and (locked_at is null or locked_at < '2009-10-10 11:37:29') and (run_at <= '2009-10-10 11:37:39')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 67) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'transformers-revenge-of-the-fallen') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1055369 AND `movies`.id <> 67) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:41', '--- !ruby/object:MovieUpdater \nmovie_id: 67\n', '2009-10-10 11:37:41', 2, '2009-10-10 18:00:56', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 564[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 1.5380
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (2.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:45' WHERE (id = 527 and locked_by = 'host:ttim-notebook pid:3404') [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 105) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'superjail') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1031283 AND `movies`.id <> 105) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:49', '--- !ruby/object:MovieUpdater \nmovie_id: 105\n', '2009-10-10 11:37:49', 2, '2009-10-10 17:59:27', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (2.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 527[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3270
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:49', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 569 and (locked_at is null or locked_at < '2009-10-10 11:37:39') and (run_at <= '2009-10-10 11:37:49')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 108) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'slumdog-millionaire') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1010048 AND `movies`.id <> 108) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:49', '--- !ruby/object:MovieUpdater \nmovie_id: 108\n', '2009-10-10 11:37:49', 2, '2009-10-10 11:40:52', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 569[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3350
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:49', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 572 and (locked_at is null or locked_at < '2009-10-10 11:37:39') and (run_at <= '2009-10-10 11:37:49')) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'the-taking-of-pelham-1-2-3') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (5.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 1111422 AND `movies`.id <> 109) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:49', '--- !ruby/object:MovieUpdater \nmovie_id: 109\n', '2009-10-10 11:37:49', 2, '2009-10-10 11:40:42', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 572[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 0.3440
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:49', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 574 and (locked_at is null or locked_at < '2009-10-10 11:37:39') and (run_at <= '2009-10-10 11:37:49')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'case-39') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 795351 AND `movies`.id <> 110) LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:53', '--- !ruby/object:MovieUpdater \nmovie_id: 110\n', '2009-10-10 11:37:53', 2, '2009-10-10 11:40:45', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 574[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3600
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:53', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 577 and (locked_at is null or locked_at < '2009-10-10 11:37:43') and (run_at <= '2009-10-10 11:37:53')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'state-of-play') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 473705 AND `movies`.id <> 111) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:37:56', '--- !ruby/object:MovieUpdater \nmovie_id: 111\n', '2009-10-10 11:37:56', 2, '2009-10-10 11:40:42', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 577[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 3.3300
+* [JOB] acquiring lock on MovieUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:37:56' WHERE (id = 539 and locked_by = 'host:ttim-notebook pid:3404') [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 94) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'heroes') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT `movies`.id FROM `movies` WHERE (`movies`.`imdb_id` = 813715 AND `movies`.id <> 94) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:38:02', '--- !ruby/object:MovieUpdater \nmovie_id: 94\n', '2009-10-10 11:38:02', 2, '2009-10-10 18:00:06', 0, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 539[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] MovieUpdater completed after 6.3140
+* [JOB] acquiring lock on CacheCleaner
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:38:02', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 608 and (locked_at is null or locked_at < '2009-10-10 11:37:52') and (run_at <= '2009-10-10 11:38:02')) [0m
+  [4;36;1mCache Delete all (1.0ms)[0m   [0;1mDELETE FROM `caches` WHERE (delete_at < '2009-10-10 11:38:02') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Create (1.0ms)[0m   [0;1mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:38:02', '--- !ruby/object:CacheCleaner {}\n\n', '2009-10-10 11:38:02', 5, '2009-10-10 11:39:02', 0, NULL, NULL)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Destroy (1.0ms)[0m   [0mDELETE FROM `delayed_jobs` WHERE `id` = 608[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+* [JOB] CacheCleaner completed after 0.0200
+* [JOB] acquiring lock on TwitterUpdater
+  [4;35;1mDelayed::Job Update (1.0ms)[0m   [0mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:39:06', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 583 and (locked_at is null or locked_at < '2009-10-10 11:38:56') and (run_at <= '2009-10-10 11:39:06')) [0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4743670842') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (1.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4744282811') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (2.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4745397482') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (1.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4749349525') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756169882') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (2.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756324956') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (2.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756348768') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (2.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756580234') LIMIT 1[0m
+  [4;36;1mAddedTweet Load (1.0ms)[0m   [0;1mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4756743227') LIMIT 1[0m
+  [4;35;1mAddedTweet Load (1.0ms)[0m   [0mSELECT * FROM `added_tweets` WHERE (`added_tweets`.`tweet_id` = '4757470470') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:39:08', '--- !ruby/object:TwitterUpdater {}\n\n', '2009-10-10 11:39:08', 7, '2009-10-10 11:42:08', 0, NULL, NULL)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (0.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 583[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+* [JOB] TwitterUpdater completed after 1.1890
+* [JOB] acquiring lock on CacheCleaner
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE `delayed_jobs` SET locked_at = '2009-10-10 11:39:08', locked_by = 'host:ttim-notebook pid:3404' WHERE (id = 628 and (locked_at is null or locked_at < '2009-10-10 11:38:58') and (run_at <= '2009-10-10 11:39:08')) [0m
+  [4;35;1mCache Delete all (1.0ms)[0m   [0mDELETE FROM `caches` WHERE (delete_at < '2009-10-10 11:39:08') [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDelayed::Job Create (1.0ms)[0m   [0mINSERT INTO `delayed_jobs` (`failed_at`, `locked_by`, `created_at`, `handler`, `updated_at`, `priority`, `run_at`, `attempts`, `locked_at`, `last_error`) VALUES(NULL, NULL, '2009-10-10 11:39:08', '--- !ruby/object:CacheCleaner {}\n\n', '2009-10-10 11:39:08', 5, '2009-10-10 11:40:08', 0, NULL, NULL)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM `delayed_jobs` WHERE `id` = 628[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+* [JOB] CacheCleaner completed after 0.0210

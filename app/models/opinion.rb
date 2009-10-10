@@ -23,4 +23,8 @@ class Opinion < ActiveRecord::Base
   def twitter_url
     "http://twitter.com/"+self.user.screen_name+"/status/"+self.tweet_id
   end
+
+  def self.tmp
+    Opinion.all(:conditions => ["text like ?", "%Ваше мнение.%"])
+  end
 end
