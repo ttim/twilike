@@ -41,7 +41,7 @@
       <file leaf-file-name="opinion.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/opinion.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="7" selection-start="917" selection-end="917" vertical-scroll-proportion="0.91122717">
+            <state line="27" column="2" selection-start="704" selection-end="704" vertical-scroll-proportion="0.6005222">
               <folding />
             </state>
           </provider>
@@ -1120,7 +1120,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/opinion.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="7" selection-start="917" selection-end="917" vertical-scroll-proportion="0.91122717">
+        <state line="27" column="2" selection-start="704" selection-end="704" vertical-scroll-proportion="0.6005222">
           <folding />
         </state>
       </provider>
