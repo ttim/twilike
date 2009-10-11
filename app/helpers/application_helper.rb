@@ -30,7 +30,7 @@ module ApplicationHelper
   end
 
   def user_href(user)
-    link_to user.name, :controller => :opinions, :action => 'by_user', :screen_name => user.screen_name
+    link_to (user.name || @user.screen_name), :controller => :opinions, :action => 'by_user', :screen_name => user.screen_name
   end
 
   def movie_href(movie)
