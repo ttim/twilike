@@ -9,6 +9,9 @@ ru:
     last_opinions: "Последние мнения"
     about: "Что Это?"
     weekend: "В Кино"
+
+    all_users: "Все пользователи"
+    all_movies: "Все фильмы"
   about:
     header: "Что это?"
     title: "Что это? / Twilike"

@@ -17742,3 +17742,1512 @@ Rendered common/_sidebar_last_opinions (261.0ms)
 Rendered common/_sidebar (348.0ms)
 Rendered common/_footer (5.0ms)
 Completed in 1198ms (View: 694, DB: 98) | 200 OK [http://ru.twiliked.net/user/kaikajkay?view=block]
+  [4;36;1mSQL (41.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#timeline (for 127.0.0.1 at 2009-10-11 17:27:47) [GET]
+Redirected to http://ru.twiliked.net:3000/
+Filter chain halted as [:check_domain] rendered_or_redirected.
+Completed in 348ms (DB: 44) | 301 Moved Permanently [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#timeline (for 127.0.0.1 at 2009-10-11 17:27:48) [GET]
+  [4;36;1mCache Columns (262.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (58.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||timeline') LIMIT 1[0m
+  [4;36;1mOpinion Load (96.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mOpinion Load (6.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = -1) ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`rating` = 0) ORDER BY created_at DESC LIMIT 5[0m
+Rendering template within layouts/opinions
+Rendering opinions/timeline
+  [4;35;1mOpinion Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mMovie Columns (113.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (45.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mUser Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (75.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 66) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 65) [0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 63) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mUser Load (19.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 61) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 109) [0m
+  [4;35;1mUser Load (18.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 29) [0m
+  [4;36;1mMovie Load (13.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 64) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 62) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 110) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (6.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 103) [0m
+  [4;35;1mUser Load (4.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 55) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 100) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 41) [0m
+  [4;36;1mMovie Load (16.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 64) [0m
+  [4;36;1mMovie Load (7.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 111) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mMovie Load (10.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 81) [0m
+  [4;35;1mUser Load (6.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 50) [0m
+  [4;36;1mMovie Load (17.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered common/_navigation (15.0ms)
+Rendered common/_search (112.0ms)
+Rendered common/_langbar (7.0ms)
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (510.0ms)
+Rendered common/_sidebar (1033.0ms)
+Rendered common/_footer (195.0ms)
+Completed in 7029ms (View: 3501, DB: 842) | 200 OK [http://ru.twiliked.net/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:28:13) [GET]
+  Parameters: {"targer"=>"movie"}
+  [4;36;1mMovie Columns (14.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (125.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (13.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) LIMIT 0, 12[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (26.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 1 AND created_at > '1999-10-11 17:28:14') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 4 AND created_at > '1999-10-11 17:28:14') [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 7 AND created_at > '1999-10-11 17:28:14') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 10 AND created_at > '1999-10-11 17:28:14') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 2 AND created_at > '1999-10-11 17:28:14') [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 5 AND created_at > '1999-10-11 17:28:14') [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 8 AND created_at > '1999-10-11 17:28:14') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 11 AND created_at > '1999-10-11 17:28:14') [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 3 AND created_at > '1999-10-11 17:28:14') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 6 AND created_at > '1999-10-11 17:28:15') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 9 AND created_at > '1999-10-11 17:28:15') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 12 AND created_at > '1999-10-11 17:28:15') [0m
+Rendered common/_pagination (19.0ms)
+Rendered movies/_search_movies (1167.0ms)
+Rendered common/_navigation (23.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;35;1mMovie Load (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (309.0ms)
+Rendered common/_sidebar (366.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 1957ms (View: 1573, DB: 225) | 200 OK [http://ru.twiliked.net/search?targer=movie]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:29:37) [GET]
+  Parameters: {"targer"=>"movie"}
+  [4;35;1mMovie Columns (11.0ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;35;1mUser Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (18.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) LIMIT 0, 12[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;35;1mOpinion Columns (12.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 1 AND created_at > '1999-10-11 17:29:38') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 4 AND created_at > '1999-10-11 17:29:38') [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 7 AND created_at > '1999-10-11 17:29:39') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 10 AND created_at > '1999-10-11 17:29:39') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 2 AND created_at > '1999-10-11 17:29:39') [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 5 AND created_at > '1999-10-11 17:29:39') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 8 AND created_at > '1999-10-11 17:29:39') [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 11 AND created_at > '1999-10-11 17:29:39') [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 3 AND created_at > '1999-10-11 17:29:39') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 6 AND created_at > '1999-10-11 17:29:39') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 9 AND created_at > '1999-10-11 17:29:40') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 12 AND created_at > '1999-10-11 17:29:40') [0m
+Rendered common/_pagination (16.0ms)
+Rendered movies/_search_movies (2566.0ms)
+Rendered common/_navigation (11.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (2.0ms)
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (324.0ms)
+Rendered common/_sidebar (475.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 3434ms (View: 3071, DB: 106) | 200 OK [http://ru.twiliked.net/search?targer=movie]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:30:28) [GET]
+  Parameters: {"targer"=>"movie"}
+  [4;36;1mMovie Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (42.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) LIMIT 0, 12[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 1 AND created_at > '1999-10-11 17:30:28') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 4 AND created_at > '1999-10-11 17:30:28') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 7 AND created_at > '1999-10-11 17:30:28') [0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 10 AND created_at > '1999-10-11 17:30:28') [0m
+  [4;35;1mSQL (9.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 2 AND created_at > '1999-10-11 17:30:28') [0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 5 AND created_at > '1999-10-11 17:30:28') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 8 AND created_at > '1999-10-11 17:30:28') [0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 11 AND created_at > '1999-10-11 17:30:29') [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 3 AND created_at > '1999-10-11 17:30:29') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 6 AND created_at > '1999-10-11 17:30:29') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 9 AND created_at > '1999-10-11 17:30:29') [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 12 AND created_at > '1999-10-11 17:30:29') [0m
+Rendered common/_pagination (15.0ms)
+Rendered movies/_search_movies (1312.0ms)
+Rendered common/_navigation (14.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;35;1mOpinion Load (16.0ms)[0m   [0mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (429.0ms)
+Rendered common/_sidebar (468.0ms)
+Rendered common/_footer (9.0ms)
+Completed in 2129ms (View: 1744, DB: 178) | 200 OK [http://ru.twiliked.net/search?targer=movie]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:30:41) [GET]
+  Parameters: {"target"=>"movie"}
+  [4;35;1mMovie Columns (19.0ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;35;1mUser Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) LIMIT 0, 12[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;35;1mOpinion Columns (24.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 1 AND created_at > '1999-10-11 17:30:41') [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 4 AND created_at > '1999-10-11 17:30:41') [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 7 AND created_at > '1999-10-11 17:30:42') [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 10 AND created_at > '1999-10-11 17:30:42') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 2 AND created_at > '1999-10-11 17:30:42') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 5 AND created_at > '1999-10-11 17:30:42') [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 8 AND created_at > '1999-10-11 17:30:42') [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 11 AND created_at > '1999-10-11 17:30:42') [0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 3 AND created_at > '1999-10-11 17:30:42') [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 6 AND created_at > '1999-10-11 17:30:42') [0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 9 AND created_at > '1999-10-11 17:30:42') [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT avg(`opinions`.rating) AS avg_rating FROM `opinions` WHERE (movie_id = 12 AND created_at > '1999-10-11 17:30:42') [0m
+Rendered common/_pagination (25.0ms)
+Rendered movies/_search_movies (1076.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (703.0ms)
+Rendered common/_sidebar (748.0ms)
+Rendered common/_footer (6.0ms)
+Completed in 2175ms (View: 1845, DB: 95) | 200 OK [http://ru.twiliked.net/search?target=movie]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:30:54) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (35.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (17.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (9.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (21.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (19.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (19.0ms)
+Rendered movies/_search_users (1625.0ms)
+Rendered common/_navigation (9.0ms)
+Rendered common/_search (4.0ms)
+Rendered common/_langbar (5.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (7.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (331.0ms)
+Rendered common/_sidebar (383.0ms)
+Rendered common/_footer (10.0ms)
+Completed in 2535ms (View: 2004, DB: 192) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:32:09) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (40.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (27.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (76.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (4.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (13.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (6.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (18.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (4.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (21.0ms)
+Rendered movies/_search_users (1705.0ms)
+Rendered common/_navigation (4.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (10.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (14.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (366.0ms)
+Rendered common/_sidebar (390.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 2553ms (View: 1983, DB: 251) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:32:32) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (35.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (96.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (19.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (6.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (9.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (10.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (25.0ms)
+Rendered movies/_search_users (1842.0ms)
+Rendered common/_navigation (7.0ms)
+Rendered common/_search (4.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (324.0ms)
+Rendered common/_sidebar (374.0ms)
+Rendered common/_footer (5.0ms)
+Completed in 2758ms (View: 2223, DB: 253) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:32:56) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (44.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (29.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (6.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (10.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (23.0ms)
+Rendered movies/_search_users (1334.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (632.0ms)
+Rendered common/_sidebar (665.0ms)
+Rendered common/_footer (12.0ms)
+Completed in 2706ms (View: 1984, DB: 169) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:33:14) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (35.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (29.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (3.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (33.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (9.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (27.0ms)
+Rendered movies/_search_users (1815.0ms)
+Rendered common/_navigation (6.0ms)
+Rendered common/_search (12.0ms)
+Rendered common/_langbar (9.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (359.0ms)
+Rendered common/_sidebar (418.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 2764ms (View: 2189, DB: 223) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:33:35) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (19.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (30.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (6.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (17.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (7.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (4.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (5.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (17.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (37.0ms)
+Rendered movies/_search_users (2251.0ms)
+Rendered common/_navigation (32.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (10.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (7.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (422.0ms)
+Rendered common/_sidebar (501.0ms)
+Rendered common/_footer (6.0ms)
+Completed in 3275ms (View: 2726, DB: 181) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:34:03) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (23.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (64.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (4.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (14.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (13.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (8.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (21.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (12.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (19.0ms)
+Rendered movies/_search_users (1950.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (5.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (23.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (651.0ms)
+Rendered common/_sidebar (707.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 3153ms (View: 2629, DB: 231) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:34:20) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (14.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (18.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (6.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (4.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (17.0ms)
+Rendered movies/_search_users (1633.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_search (4.0ms)
+Rendered common/_langbar (27.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (327.0ms)
+Rendered common/_sidebar (405.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 2588ms (View: 2060, DB: 121) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:34:49) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (53.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (24.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (13.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (14.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (22.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (25.0ms)
+Rendered movies/_search_users (2455.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_search (11.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (6.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (417.0ms)
+Rendered common/_sidebar (511.0ms)
+Rendered common/_footer (5.0ms)
+Completed in 3543ms (View: 2962, DB: 217) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:35:05) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (18.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (52.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (20.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (4.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (8.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (5.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (16.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (22.0ms)
+Rendered movies/_search_users (1810.0ms)
+Rendered common/_navigation (6.0ms)
+Rendered common/_search (1.0ms)
+Rendered common/_langbar (2.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (5.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (415.0ms)
+Rendered common/_sidebar (452.0ms)
+Rendered common/_footer (6.0ms)
+Completed in 2972ms (View: 2257, DB: 184) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (11.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:35:55) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (46.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (17.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (23.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (7.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (9.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (18.0ms)
+Rendered movies/_search_users (1826.0ms)
+Rendered common/_navigation (10.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;36;1mOpinion Load (10.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (725.0ms)
+Rendered common/_sidebar (782.0ms)
+Rendered common/_footer (5.0ms)
+Completed in 3019ms (View: 2585, DB: 237) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:36:19) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (47.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (114.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (261.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (49.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (64.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (32.0ms)
+Rendered movies/_search_users (1823.0ms)
+Rendered common/_navigation (9.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (354.0ms)
+Rendered common/_sidebar (420.0ms)
+Rendered common/_footer (6.0ms)
+Completed in 3137ms (View: 2193, DB: 599) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:37:24) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (22.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (3.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (14.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (21.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (15.0ms)
+Rendered movies/_search_users (1437.0ms)
+Rendered common/_navigation (6.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;36;1mOpinion Load (6.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (328.0ms)
+Rendered common/_sidebar (370.0ms)
+Rendered common/_footer (3.0ms)
+Completed in 2308ms (View: 1786, DB: 146) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:37:50) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (40.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (91.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (41.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (14.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (52.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (45.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (12.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (5.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (23.0ms)
+Rendered movies/_search_users (1655.0ms)
+Rendered common/_navigation (9.0ms)
+Rendered common/_search (3.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (7.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (8.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (468.0ms)
+Rendered common/_sidebar (512.0ms)
+Rendered common/_footer (6.0ms)
+Completed in 2779ms (View: 2061, DB: 383) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:38:00) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (21.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (25.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (7.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (16.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (5.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (73.0ms)
+Rendered movies/_search_users (1836.0ms)
+Rendered common/_navigation (20.0ms)
+Rendered common/_search (4.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (4.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (373.0ms)
+Rendered common/_sidebar (429.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 3030ms (View: 2602, DB: 190) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:38:16) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (111.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (37.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (11.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (11.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (27.0ms)
+Rendered movies/_search_users (3254.0ms)
+Rendered common/_navigation (9.0ms)
+Rendered common/_search (3.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (9.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (407.0ms)
+Rendered common/_sidebar (454.0ms)
+Rendered common/_footer (7.0ms)
+Completed in 4652ms (View: 3690, DB: 235) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:38:42) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (94.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (11.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (55.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (92.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (8.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (20.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (6.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (7.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (22.0ms)
+Rendered movies/_search_users (3533.0ms)
+Rendered common/_navigation (6.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (4.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (552.0ms)
+Rendered common/_sidebar (596.0ms)
+Rendered common/_footer (6.0ms)
+Completed in 5056ms (View: 3961, DB: 356) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:39:03) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (21.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (18.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (65.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (90.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (23.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (92.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (8.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (6.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (27.0ms)
+Rendered movies/_search_users (2858.0ms)
+Rendered common/_navigation (9.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (9.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (1754.0ms)
+Rendered common/_sidebar (1798.0ms)
+Rendered common/_footer (4.0ms)
+Completed in 5848ms (View: 4390, DB: 385) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:39:16) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (20.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (49.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (67.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (5.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (7.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (27.0ms)
+Rendered movies/_search_users (3118.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_search (1.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (401.0ms)
+Rendered common/_sidebar (433.0ms)
+Rendered common/_footer (5.0ms)
+Completed in 4134ms (View: 3515, DB: 220) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:39:42) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (75.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (5.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (24.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (4.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (20.0ms)
+Rendered movies/_search_users (1932.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (16.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (428.0ms)
+Rendered common/_sidebar (484.0ms)
+Rendered common/_footer (5.0ms)
+Completed in 3032ms (View: 2403, DB: 212) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:40:03) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (17.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (9.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (14.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (4.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (3.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (11.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (9.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (18.0ms)
+Rendered movies/_search_users (1646.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (674.0ms)
+Rendered common/_sidebar (712.0ms)
+Rendered common/_footer (7.0ms)
+Completed in 3216ms (View: 2540, DB: 190) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:40:29) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (39.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (14.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (39.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (3.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (10.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (3.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (18.0ms)
+Rendered movies/_search_users (1874.0ms)
+Rendered common/_navigation (10.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (345.0ms)
+Rendered common/_sidebar (399.0ms)
+Rendered common/_footer (5.0ms)
+Completed in 2680ms (View: 2232, DB: 181) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:40:48) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (27.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (27.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (59.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (44.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (95.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (3.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (11.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (20.0ms)
+Rendered movies/_search_users (1829.0ms)
+Rendered common/_navigation (8.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (11.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (364.0ms)
+Rendered common/_sidebar (461.0ms)
+Rendered common/_footer (5.0ms)
+Completed in 2931ms (View: 2173, DB: 320) | 200 OK [http://ru.twiliked.net/search?target=user]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:41:06) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (34.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (17.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (31.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (21.0ms)
+Rendered movies/_search_users (1401.0ms)
+Rendered common/_navigation (70.0ms)
+Rendered common/_search (4.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;36;1mOpinion Load (7.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (8.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (316.0ms)
+Rendered common/_sidebar (446.0ms)
+Rendered common/_footer (3.0ms)
+Completed in 2160ms (View: 1808, DB: 178) | 200 OK [http://en.twiliked.net/search?target=user]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MoviesController#search (for 127.0.0.1 at 2009-10-11 17:41:25) [GET]
+  Parameters: {"target"=>"user"}
+  [4;36;1mMovie Columns (30.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT count(*) AS count_all FROM `movies` WHERE (UPPER(names) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (79.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) LIMIT 0, 7[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (UPPER(name) LIKE UPPER('%%') OR UPPER(screen_name) LIKE UPPER('%%')) [0m
+Rendering template within layouts/opinions
+Rendering movies/search
+  [4;36;1mOpinion Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSQL (13.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 1) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 1) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (4.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 93) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 2) [0m
+  [4;35;1mOpinion Load (7.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 2) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 19) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 3) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 3) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 96) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 4) [0m
+  [4;35;1mOpinion Load (6.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 4) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 5) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 5) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 18) [0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 6) [0m
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 6) ORDER BY created_at DESC LIMIT 1[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 46) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`user_id` = 7) [0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 7) ORDER BY created_at DESC LIMIT 1[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 47) [0m
+Rendered common/_pagination (29.0ms)
+Rendered movies/_search_users (1889.0ms)
+Rendered common/_navigation (13.0ms)
+Rendered common/_search (59.0ms)
+Rendered common/_langbar (3.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 115) [0m
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 114) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 53) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;35;1mMovie Load (2.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 113) [0m
+Rendered common/_sidebar_last_opinions (381.0ms)
+Rendered common/_sidebar (732.0ms)
+Rendered common/_footer (5.0ms)
+Completed in 3178ms (View: 2633, DB: 210) | 200 OK [http://ru.twiliked.net/search?target=user]

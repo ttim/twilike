@@ -64,9 +64,8 @@
 
 /* last opinions */
 #last_opinions {
-    width: 150px;
-    float: right;
-    margin-top: -20px
+    margin-left: 20px;
+    margin-top: -10px;
 }
 
 .sidebar_response {
@@ -79,4 +78,9 @@
     width: 16px;
     height: 16px;
     margin-bottom: -4px;
+}
+
+/* other */
+#other ul li {
+    list-style: none;
 }

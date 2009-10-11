@@ -12,4 +12,11 @@
   <%= render :partial => "common/langbar" %>
 
   <%= render :partial => "common/sidebar_last_opinions" %>
+      
+  <div id = "other">
+    <ul>
+      <li><%= link_to t('common.all_movies'), search_path(:target => 'movie') %></li>
+      <li><%= link_to t('common.all_users'), search_path(:target => 'user') %></li>      
+    </ul>
+  </div>
 </div>
