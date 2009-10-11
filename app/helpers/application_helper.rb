@@ -29,8 +29,19 @@ module ApplicationHelper
     "<img alt='"+user.name+"' height='48' src='"+user.profile_image_url+"' width='48'/>"
   end
 
+  def user_name(user)
+    name = user.name
+
+    return user.screen_name if name == nil
+    
+    name = name.strip
+    name = user.screen_name if name == ""
+
+    name
+  end
+
   def user_href(user)
-    link_to (user.name || @user.screen_name), :controller => :opinions, :action => 'by_user', :screen_name => user.screen_name
+    link_to (user_name(user)), :controller => :opinions, :action => 'by_user', :screen_name => user.screen_name
   end
 
   def movie_href(movie)
