@@ -111,7 +111,7 @@ module ApplicationHelper
   end
 
   def comment_movie(movie, text = "@")
-    name = movie.english_name
+    name = movie.translated_name
     name = name.gsub(/\./, '')
 
     link_to text, 'http://twitter.com/home?status='+CGI.escape(name+". "+t('message.your_opinion')+". #twilike+"), { :title => t('message.comment_movie')}
