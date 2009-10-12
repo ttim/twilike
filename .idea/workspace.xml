@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="abfd4eec-63ef-4c86-b7d3-7ff60c67419a" name="Default" comment="for_user(1/2) and for_movie is here! :-)">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/twitter.rb" afterPath="$PROJECT_DIR$/lib/twitter.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/_theme1.css" afterPath="$PROJECT_DIR$/public/stylesheets/_theme1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/movie.rb" afterPath="$PROJECT_DIR$/app/models/movie.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/_theme2.css" afterPath="$PROJECT_DIR$/public/stylesheets/_theme2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/plugins/delayed_job/lib/delayed/job.rb" afterPath="$PROJECT_DIR$/vendor/plugins/delayed_job/lib/delayed/job.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/movie.rb" afterPath="$PROJECT_DIR$/app/models/movie.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/_all.css" afterPath="$PROJECT_DIR$/public/stylesheets/_all.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/plugins/delayed_job/lib/delayed/job.rb" afterPath="$PROJECT_DIR$/vendor/plugins/delayed_job/lib/delayed/job.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/twilike.iml" afterPath="$PROJECT_DIR$/.idea/twilike.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/opinions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/opinions_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
@@ -58,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitter.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="twitter.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/twitter.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="4" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+            <state line="17" column="4" selection-start="401" selection-end="401" vertical-scroll-proportion="0.7545692">
               <folding />
             </state>
           </provider>
@@ -94,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opinions_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="opinions_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/opinions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="29" selection-start="559" selection-end="559" vertical-scroll-proportion="0.88772845">
+            <state line="20" column="29" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -155,10 +153,10 @@
         <option value="$PROJECT_DIR$/config/locales/en.yml" />
         <option value="$PROJECT_DIR$/app/views/common/_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/sidebar.css" />
-        <option value="$PROJECT_DIR$/lib/twitter.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/delayed_job/lib/delayed/job.rb" />
         <option value="$PROJECT_DIR$/app/models/movie.rb" />
         <option value="$PROJECT_DIR$/app/controllers/opinions_controller.rb" />
+        <option value="$PROJECT_DIR$/lib/twitter.rb" />
       </list>
     </option>
   </component>
@@ -834,13 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/twitter.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="4" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/plugins/delayed_job/lib/delayed/job.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="33" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
@@ -864,7 +855,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/opinions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="29" selection-start="559" selection-end="559" vertical-scroll-proportion="0.88772845">
+        <state line="20" column="29" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/twitter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="4" selection-start="401" selection-end="401" vertical-scroll-proportion="0.7545692">
           <folding />
         </state>
       </provider>
