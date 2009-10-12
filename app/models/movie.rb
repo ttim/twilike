@@ -21,20 +21,28 @@ class Movie < ActiveRecord::Base
     # TODO: if enqueue not successul ??? O_O
   end
 
+  def check_small_name(small_name)
+    movie = Movie.find_by_small_name(small_name)
+
+    (movie == nil) || (movie == self)
+  end
+
   def small_name_for(english_name)
     tmp = ""
 
     english_name.downcase.each_char do |char|
       ok = false
-      "qwertyuiopasdfghjklzxcvbnm1234567890".each_char { |t| ok = (ok || (t == char)) }
+      "qwertyuiopasdfghjklzxcvbnm1234567890-".each_char { |t| ok = (ok || (t == char)) }
       tmp += "-" if char == " "
       tmp += char if ok
     end
 
-    movie = Movie.find_by_small_name(tmp)
+    return tmp if check_small_name(tmp)
 
-    if (movie == nil) || (movie == self)
-      return tmp
+    if self.year != nil
+      tmp += "-"+self.year.to_s
+
+      return tmp if check_small_name(tmp)
     end
 
     1000.times do |num|
@@ -81,7 +89,6 @@ class Movie < ActiveRecord::Base
     names = "|"
     info["names"].each { |name| names += name + "|" }
     self.names = names
-
 
     update_saved_image if is_update
   end

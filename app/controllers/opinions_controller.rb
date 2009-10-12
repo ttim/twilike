@@ -17,7 +17,7 @@ class OpinionsController < ApplicationController
     if @movie != nil
       get_header_and_title_from_i18n
       @header = @movie.translated_name
-      @title = @movie.translated_name + " / Twilike" 
+      @title = @movie.translated_name + " (" + @movie.year.to_s + ")" + " / Twilike" 
 
       @opinions = Opinion.paginate(:conditions => { :movie_id => @movie },
                                    :per_page => MOVIE_COUNT,
