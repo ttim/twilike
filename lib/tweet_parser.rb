@@ -9,9 +9,9 @@ class String
   end
 
 class TweetParser  
-  def self.parse(tweet)
+  def self.parse(tmp)
     # result = { :name => "", :rating => 0|+1|-1, :text => "" }
-    tweet += " "
+    tweet = tmp + " "
     
     # rating parse
     current_rating = -1
