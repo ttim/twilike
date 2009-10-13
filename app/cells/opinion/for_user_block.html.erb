@@ -14,7 +14,7 @@
           [
           <%= user_href(@opinion.user) %>
           ]
-          <%= @opinion.text %>
+          <%= render_cell :opinion, :only_text, :opinion => @opinion %>
           <a href="<%= opinion_link(@opinion) %>">#</a>
         </td>
       </tr>

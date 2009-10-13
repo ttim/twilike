@@ -8,7 +8,7 @@
       <td style='padding-right: 5px'>
         <%= user_href(@opinion.user) %>
       <br />
-      <%= @opinion.text %> <a href = "<%= opinion_link(@opinion) %>">#</a>
+      <%= render_cell :opinion, :only_text, :opinion => @opinion %> <a href = "<%= opinion_link(@opinion) %>">#</a>
       </td>
     </tr>
     <tr></tr>

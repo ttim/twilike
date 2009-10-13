@@ -3,5 +3,5 @@
   [
   <%= movie_href(@opinion.movie) %>
   ]
-  <%= @opinion.text %> <a href = "<%= opinion_link(@opinion) %>">#</a>
+  <%= render_cell :opinion, :only_text, :opinion => @opinion %> <a href = "<%= opinion_link(@opinion) %>">#</a>
 </div>

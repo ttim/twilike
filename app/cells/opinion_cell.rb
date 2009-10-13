@@ -28,4 +28,8 @@ class OpinionCell < Cell::Base
   def for_user
     render :view => "for_user_"+@opts[:type].to_s
   end
+
+  def only_text
+    render
+  end
 end

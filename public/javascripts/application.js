@@ -13,7 +13,7 @@ function setCookie(c_name, value, expire_days)
              ((expire_days == null) ? "" : ";expires=" + date.toGMTString()) +
              ";path=/;domain=." + RAILS_DOMAIN;
 
-    document.cookie = params
+    document.cookie = params;
 }
 
 function getCookie(c_name)
@@ -30,38 +30,39 @@ function getCookie(c_name)
         }
     }
 
-    return ""
+    return "";
 }
 
 function load_css(filename) {
-    var fileref = document.createElement("link")
-    fileref.setAttribute("rel", "stylesheet")
-    fileref.setAttribute("type", "text/css")
-    fileref.setAttribute("href", filename)
+    var fileref = document.createElement("link");
+    fileref.setAttribute("rel", "stylesheet");
+    fileref.setAttribute("type", "text/css");
+    fileref.setAttribute("href", filename);
 
-    if (typeof fileref != "undefined")
-        document.getElementsByTagName("head")[0].appendChild(fileref)
+    if (typeof fileref != "undefined") {
+        document.getElementsByTagName("head")[0].appendChild(fileref);
+    }
 }
 
 function set_theme(theme) {
     if (RAILS_ENV == "production") {
-        load_css('/stylesheets/_' + theme + '.css')
+        load_css('/stylesheets/_' + theme + '.css');
     } else {
         for (var i in THEME_FILES) {
-            load_css('/stylesheets/' + theme + '/' + THEME_FILES[i] + '.css')
+            load_css('/stylesheets/' + theme + '/' + THEME_FILES[i] + '.css');
         }
     }
 
     // add to cookies
-    setCookie("theme", theme, 365)
+    setCookie("theme", theme, 365);
 }
 
 function load_default_theme() {
-    theme = getCookie("theme")
+    theme = getCookie("theme");
 
-    if ((theme != "theme1") && (theme != "theme2")) theme = "theme1"
+    if ((theme != "theme1") && (theme != "theme2")) theme = "theme1";
 
-    set_theme(theme)
+    set_theme(theme);
 }
 
-load_default_theme()
+load_default_theme();

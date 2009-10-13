@@ -107,7 +107,7 @@ module ApplicationHelper
   end
 
   def rails_env_javascript
-    '<script type="text/javascript">RAILS_ENV="'+RAILS_ENV+'"; RAILS_DOMAIN="'+ApplicationController::RAILS_DOMAIN+'"</script>'
+    '<script type="text/javascript">RAILS_ENV="'+RAILS_ENV+'"; RAILS_DOMAIN="'+ApplicationController::RAILS_DOMAIN+'"; RAILS_LOCALE="'+I18n.locale.to_s+'"</script>'
   end
 
   def comment_movie(movie, text = "@")

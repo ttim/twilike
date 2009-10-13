@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091004045147) do
+ActiveRecord::Schema.define(:version => 20091013125738) do
 
   create_table "added_tweets", :force => true do |t|
     t.string   "tweet_id",   :limit => 14
@@ -61,13 +61,14 @@ ActiveRecord::Schema.define(:version => 20091004045147) do
   add_index "movies", ["small_name"], :name => "index_movies_on_small_name"
 
   create_table "opinions", :force => true do |t|
-    t.string   "tweet_id",   :default => "", :null => false
-    t.integer  "movie_id",                   :null => false
-    t.integer  "user_id",                    :null => false
+    t.string   "tweet_id",        :default => "", :null => false
+    t.integer  "movie_id",                        :null => false
+    t.integer  "user_id",                         :null => false
     t.text     "text"
     t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "translated_text"
   end
 
   add_index "opinions", ["rating"], :name => "index_opinions_on_rating"

@@ -12,4 +12,6 @@ $(document).ready(function() {
         set_theme($(this).attr("class"))
         return false;
     })
+
+    translate_all()
 });

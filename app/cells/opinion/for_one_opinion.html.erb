@@ -15,7 +15,7 @@
         <%= @opinion.user.name %>
       </a>]
         <br/>
-        <%= @opinion.text %>
+        <%= render_cell :opinion, :only_text, :opinion => @opinion %>
         <br/>
         <a href = "<%= @opinion.twitter_url%>">@ <%= @opinion.created_at.to_s(:long) %></a>
       </td>
