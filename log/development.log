@@ -36450,3 +36450,112 @@ Rendered common/_sidebar_last_opinions (608.0ms)
 Rendered common/_sidebar (647.0ms)
 Rendered common/_footer (12.0ms)
 Completed in 3593ms (View: 3166, DB: 122) | 200 OK [http://ru.twiliked.net/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#by_movie (for 127.0.0.1 at 2009-10-14 02:01:40) [GET]
+  Parameters: {"small_name"=>"running-scared"}
+  [4;36;1mCache Columns (48.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (1.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||by_movie|||running-scared') LIMIT 1[0m
+  [4;36;1mMovie Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (101.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'running-scared') LIMIT 1[0m
+  [4;36;1mOpinion Load (1.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`movie_id` = 73) ORDER BY created_at DESC LIMIT 0, 9[0m
+Rendering template within layouts/opinions
+Rendering opinions/by_movie
+  [4;35;1mOpinion Columns (63.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mUser Columns (26.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 33) [0m
+Rendered common/_pagination (62.0ms)
+Rendered common/_navigation (5.0ms)
+Rendered common/_search (2.0ms)
+Rendered common/_langbar (2.0ms)
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 73) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 72) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 71) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 70) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 57) [0m
+Rendered common/_sidebar_last_opinions (444.0ms)
+Rendered common/_sidebar (467.0ms)
+  [4;36;1mSQL (39.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`rating` = 1 AND `opinions`.`movie_id` = 73) [0m
+  [4;35;1mSQL (9.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`rating` = 0 AND `opinions`.`movie_id` = 73) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`rating` = -1 AND `opinions`.`movie_id` = 73) [0m
+Rendered common/_footer (4.0ms)
+Completed in 1559ms (View: 1114, DB: 307) | 200 OK [http://ru.twiliked.net/movie/running-scared]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#by_movie (for 127.0.0.1 at 2009-10-14 02:02:15) [GET]
+  Parameters: {"small_name"=>"prison-break-the-final-break"}
+  [4;35;1mCache Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `caches`[0m
+  [4;36;1mCache Load (1.0ms)[0m   [0;1mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||by_movie|||prison-break-the-final-break') LIMIT 1[0m
+  [4;35;1mMovie Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (8.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`small_name` = 'prison-break-the-final-break') LIMIT 1[0m
+  [4;35;1mOpinion Load (1.0ms)[0m   [0mSELECT * FROM `opinions` WHERE (`opinions`.`movie_id` = 68) ORDER BY created_at DESC LIMIT 0, 9[0m
+Rendering template within layouts/opinions
+Rendering opinions/by_movie
+  [4;36;1mOpinion Columns (22.0ms)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (6.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 38) [0m
+Rendered common/_pagination (1.0ms)
+Rendered common/_navigation (2.0ms)
+Rendered common/_search (1.0ms)
+Rendered common/_langbar (1.0ms)
+  [4;35;1mOpinion Load (0.0ms)[0m   [0mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mMovie Load (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 73) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 72) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 71) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 70) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 57) [0m
+Rendered common/_sidebar_last_opinions (334.0ms)
+Rendered common/_sidebar (350.0ms)
+  [4;35;1mSQL (5.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`rating` = 1 AND `opinions`.`movie_id` = 68) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`rating` = 0 AND `opinions`.`movie_id` = 68) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM `opinions` WHERE (`opinions`.`rating` = -1 AND `opinions`.`movie_id` = 68) [0m
+Rendered common/_footer (4.0ms)
+Completed in 1038ms (View: 630, DB: 74) | 200 OK [http://ru.twiliked.net/movie/prison-break-the-final-break]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#by_user (for 127.0.0.1 at 2009-10-14 02:02:21) [GET]
+  Parameters: {"screen_name"=>"Uncopyrightable"}
+Completed in 31ms (View: 16, DB: 0) | 301 Moved Permanently [http://ru.twiliked.net/user/Uncopyrightable]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing OpinionsController#by_user (for 127.0.0.1 at 2009-10-14 02:02:22) [GET]
+  Parameters: {"view"=>"block", "screen_name"=>"Uncopyrightable"}
+  [4;36;1mCache Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `caches`[0m
+  [4;35;1mCache Load (5.0ms)[0m   [0mSELECT * FROM `caches` WHERE (`caches`.`key` = 'ru|||opinions|||by_user|||Uncopyrightable|||block') LIMIT 1[0m
+  [4;36;1mUser Load (22.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`screen_name` = 'Uncopyrightable') LIMIT 1[0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mOpinion Load (2.0ms)[0m   [0;1mSELECT * FROM `opinions` WHERE (`opinions`.`user_id` = 38) ORDER BY created_at DESC LIMIT 0, 9[0m
+Rendering template within layouts/opinions
+Rendering opinions/by_user
+  [4;35;1mOpinion Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mMovie Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (5.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 68) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 38) [0m
+  [4;35;1mMovie Load (21.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 64) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 38) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 38) [0m
+Rendered common/_pagination (1.0ms)
+Rendered common/_navigation (6.0ms)
+Rendered common/_view_switch (29.0ms)
+Rendered common/_search (3.0ms)
+Rendered common/_langbar (4.0ms)
+  [4;35;1mOpinion Load (2.0ms)[0m   [0mSELECT * FROM `opinions` ORDER BY created_at DESC LIMIT 5[0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 73) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 72) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 71) [0m
+  [4;35;1mMovie Load (1.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 70) [0m
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 57) [0m
+Rendered common/_sidebar_last_opinions (324.0ms)
+Rendered common/_sidebar (396.0ms)
+Rendered common/_footer (3.0ms)
+Completed in 1248ms (View: 847, DB: 86) | 200 OK [http://ru.twiliked.net/user/Uncopyrightable?view=block]
