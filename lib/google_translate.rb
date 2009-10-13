@@ -6,6 +6,9 @@ class GoogleTranslate
   format :json
 
   def self.translate(text, language_pair)
+    return nil if text == nil
+    return "" if text.strip == ""
+
     result = self.get("/translate", :query => { :q => text, :v => "1.0", :langpair => language_pair })
 
     raise "Error while parsing result" if (result == nil) || (result["responseData"] == nil) || (result["responseStatus"] != 200)
