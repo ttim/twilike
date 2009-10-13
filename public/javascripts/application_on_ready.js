@@ -6,12 +6,10 @@ $(document).ready(function() {
     $(".movie_img").click(function() {
         movie_name = $(this).attr('id').substring(6);
         window.location = "/movie/" + movie_name;
-    })
+    });
 
     $("#color_switch a").click(function() {
-        set_theme($(this).attr("class"))
+        set_theme($(this).attr("class"));
         return false;
-    })
-
-    translate_all()
+    });
 });
