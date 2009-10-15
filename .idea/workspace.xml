@@ -7,13 +7,13 @@
     <list default="true" id="abfd4eec-63ef-4c86-b7d3-7ff60c67419a" name="Default" comment="for_user(1/2) and for_movie is here! :-)">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/_theme1.css" afterPath="$PROJECT_DIR$/public/stylesheets/_theme1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cells/opinion/only_text.html.erb" afterPath="$PROJECT_DIR$/app/cells/opinion/only_text.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/_theme2.css" afterPath="$PROJECT_DIR$/public/stylesheets/_theme2.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/_all.css" afterPath="$PROJECT_DIR$/public/stylesheets/_all.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/common/_footer.html.erb" afterPath="$PROJECT_DIR$/app/views/common/_footer.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/twilike.iml" afterPath="$PROJECT_DIR$/.idea/twilike.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/application_on_ready.js" afterPath="$PROJECT_DIR$/public/javascripts/application_on_ready.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gems" afterPath="$PROJECT_DIR$/.gems" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
     </list>
     <list id="a0d2f9af-e795-4e6f-b662-c749f6f2d48c" name="Failed commit: Default" comment="initial commit" />
     <ignored path=".idea/workspace.xml" />
@@ -38,28 +38,28 @@
   <component name="FileColors" enabled="false" enabledForTabs="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="google_translate.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/google_translate.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="32" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_footer.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_footer.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/common/_footer.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="51" selection-start="225" selection-end="225" vertical-scroll-proportion="0.25">
+            <state line="4" column="51" selection-start="225" selection-end="225" vertical-scroll-proportion="-3.36">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <file leaf-file-name="only_text.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/cells/opinion/only_text.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="472" selection-end="472" vertical-scroll-proportion="-3.6">
+            <state line="3" column="55" selection-start="150" selection-end="150" vertical-scroll-proportion="0.11209965">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="18" selection-start="1300" selection-end="1300" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -141,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20091013125738_add_translated_opinion_column.rb" />
         <option value="$PROJECT_DIR$/app/jobs/opinion_translate.rb" />
         <option value="$PROJECT_DIR$/app/models/opinion.rb" />
         <option value="$PROJECT_DIR$/app/cells/opinion_cell.rb" />
@@ -152,11 +151,12 @@
         <option value="$PROJECT_DIR$/app/cells/opinion/for_top.html.erb" />
         <option value="$PROJECT_DIR$/app/cells/opinion/for_user_block.html.erb" />
         <option value="$PROJECT_DIR$/app/cells/opinion/for_user_line.html.erb" />
-        <option value="$PROJECT_DIR$/app/cells/opinion/only_text.html.erb" />
         <option value="$PROJECT_DIR$/lib/google_translate.rb" />
         <option value="$PROJECT_DIR$/public/javascripts/application_on_ready.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/common/_footer.html.erb" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
+        <option value="$PROJECT_DIR$/app/cells/opinion/only_text.html.erb" />
       </list>
     </option>
   </component>
@@ -192,8 +192,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,6 +289,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twilike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twilike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -451,15 +463,17 @@
       <pane id="RailsProjectView">
         <subPane />
       </pane>
+      <pane id="Favorites" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.general" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.general" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Rails.Development: twilike">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
@@ -850,11 +864,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/opinion.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="2" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/opinion_cell.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="10" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" />
@@ -865,13 +874,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/opinion/only_text.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="7" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/sidebar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="0" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0" />
@@ -879,77 +881,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_timeline.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="71" selection-start="565" selection-end="626" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_top.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="63" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_user_block.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="71" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_user_line.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="67" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_movie.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="67" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_one_opinion.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="69" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_sidebar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="63" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="18" column="71" selection-start="565" selection-end="626" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/google_translate.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
+        <state line="11" column="32" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application_on_ready.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="7" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_top.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="472" selection-end="472" vertical-scroll-proportion="-3.6">
-          <folding />
-        </state>
+        <state line="5" column="63" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_user_block.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="71" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_user_line.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="67" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_movie.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="67" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_one_opinion.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="69" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/for_sidebar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="63" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/common/_footer.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="51" selection-start="225" selection-end="225" vertical-scroll-proportion="0.25">
+        <state line="4" column="51" selection-start="225" selection-end="225" vertical-scroll-proportion="-3.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="18" selection-start="1300" selection-end="1300" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cells/opinion/only_text.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="55" selection-start="150" selection-end="150" vertical-scroll-proportion="0.11209965">
           <folding />
         </state>
       </provider>

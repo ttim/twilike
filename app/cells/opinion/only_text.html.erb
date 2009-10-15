@@ -1,6 +1,7 @@
 <span class="opinion_text">
   <%= @opinion.translated_text %>
-  <% if @opinion.translated_text != @opinion.text %>
-    <%= image_tag("russia_flag.png", :width => 16, :height => 16, :style => "margin-bottom: -4px", :title => @opinion.text) %>
+  <% coder = HTMLEntities.new %>
+  <% if coder.decode(@opinion.translated_text) != coder.decode(@opinion.text) %>
+     <%= image_tag("russia_flag.png", :width => 16, :height => 16, :style => "margin-bottom: -4px", :title => @opinion.text) %>
   <% end %>
 </span>
