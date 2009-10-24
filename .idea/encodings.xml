@@ -12,8 +12,10 @@
     <file url="file://$PROJECT_DIR$/app/views/opinions/by_movie.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/opinions/timeline.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/opinions/top.html.erb" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/static/about.html.erb" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/static/message.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/static/en/about.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/static/en/message.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/static/ru/about.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/static/ru/message.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/locales/en.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/locales/ru.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lib/omdb.rb" charset="UTF-8" />

@@ -1,17 +1,19 @@
 class StaticController < ApplicationController
-  def about
-    return if caching(5.minutes)
-
+  def static(name)
+    return true if caching(5.minutes)
+    
     get_header_and_title_from_i18n
 
-    render :layout => 'opinions'
+    render 'static/'+I18n.locale.to_s+'/'+name, :layout => 'opinions'
+
+    return false
+  end
+
+  def about
+    return if static('about')
   end
 
   def message
-    return if caching(5.minutes)
-
-    get_header_and_title_from_i18n
-
-    render :layout => 'opinions'
+    return if static('message')
   end
 end
