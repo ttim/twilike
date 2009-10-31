@@ -21,4 +21,8 @@ class Omdb
   def self.add_name_to_moderate(name)
     self.post('/movies', { :query => {:api_key => API_KEY}, :body => {:name => name}})
   end
+
+  def self.weekend
+    self.get('/movies/week', { :query => {:name => name, :api_key => API_KEY}, :format => :json })
+  end
 end

@@ -77,3 +77,6 @@ ru:
   paginate:
     next: "Следующая »"
     prev: "« Предыдущая"
+  weekend:
+    title: "В Кино / Twilike"
+    header: "Сейчас в кино"

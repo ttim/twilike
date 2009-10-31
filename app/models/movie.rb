@@ -138,6 +138,8 @@ class Movie < ActiveRecord::Base
 
     avg = Opinion.average(:rating, :conditions => ["movie_id = :movie_id AND created_at > :min_created_at",
                                                    {:movie_id => self, :min_created_at => Time.now-time_interval}])
+    return nil if avg == nil
+    
     rating = 5*(avg+1)
 
     # rating = 9.9 if rating == 10
@@ -178,5 +180,17 @@ class Movie < ActiveRecord::Base
 
     # get image from GAE
     ImageProcessor.get_image_url(self.small_name, IMAGE_SIZES[size][:width], IMAGE_SIZES[size][:height])
+  end
+
+  def self.weekend
+    ids = Omdb.weekend
+
+    result = []
+
+    ids.each do |id|
+      result << Movie.find_or_create_by_imdb_id(id)
+    end
+
+    result
   end
 end

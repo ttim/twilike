@@ -32,6 +32,10 @@ class MoviesController < ApplicationController
   end
 
   def weekend
+    get_header_and_title_from_i18n
+
+    @movies = Movie.weekend
     
+    render :layout => 'opinions'
   end
 end

@@ -52,7 +52,7 @@ class OpinionsController < ApplicationController
       @time = interval if tmp == interval
     end
 
-    @time = @time || "alltime"
+    @time = @time || "month"
 
     return if caching(3.minutes, @time)
 

@@ -1,0 +1,25 @@
+<div id='main' class = 'static'>
+  <table cellpadding='0' cellspacing='0' id='timelines'>
+    <tr>
+      <% [:plus, :neutral, :minus].each do |rate| %>
+          <td class='timeline' valign='top'>
+            <%
+               current = []
+               i = {:plus => 2, :neutral => 1, :minus => 0}[rate]
+
+               @movies.each do |movie|
+                   i += 1
+
+                   current << movie if i%3 == 0
+               end
+            %>
+
+            <% current.each do |movie| %>
+                <%= render_cell :movie, :for_search, :movie => movie %>
+            <% end %>
+
+          </td>
+      <% end %>
+    </tr>
+  </table>
+</div>

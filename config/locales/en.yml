@@ -74,3 +74,6 @@ en:
   paginate:
     next: "Next »"
     prev: "« Previous"
+  weekend:
+    title: "Weekend / Twilike"
+    header: "Weekend"

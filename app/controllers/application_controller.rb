@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   USE_CACHE = (RAILS_ENV == "production")
 
-  DOMAINS = { 'development' => 'twiliked.net', 'production' => 'twilike.net' }
+  DOMAINS = { 'development' => 'localhost', 'production' => 'twilike.net' }
 
   RAILS_DOMAIN = DOMAINS[RAILS_ENV]
   RAILS_PORT = (if (RAILS_ENV == "development") then ":3000" else "" end)
