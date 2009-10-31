@@ -32,6 +32,8 @@ class MoviesController < ApplicationController
   end
 
   def weekend
+    return true if caching(3.hours)
+
     get_header_and_title_from_i18n
 
     @movies = Movie.weekend
