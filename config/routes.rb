@@ -23,6 +23,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.message 'message', :controller => 'static', :action => 'message'
 
+  # rest routes
+  map.connect 'rest/user/:screen_name/seen_movies.json', :controller => 'rest_user', :action => 'seen_movies'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

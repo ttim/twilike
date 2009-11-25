@@ -116,7 +116,7 @@ class OpinionsController < ApplicationController
       redirect_to root_url
     end
   end
-
+  
   def one
     @opinion = Opinion.find_by_tweet_id(params[:tweet_id])
   end
