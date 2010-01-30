@@ -14,7 +14,7 @@ class TwitterUpdater
         user.save!
       end
 
-      raise "not successful tweet adding" unless AddedTweet.create(:tweet_id => id, :data => tweet)
+      raise "not successful tweet adding" unless AddedTweet.create(:tweet_id => id)
     end
   end
 

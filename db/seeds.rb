@@ -13,7 +13,7 @@ Delayed::Job.enqueue(CacheCleaner.new, CacheCleaner::JOB_PRIORITY, Time.now)
 
 # Old tweets
 def add_tweet(id)
-  AddedTweet.create(:tweet_id => id, :data => Twitter.status(id))  
+  AddedTweet.create(:tweet_id => id)
 end
 ["3641892622", "3641889216", "3641882433", "3432890947", "3377756399", "3292045230", "3291560505", "3291041292"].each do |id|
   add_tweet(id)

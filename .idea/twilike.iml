@@ -12,15 +12,9 @@
   <component name="GemRequirementsHolder" version="2">
     <requirement>
       <requirement>
-        <dependency name="will_paginate" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="htmlentities" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/environment.rb" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="sqlite3-ruby" version="0" bound="GREATER_OR_EQUAL" />
-      </requirement>
-      <source from="vendor/plugins/delayed_job/spec/database.rb" />
     </requirement>
     <requirement>
       <requirement>
@@ -30,21 +24,28 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="mysql" version="0" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/database.yml" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/boot.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="htmlentities" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="sqlite3-ruby" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
-      <source from="config/environment.rb" />
+      <source from="config/database.yml" />
+      <source from="vendor/plugins/delayed_job/spec/database.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="mysql" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="will_paginate" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
-      <source from="config/database.yml" />
+      <source from="config/environment.rb" />
     </requirement>
   </component>
   <component name="NewModuleRootManager">

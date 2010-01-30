@@ -7,6 +7,10 @@ class AddedTweet < ActiveRecord::Base
 
   before_create :perform
 
+  def data
+    Twitter.status(self.tweet_id)
+  end
+
   def perform
     result = TweetParser.parse(self.data["text"]) # result = { :name => "", :rating => 0|+1|-1, :text => "" }
     

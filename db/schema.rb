@@ -9,11 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091013125738) do
+ActiveRecord::Schema.define(:version => 20100130165954) do
 
   create_table "added_tweets", :force => true do |t|
     t.string   "tweet_id",   :limit => 14
-    t.text     "data"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
